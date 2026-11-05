@@ -1,48 +1,64 @@
 {
   "s_24": {
-    "module": "Aventura 3 — Vozes na Ágora e Sombras no Senado",
-    "title": "Sessão 1: As Velas do Mediterrâneo no Porto do Pireu",
-    "text": "No movimentado porto do Pireu em Atenas, marinheiros fenícios descarregam rolos de papiro e mercadorias, anotando tudo com um alfabeto fonético adaptado pelos gregos.",
-    "evidence": "Pista Material: Ânforas de cerâmica, dracmas de prata e o intercâmbio comercial e cultural no Mediterrâneo.",
+    "module": "🏛️ Aventura 3 — Vozes na Ágora e Sombras no Senado",
+    "title": "Sessão 1: O Porto do Pireu",
+    "text": "⚓ No movimentado porto do Pireu em Atenas, marinheiros fenícios e comerciantes egípcios desembarcam mercadorias e papiros, revelando o intenso intercâmbio cultural no Mediterrâneo Antigo.",
+    "evidence": "🏺 Pista Material: Ânforas, moedas de prata e rotas comerciais afro-asiáticas.",
     "choices": [
-      { "text": "Caminho A: Reconhecer as profundas raízes afro-asiáticas da cultura clássica grega.", "target": "s_25", "effect": { "memoria": 2 } },
-      { "text": "Caminho B: Acreditar no mito isolado do 'milagre grego' puro.", "target": "s_26", "effect": { "memoria": -1 } }
+      { 
+        "text": "🌍 Caminho A: Investigar as profundas raízes e trocas culturais entre povos da Ásia, África e Europa na formação clássica.", 
+        "target": "s_25_a", 
+        "effect": { "memoria": 2, "coesao": 1 },
+        "feedback": "📚 Desdobramento: A investigação derrubou o mito do 'milagre grego isolado', valorizando as contribuições fenícias e egípcias."
+      },
+      { 
+        "text": "🏛️ Caminho B: Visitar imediatamente a colina da Pnyx para acompanhar a votação na Assembleia Popular (Eclésia).", 
+        "target": "s_25_b", 
+        "effect": { "sustento": 1, "memoria": 1 },
+        "feedback": "🗳️ Desdobramento: A vivência na Pnyx revelou o funcionamento da democracia direta e suas exclusões sociais."
+      },
+      { 
+        "text": "⚔️ Caminho C: Viajar para Esparta para analisar o rigor militar e a exploração do trabalho dos hilotas.", 
+        "target": "s_25_c", 
+        "effect": { "coesao": 1, "sustento": -1 },
+        "feedback": "🛡️ Desdobramento: A observação de Esparta escancarou o modelo oligárquico e militarizado baseado no controle de servos."
+      }
     ]
   },
-  "s_25": {
-    "module": "Aventura 3 — Vozes na Ágora e Sombras no Senado",
-    "title": "Sessão 7: A Subida para a Pnyx",
-    "text": "Na praça da Ágora, os arqueiros citas conduzem os cidadãos com uma corda molhada em tinta vermelha rumo à colina da Pnyx para votação na Eclésia (Assembleia Popular).",
-    "evidence": "Kleroterion de sorteio em pedra e os limites excludentes da cidadania ateniense antiga.",
+  "s_25_a": {
+    "module": "🏛️ Aventura 3 — Vozes na Ágora e Sombras no Senado",
+    "title": "Sessão 2A: As Raízes do Mediterrâneo",
+    "text": "📜 O debate sobre as influências externas amplia a visão crítica dos estudantes sobre a Antiguidade Clássica.",
+    "evidence": "🌍 Pluralidade cultural e circulação de saberes.",
     "choices": [
-      { "text": "Enviar apenas o cidadão ateniense qualificado para votar, compreendendo a exclusão de mulheres, metecos e escravizados.", "target": "s_27", "effect": { "coesao": 1, "memoria": 2 } }
+      { "text": "🏛️ Seguir para a República Romana para apoiar a greve plebeia no Monte Sagrado.", "target": "s_end_av3", "effect": { "coesao": 1 } }
     ]
   },
-  "s_26": {
-    "module": "Aventura 3 — Vozes na Ágora e Sombras no Senado",
-    "title": "Sessão 3: O Erro de Perspectiva Histórica",
-    "text": "Ignorar as trocas culturais com fenícios e egípcios impede a compreensão correta da formação do mundo clássico.",
-    "evidence": "Correção historiográfica aplicada pelo mestre oleiro.",
+  "s_25_b": {
+    "module": "🏛️ Aventura 3 — Vozes na Ágora e Sombras no Senado",
+    "title": "Sessão 2B: Os Limites da Cidadania",
+    "text": "👥 A constatação de que mulheres, estrangeiros e escravizados não votavam gera profundo debate crítico.",
+    "evidence": "⚖️ Exclusão e privilégios na pólis grega.",
     "choices": [
-      { "text": "Retomar o estudo correto das instituições de Atenas e Esparta.", "target": "s_25", "effect": {} }
+      { "text": "📜 Acompanhar as conquistas da plebe romana e a Lei das Doze Tábuas.", "target": "s_end_av3", "effect": { "memoria": 1 } }
     ]
   },
-  "s_27": {
-    "module": "Aventura 3 — Vozes na Ágora e Sombras no Senado",
-    "title": "Sessão 19: A República Romana e o Monte Sagrado",
-    "text": "Em Roma, a plebe endividada enfrenta o risco do nexum (escravidão por dívidas) perante a oligarquia patrícia, decidindo marchar em greve geral para o Monte Sagrado.",
-    "evidence": "Conquista histórica dos Tribunos da Plebe e da Lei das Doze Tábuas de bronze.",
+  "s_25_c": {
+    "module": "🏛️ Aventura 3 — Vozes na Ágora e Sombras no Senado",
+    "title": "Sessão 2C: A Sociedade Espartana",
+    "text": "🛡️ O contraste entre esparciatas e hilotas evidencia a rigidez das estruturas de dominação.",
+    "evidence": "⚔️ Sociedade estamental e militarismo.",
     "choices": [
-      { "text": "Concluir com êxito a Aventura 3 e avançar para o período helenístico.", "target": "s_28", "effect": { "sustento": 1, "coesao": 2 } }
+      { "text": "⚖️ Consolidar o estudo comparativo entre as cidades-estado.", "target": "s_end_av3", "effect": { "memoria": 1 } }
     ]
   },
-  "s_28": {
-    "module": "Aventura 3 — Fim da Jornada do 3º Bimestre",
+  "s_end_av3": {
+    "module": "🏛️ Aventura 3 — Epílogo",
     "title": "Epílogo da Aventura 3: Entre a Ágora e o Fórum",
-    "text": "Do mundo grego à República Romana, sua turma analisou os limites da cidadania antiga, o escravismo e as conquistas jurídicas da plebe.",
-    "evidence": "Habilidades EF06HI09, EF06HI10, EF06HI11 e EF06HI12 consolidadas.",
+    "text": "🏆 Você explorou as bases da civilização clássica, os limites da cidadania e as lutas sociais em Roma e na Grécia!",
+    "evidence": "📚 Habilidades EF06HI09 a EF06HI12 consolidadas.",
     "choices": [
-      { "text": "Reiniciar Aventura 3", "target": "s_24", "effect": {} }
+      { "text": "🔄 Reiniciar Aventura 3", "target": "s_24", "effect": {}, "feedback": "Reiniciando o ciclo clássico..." }
     ]
   }
 }
