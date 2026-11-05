@@ -1,64 +1,252 @@
 {
   "s_29": {
     "module": "🏰 Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
-    "title": "Sessão 1: A Névoa no Limes do Reno",
-    "text": "🌫️ No século IV d.C., com a crise do escravismo romano e a escassez de cativos, as propriedades agrícolas adotam o regime de colonato e firmam pactos de hospitalidade (hospitalitas) com os povos germânicos.",
-    "evidence": "🪙 Pista Material: Moedas desvalorizadas, ruralização econômica e fusão cultural romano-germânica.",
+    "stepLabel": "Etapa 1 de 6 • Antiguidade Tardia (Séculos IV e V)",
+    "bncc": "EF06HI14 • EF06HI15",
+    "sceneArt": "🌫️ 🛡️ 🌾 🤝 🪙",
+    "era": "Século IV–V d.C. (Transição para a Idade Média)",
+    "location": "Fronteira do Rio Reno (Limes Germanicus) e Vilas Rurais Romanas",
+    "title": "Sessão 1: A Névoa no Reno — Crise do Escravismo e o Colonato",
+    "text": "🌫️ O vento frio sopra sobre as torres de vigia da fronteira romana no **Rio Reno**. Estamos no século IV d.C.: o Império Romano parou de se expandir há gerações. Sem novas guerras de conquista, o fluxo de prisioneiros escravizados secou, a moeda romana perdeu valor, os impostos subiram e as cidades do Ocidente estão esvaziando à medida que a população foge para o campo (**ruralização**).\n\n🌾 Nas grandes propriedades rurais (*villae*), os senhores romanos já não têm escravizados suficientes para arar a terra. Ao mesmo tempo, famílias de povos **germânicos** (francos, godos, burgúndios) atravessam o rio buscando terras férteis e proteção contra o avanço dos hunos. Como reorganizar a produção e a convivência na fronteira?",
+    "evidence": "🪙 Fonte Material e Documental: Moedas romanas desvalorizadas (com menos prata), decretos imperiais do século IV prendendo o trabalhador rural (*colono*) à terra e contratos de *hospitalitas* (assentamento de federados germânicos).",
+    "question": "Como a crise do escravismo romano e o surgimento do regime de **colonato** prepararam o terreno para a servidão medieval?",
     "choices": [
-      { 
-        "text": "🌾 Caminho A: Organizar o colonato agrário e estabelecer acordos pacíficos de coexistência produtiva com os federados.", 
-        "target": "s_30_a", 
-        "effect": { "sustento": 1, "coesao": 1 },
-        "feedback": "🤝 Desdobramento: A parceria agrícola garantiu a produção de alimentos e assentou as bases para a transição rumo ao feudalismo."
+      {
+        "text": "🌾 Caminho A: Adotar o regime de **Colonato** (cedendo lotes de terra para famílias romanas pobres e imigrantes germânicos cultivarem em troca de parte da colheita e proteção mútua) e seguir para o Oriente para ver como Constantinopla resiste.",
+        "target": "s_30_bizancio",
+        "effect": { "sustento": 1, "coesao": 1, "memoria": 1 },
+        "feedback": "🏆 Desdobramento Historiográfico: Vocês compreenderam a raiz econômica da transição medieval! O *colonato* substituiu gradualmente o escravismo antigo: o colono não era um escravo que podia ser vendido sozinho, mas estava preso à terra por lei e devia obrigações ao proprietário."
       },
-      { 
-        "text": "⚔️ Caminho B: Tentar fechar as fronteiras à força com legiões romanas esvaziadas e sem recursos.", 
-        "target": "s_30_b", 
-        "effect": { "sustento": -1, "coesao": -1 },
-        "feedback": "⚠️ Desdobramento: A tentativa falha de militarização gerou conflitos violentos e acelerou o colapso administrativo do Império."
+      {
+        "text": "🤝 Caminho B: Firmar pactos de *Hospitalitas* e aliança (*foedus*) com os chefes germânicos na Gália e na Germânia, integrando os costumes romanos e germânicos nos novos reinos do Ocidente.",
+        "target": "s_30_reinos",
+        "effect": { "coesao": 2, "sustento": 1 },
+        "feedback": "✨ Desdobramento Historiográfico: As migrações germânicas não foram apenas 'invasões violentas repentinas': durante séculos houve comércio, alistamento de germânicos no exército romano e fusão cultural."
       },
-      { 
-        "text": "🕌 Caminho C: Viajar para o Oriente para estudar as caravanas, o direito de Justiniano e as inovações do Mundo Islâmico.", 
-        "target": "s_30_c", 
-        "effect": { "memoria": 2 },
-        "feedback": "🌟 Desdobramento: A imersão oriental revelou o esplendor de Bizantino e a preservação científica e comercial do Islã."
+      {
+        "text": "⚔️ Caminho C: Tentar manter os latifúndios exclusivamente com trabalho escravo e ordenar que legiões sem pagamento ataquem todas as famílias germânicas na margem do rio.",
+        "target": "s_30_reinos",
+        "effect": { "sustento": -2, "coesao": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Sem afluxo de cativos e com o tesouro imperial falido, a recusa em adotar o colonato deixou os campos abandonados e provocou motins militares na fronteira."
       }
     ]
   },
-  "s_30_a": {
+  "s_30_bizancio": {
     "module": "🏰 Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
-    "title": "Sessão 2A: O Domínio Feudal",
-    "text": "🏰 Com a ruralização da Europa, a sociedade organiza-se em torno do senhorio feudal, exigindo o cumprimento das obrigações servis.",
-    "evidence": "🌾 Obrigações consuetudinárias: corveia, talha e banalidades.",
+    "stepLabel": "Etapa 2 de 6 • O Império Bizantino (Oriente)",
+    "bncc": "EF06HI14 • EF06HI15",
+    "sceneArt": "🕌 👑 📜 ⛵ ✨",
+    "era": "Século VI d.C. (Governo de Justiniano e Teodora)",
+    "location": "Constantinopla (Estreito de Bósforo — Império Bizantino)",
+    "title": "Sessão 2: O Ouro dos Mosaicos — Constantinopla, Justiniano e Teodora",
+    "text": "✨ Enquanto o Império Romano do Ocidente fragmentou-se em 476 d.C., a metade oriental — conhecida pelos historiadores como **Império Bizantino** — pulsa de riqueza e comércio! Sua dupla desembarca em **Constantinopla**, estrategicamente situada entre a Europa e a Ásia, protegida por muralhas triplas e banhada pelo Estreito de Bósforo.\n\n👑 Sob a gigantesca cúpula da **Basílica de Santa Sofia**, brilham mosaicos dourados retratando o imperador **Justiniano** e a imperatriz **Teodora** (uma mulher de origem humilde que se tornou a conselheira política mais poderosa do império, reformando leis para proteger mulheres e crianças). Nos escritórios imperiais, juristas liderados por Triboniano compilam séculos de leis romanas em uma obra monumental.",
+    "evidence": "📜 Fonte Histórica e Artística: Mosaicos bizantinos da Basílica de São Vital (Ravena) retratando Justiniano e Teodora, e o **Corpus Juris Civilis** (Código de Justiniano).",
+    "question": "Quando ouvimos dizer que 'o Império Romano acabou em 476 d.C.', por que precisamos especificar que isso ocorreu apenas no Ocidente? Qual foi o papel de Constantinopla pelos mil anos seguintes?",
     "choices": [
-      { "text": "⛪ Visitar os mosteiros para observar o trabalho dos monges copistas no scriptorium.", "target": "s_end_av4", "effect": { "memoria": 2 }, "feedback": "✍️ O trabalho monástico preservou manuscritos antigos, superando o mito simplista das Idades das Trevas." }
+      {
+        "text": "📜 Caminho A: Colaborar na organização do **Corpus Juris Civilis (Código de Justiniano)**, preservando o Direito Romano para o futuro, e impulsionar o comércio marítimo entre o Mediterrâneo e o Mar Negro.",
+        "target": "s_31_isla",
+        "effect": { "sustento": 1, "coesao": 1, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Graças ao Código de Justiniano, o Direito Romano não se perdeu na Idade Média e serviu de base para os códigos civis modernos (inclusive o brasileiro!). Constantinopla permaneceu de pé por mais mil anos, até 1453."
+      },
+      {
+        "text": "👑 Caminho B: Apoiar as reformas sociais defendidas pela imperatriz **Teodora** e sua firme liderança política durante a Revolta de Nika no Hipódromo.",
+        "target": "s_31_isla",
+        "effect": { "coesao": 2, "memoria": 1 },
+        "feedback": "🌟 Desdobramento Historiográfico: A atuação de Teodora demonstra o protagonismo feminino na alta política bizantina, garantindo direitos de herança para mulheres e estabilidade ao governo."
+      },
+      {
+        "text": "💸 Caminho C: Aumentar abusivamente os impostos sobre as oficinas de seda e os mercadores do porto para financiar guerras intermináveis de reconquista no Ocidente.",
+        "target": "s_31_isla",
+        "effect": { "sustento": -1, "coesao": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Historicamente, o excesso de gastos militares e impostos nas guerras de Justiniano esgotou o tesouro imperial e gerou revoltas populares no Hipódromo de Constantinopla."
+      }
     ]
   },
-  "s_30_b": {
+  "s_30_reinos": {
     "module": "🏰 Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
-    "title": "Sessão 2B: A Fragmentação do Poder",
-    "text": "⚔️ O colapso centralizado fragmenta o poder político nas mãos dos senhores de terras locais.",
-    "evidence": "🏛️ Descentralização política medieval.",
+    "stepLabel": "Etapa 2 de 6 • Reinos Romano-Germânicos e Bizâncio",
+    "bncc": "EF06HI14 • EF06HI16",
+    "sceneArt": "⚔️ 📜 👑 ⛪ 🤝",
+    "era": "Séculos V e VI d.C.",
+    "location": "Reino dos Francos (Gália) e Rotas do Mediterrâneo",
+    "title": "Sessão 2: O Encontro de Dois Mundos — A Síntese Romano-Germânica",
+    "text": "👑 Na antiga província romana da Gália, agora governada pelo **Reino dos Francos**, sua dupla observa o nascimento de uma nova sociedade: os reis germânicos adotam o **latim** para redigir suas leis antes orais, convertem-se ao **Cristianismo** em aliança com os bispos da Igreja e combinam o respeito às instituições romanas com o costume germânico do **Comitatus** (laço de fidelidade guerreira pessoal entre um chefe e seus companheiros).\n\n⛵ Ao mesmo tempo, mercadores vindos do Oriente trazem notícias de **Constantinopla**, onde o imperador Justiniano e a imperatriz Teodora acabam de compilar o **Código de Justiniano**.",
+    "evidence": "📜 Fonte Documental: *Lei Sálica* (costumes germânicos francos redigidos em latim) e moedas bizantinas (*solidus* de ouro) que circulavam por todo o Mediterrâneo.",
+    "question": "Quais elementos da cultura romana e quais elementos da cultura germânica se fundiram para formar a base da Europa Medieval?",
     "choices": [
-      { "text": "🤝 Aceitar a nova realidade agrária e firmar laços de vassalagem.", "target": "s_end_av4", "effect": { "coesao": 1 }, "feedback": "🛡️ Os laços de fidelidade militar reestruturaram a ordem política na Europa Ocidental." }
+      {
+        "text": "🤝 Caminho A: Promover a síntese cultural romano-germânica (unindo a língua latina, o direito escrito e a administração cristã com os laços de fidelidade pessoal do *comitatus*) e enviar emissários para estudar o Oriente.",
+        "target": "s_31_isla",
+        "effect": { "coesao": 2, "memoria": 1 },
+        "feedback": "🏆 Desdobramento Historiográfico: Vocês identificaram os três pilares da Idade Média Ocidental: a herança clássica greco-romana, a contribuição dos povos germânicos e a instituição da Igreja Cristã!"
+      },
+      {
+        "text": "📜 Caminho B: Obter uma cópia do *Corpus Juris Civilis* vindo de Constantinopla para preservar a memória jurídica romana nas bibliotecas episcopais.",
+        "target": "s_31_isla",
+        "effect": { "memoria": 2 },
+        "feedback": "✨ Desdobramento Historiográfico: O diálogo entre o Ocidente e o Império Bizantino manteve viva a tradição jurídica e artística durante a Alta Idade Média."
+      },
+      {
+        "text": "🔥 Caminho C: Proibir o uso do latim e destruir os antigos aquedutos e registros administrativos romanos nas cidades.",
+        "target": "s_31_isla",
+        "effect": { "sustento": -1, "memoria": -2 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Os reis germânicos (como Teodorico, o Ostrogodo, e Clóvis, o Franco) jamais quiseram destruir a infraestrutura romana; pelo contrário, buscaram preservá-la para legitimar seu poder."
+      }
     ]
   },
-  "s_30_c": {
+  "s_31_isla": {
     "module": "🏰 Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
-    "title": "Sessão 2C: O Saber Oriental",
-    "text": "📚 O uso do astrolábio e os avanços na medicina comprovam a riqueza cultural do mundo islâmico medieval.",
-    "evidence": "🔬 Ciência, comércio e circulação de saberes.",
+    "stepLabel": "Etapa 3 de 6 • Ciência e Comércio no Mundo Islâmico",
+    "bncc": "EF06HI14 • EF06HI15 • EF06HI18",
+    "sceneArt": "🐪 🕌 🔭 🧪 📚",
+    "era": "Séculos VIII a XI d.C. (Idade de Ouro Islâmica)",
+    "location": "Casa da Sabedoria (Bayt al-Hikma) — Bagdá e Rotas de Córdoba",
+    "title": "Sessão 3: O Astrolábio e as Caravanas — O Esplendor do Mundo Islâmico",
+    "text": "🐪 Seguindo as grandes rotas de caravanas que ligam a Península Arábica, o Norte da África, a Península Ibérica (*Al-Andalus*) e o Oriente, sua dupla chega à vibrante metrópole de **Bagdá**. Enquanto a Europa Ocidental vive um período predominantemente agrário, o **Mundo Islâmico Medieval** possui cidades iluminadas, hospitais públicos gratuitos, bibliotecas com centenas de milhares de livros em papel (técnica trazida da China) e intenso comércio intercontinental.\n\n🔭 Na famosa **Casa da Sabedoria** (*Bayt al-Hikma*), sábios muçulmanos, cristãos e judeus traduzem para o árabe os manuscritos gregos de Aristóteles e Euclides, enquanto **Al-Khwarizmi** desenvolve a **Álgebra** e divulga os algarismos indo-arábicos (0, 1, 2, 3...), **Ibn Sina (Avicena)** escreve o *Cânone da Medicina* e astrônomos aperfeiçoam o **Astrolábio**!",
+    "evidence": "🔭 Fonte Material e Científica: Astrolábios de latão gravados em árabe (usados para orientação pelas estrelas), manuscritos ilustrados de medicina cirúrgica de Al-Zahrawi e Avicena, e tratados de álgebra e óptica.",
+    "question": "Como o desenvolvimento científico, médico e matemático do Mundo Islâmico durante a Idade Média derruba a ideia preconceituosa de que a Idade Média inteira foi uma época de atraso científico?",
     "choices": [
-      { "text": "🌍 Retornar ao Ocidente com a bagagem de novos conhecimentos.", "target": "s_end_av4", "effect": { "memoria": 1 }, "feedback": "🌟 A troca cultural enriqueceu a compreensão histórica da Idade Média global." }
+      {
+        "text": "📚 Caminho A: Estudar na Casa da Sabedoria, valorizando como a civilização islâmica não apenas preservou e traduziu os clássicos gregos, mas avançou de forma original na medicina, na álgebra, na química, na óptica e na cartografia.",
+        "target": "s_32_feudo",
+        "effect": { "sustento": 1, "coesao": 1, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Vocês romperam com a visão eurocêntrica! Palavras do nosso cotidiano como *álgebra*, *algoritmo*, *alquimia*, *almofada*, *açúcar*, *algodão* e *chafariz* vieram do árabe, provando o gigantesco legado islâmico para o mundo e para a língua portuguesa."
+      },
+      {
+        "text": "🐪 Caminho B: Integrar a rede de caravanas e navegação com o astrolábio e a vela latina, levando especiarias, papel, técnicas de irrigação (noras e acequias) e laranjeiras para a Europa mediterrânea.",
+        "target": "s_32_feudo",
+        "effect": { "sustento": 2, "memoria": 1 },
+        "feedback": "🌍 Desdobramento Historiográfico: Os mercadores muçulmanos conectavam a Índia, a China, a África Subsaariana e a Europa, introduzindo novas culturas agrícolas e instrumentos náuticos que mais tarde possibilitariam as Grandes Navegações."
+      },
+      {
+        "text": "🚫 Caminho C: Desprezar os livros de medicina de Avicena e os algarismos indo-arábicos por virem de outra cultura e religião.",
+        "target": "s_32_feudo",
+        "effect": { "sustento": -1, "memoria": -2 },
+        "feedback": "⚠️ Desdobramento Historiográfico: A intolerância intelectual atrasa o conhecimento! Na realidade histórica, as primeiras universidades europeias (como Salerno, Bolonha e Paris) usaram o *Cânone da Medicina* de Avicena como livro-texto principal por mais de 500 anos."
+      }
+    ]
+  },
+  "s_32_feudo": {
+    "module": "🏰 Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
+    "stepLabel": "Etapa 4 de 6 • O Senhorio Feudal e a Servidão",
+    "bncc": "EF06HI16 • EF06HI17",
+    "sceneArt": "🏰 🌾 🐂 🥖 ⚒️",
+    "era": "Séculos X a XII d.C. (Plena Idade Média)",
+    "location": "Senhorio Feudal na Europa Ocidental",
+    "title": "Sessão 4: As Três Terras do Feudo — Corveia, Talha e Banalidades",
+    "text": "🏰 Retornando à Europa Ocidental, o poder político fragmentou-se nas mãos da nobreza guerreira ligada por pactos de **suserania e vassalagem**. A vida econômica gira em torno do **Feudo (Senhorio)**, dividido em três grandes áreas:\n1) **Manso Senhorial:** terras exclusivas do senhor feudal (onde fica o castelo);\n2) **Manso Servil:** lotes divididos em faixas onde as famílias de **servos** cultivam seu sustento;\n3) **Terras Comunais:** bosques e pastos de uso coletivo para colher lenha, frutos e criar animais.\n\n🌾 O bailio (capataz do senhor) chega à aldeia exigindo o cumprimento das três grandes obrigações servis: a **Corveia** (trabalhar de graça 3 dias por semana nas terras do senhor e consertar o castelo), a **Talha** (entregar quase metade do que foi colhido no manso servil) e as **Banalidades** (pagar taxas em pão ou vinho para usar o moinho, o forno e o lagar do senhor). Mas a aldeia descobriu uma inovação técnica: a **rotação trienal de culturas** e a **charrua de ferro** puxada a cavalo!",
+    "evidence": "🎨 Fonte Iconográfica e Material: Iluminuras medievais (*As Muito Ricas Horas do Duque de Berry*) mostrando camponeses arando com charrua pesada sob os muros do castelo, moinhos hidráulicos e fornos senhoriais.",
+    "question": "Qual é a diferença entre um **escravizado** da Antiguidade e um **servo** do Feudalismo medieval? E como funcionavam a corveia, a talha e as banalidades?",
+    "choices": [
+      {
+        "text": "🌾 Caminho A: Implementar a **rotação trienal de culturas** (trigo no primeiro campo, aveia/leguminosas no segundo e descanso/pasto no terceiro) com a charrua de ferro para aumentar a produção, negociando o cumprimento das obrigações sem esgotar o solo.",
+        "target": "s_33_mulheres_comunas",
+        "effect": { "sustento": 2, "coesao": 1, "memoria": 1 },
+        "feedback": "🏆 Desdobramento Historiográfico: Vocês dominaram a revolução agrícola medieval! A rotação trienal, o arado pesado de ferro (charrua), o colar rígido para cavalos e o moinho d'água aumentaram a produção de alimentos a partir do século XI, embora os servos continuassem sobrecarregados pela Corveia, Talha e Banalidades."
+      },
+      {
+        "text": "⚖️ Caminho B: Registrar no Diário de Bordo a distinção jurídica fundamental: o servo medieval não era uma 'coisa/propriedade' que podia ser vendida separada da família como o escravizado antigo, mas estava preso à terra por laços de dependência e tributos.",
+        "target": "s_33_mulheres_comunas",
+        "effect": { "coesao": 1, "memoria": 2 },
+        "feedback": "✨ Desdobramento Historiográfico: Distinção conceitual perfeita para o 6º ano! O servo tinha direito ao uso hereditário do seu lote no manso servil e à proteção militar do senhor, mas não tinha liberdade de abandonar o feudo e sustentava o clero e a nobreza."
+      },
+      {
+        "text": "🚫 Caminho C: Plantar na totalidade da terra todos os anos sem descanso (pousio) e recusar o uso da charrua de ferro e do moinho d'água.",
+        "target": "s_33_mulheres_comunas",
+        "effect": { "sustento": -2, "coesao": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Sem a rotação de culturas, os nutrientes do solo esgotaram-se rapidamente. Após pagar a Talha e as Banalidades ao senhor feudal, quase não restou trigo para a aldeia."
+      }
+    ]
+  },
+  "s_33_mulheres_comunas": {
+    "module": "🏰 Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
+    "stepLabel": "Etapa 5 de 6 • Cotidiano, Mulheres e Resistência na Idade Média",
+    "bncc": "EF06HI16 • EF06HI19",
+    "sceneArt": "👩‍🌾 🌿 🧶 ⚖️ 🌲",
+    "era": "Séculos XII e XIII d.C.",
+    "location": "Aldeia Camponesa, Bosques Comunais e Abadia Feminina",
+    "title": "Sessão 5: Os Bosques Comunais e o Protagonismo das Mulheres Medievais",
+    "text": "🌲 O inverno aproxima-se e o senhor feudal tenta cercar os **bosques e terras comunais** para transformá-los em reserva exclusiva de caça da nobreza, proibindo as famílias camponesas de recolher lenha seca, castanhas, mel e ervas medicinais.\n\n👩‍🌾 Na liderança da assembleia da aldeia estão as **mulheres camponesas**: longe da imagem passiva dos contos de fadas, na Idade Média real as mulheres trabalham na colheita, dominam a fiação e a tecelagem, fabricam cerveja e pão, atuam como parteiras e conhecedoras da botânica medicinal, enquanto nas cidades participam de corporações de ofício e, nos mosteiros femininos, abadessas como **Hildegarda de Bingen** escrevem enciclopédias de ciências naturais, medicina e música!",
+    "evidence": "📜 Fonte Histórica e Iconográfica: Iluminuras medievais retratando mulheres na ceifa do trigo, no comércio das feiras e os manuscritos científicos e musicais de *Hildegarda de Bingen* (século XII).",
+    "question": "Qual era o verdadeiro papel econômico, social e intelectual das mulheres (camponesas, artesãs e religiosas) na sociedade medieval?",
+    "choices": [
+      {
+        "text": "👩‍🌾 Caminho A: Unir a aldeia para defender o direito costumeiro sobre as **Terras Comunais** e valorizar o trabalho produtivo, medicinal e intelectual das mulheres medievais (das camponesas e artesãs às estudiosas como Hildegarda de Bingen).",
+        "target": "s_34_mosteiro",
+        "effect": { "sustento": 1, "coesao": 2, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Excelente! Na Idade Média, o direito consuetudinário (baseado na tradição e no costume) protegia o acesso dos servos às terras comunais. Além disso, reconhecer o trabalho feminino no campo, nas oficinas urbanas e nas abadias corrige séculos de invisibilização histórica!"
+      },
+      {
+        "text": "🧶 Caminho B: Organizar o excedente de tecidos de lã, queijos e pães produzidos pelas famílias camponesas para comercializar na feira do **burgo** (cidade medieval em renascimento).",
+        "target": "s_34_mosteiro",
+        "effect": { "sustento": 2, "coesao": 1 },
+        "feedback": "✨ Desdobramento Historiográfico: A partir do século XI, o excedente agrícola e artesanal impulsionou o renascimento comercial e urbano, dando origem às feiras e aos burgos!"
+      },
+      {
+        "text": "🌲 Caminho C: Aceitar calado a perda das terras comunais e proibir as mulheres da aldeia de exercerem os ofícios de tecelagem, panificação e cuidado com ervas medicinais.",
+        "target": "s_34_mosteiro",
+        "effect": { "sustento": -2, "coesao": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Sem a lenha e os recursos dos bosques comunais e sem a força produtiva e os saberes das mulheres, a economia doméstica da aldeia entrou em grave penúria no inverno."
+      }
+    ]
+  },
+  "s_34_mosteiro": {
+    "module": "🏰 Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
+    "stepLabel": "Etapa 6 de 6 • Cultura, Mosteiros e o Mito da 'Idade das Trevas'",
+    "bncc": "EF06HI14 • EF06HI18",
+    "sceneArt": "⛪ ✍️ 📖 🕯️ 🎓",
+    "era": "Séculos XII e XIII d.C.",
+    "location": "Scriptorium da Abadia Beneditina e Primeiras Universidades",
+    "title": "Sessão 6: A Luz das Iluminuras — Superando o Mito da 'Idade das Trevas'",
+    "text": "🕯️ Na última etapa da nossa jornada pelo 6º Ano, vocês entram no salão silencioso e bem iluminado de um mosteiro medieval: o **Scriptorium** ('sala de escrita'). Sob a regra de São Bento (*Ora et Labora* — 'Reza e Trabalha'), dezenas de **monges copistas** inclinam-se sobre mesas inclinadas. Com penas de ganso, tintas minerais e folhas finíssimas de ouro, eles copiam pacientemente, letra por letra, obras de Cícero, Virgílio, Aristóteles, tratados agrícolas e crônicas históricas sobre **pergaminhos** de couro, decorando as páginas com deslumbrantes **iluminuras**.\n\n🎓 Lá fora, nas cidades que voltam a crescer, surgem as Catedrais Góticas com seus vitrais coloridos, os óculos de grau, o relógio mecânico e uma criação tipicamente medieval que existe até hoje: as **Universidades** (Bolonha, Paris, Oxford, Coimbra)!",
+    "evidence": "📖 Fonte Material e Documental: Manuscritos medievais em pergaminho com iluminuras douradas, óculos medievais do século XIII e estatutos das primeiras Universidades europeias.",
+    "question": "Diante das bibliotecas monásticas, da arte gótica, da revolução agrícola, da ciência islâmica/bizantina e do nascimento das Universidades, por que os historiadores atuais consideram errado chamar a Idade Média de 'Idade das Trevas'?",
+    "choices": [
+      {
+        "text": "📖 Caminho A: Proteger os manuscritos do *Scriptorium* e concluir no Diário de Bordo que o rótulo 'Idade das Trevas' foi um preconceito criado séculos depois: a Idade Média foi um período de intensa preservação cultural, criação das Universidades, avanços tecnológicos e diversidade entre Ocidente, Bizâncio e Islã!",
+        "target": "s_end_av4",
+        "effect": { "sustento": 1, "coesao": 1, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Síntese digna de verdadeiros historiadores! Se hoje podemos ler a maioria dos autores da Roma e da Grécia Antiga, devemos isso ao trabalho paciente dos monges copistas nos mosteiros e dos sábios tradutores de Bagdá e Constantinopla."
+      },
+      {
+        "text": "🎓 Caminho B: Levar cópias dos manuscritos traduzidos do árabe e do latim para os estudantes e mestres das novas **Universidades** urbanas, promovendo o debate filosófico e jurídico.",
+        "target": "s_end_av4",
+        "effect": { "coesao": 1, "memoria": 2 },
+        "feedback": "🌟 Desdobramento Historiográfico: As universidades nasceram exatamente no coração da Idade Média (séculos XI-XIII) como corporações de mestres e estudantes dedicadas ao Direito, à Medicina, às Artes e à Teologia!"
+      },
+      {
+        "text": "🕶️ Caminho C: Repetir o senso comum de que durante mil anos ninguém leu livros, ninguém produziu ciência e nada de útil foi inventado na Idade Média.",
+        "target": "s_end_av4",
+        "effect": { "memoria": -2 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Esse estereótipo ignora os fatos materiais! Até mesmo itens cotidianos como o livro encadernado em páginas (*códice*), os botões de roupa, os óculos, o garfo, a janela de vidro, a imprensa, o relógio mecânico e a universidade têm raízes medievais."
+      }
     ]
   },
   "s_end_av4": {
-    "module": "🏰 Aventura 4 — Epílogo",
-    "title": "Epílogo da Aventura 4: Guardiões do Tempo e da História",
-    "text": "🏆 Parabéns! Você completou toda a travessia histórica do 6º ano, compreendendo as transformações do trabalho, da política e da sociedade!",
-    "evidence": "📚 Habilidades EF06HI13 a EF06HI20 consolidadas com excelência.",
+    "module": "🏰 Aventura 4 — Epílogo Geral do 6º Ano (4º Bimestre)",
+    "stepLabel": "Travessia Anual Concluída • Guardiões da História",
+    "bncc": "Todas as Habilidades EF06HI01 a EF06HI19 Consolidadas",
+    "sceneArt": "🏆 ⏳ 📜 🌍 🎓",
+    "era": "Conclusão da Jornada Anual do 6º Ano",
+    "location": "Salão dos Mestres das Crônicas do Tempo",
+    "title": "Epílogo Geral: Mestres das Crônicas do Tempo!",
+    "text": "🎉 **PARABÉNS, GUARDIÕES DO TEMPO!** Sua dupla completou a Aventura 4 e encerrou com excelência todo o ciclo histórico do 6º Ano do Ensino Fundamental!\n\nNesta quarta aventura, vocês desvendaram:\n1️⃣ **A Transição da Antiguidade para a Idade Média:** A crise do escravismo romano, a ruralização, o colonato e a fusão cultural romano-germânica.\n2️⃣ **Uma Idade Média Plural e Conectada:** Enquanto a Europa Ocidental estruturou o Feudalismo, o **Império Bizantino** brilhou em Constantinopla com o Código de Justiniano e a imperatriz Teodora, e o **Mundo Islâmico** liderou a ciência mundial na Casa da Sabedoria.\n3️⃣ **O Cotidiano Feudal e o Fim do Mito das 'Trevas':** Vocês compreenderam o trabalho dos servos (*corveia, talha e banalidades*), a importância das terras comunais, o protagonismo das mulheres medievais e a preservação do saber nos *scriptoria* dos mosteiros e nas primeiras Universidades!",
+    "evidence": "🖨️ Emissão do Relatório Final: Clique em '📓 Diário de Bordo' na Ficha do Jogador acima, escreva a conclusão final da sua dupla e clique em '🖨️ Imprimir / Salvar PDF da Aula' para entregar ao professor!",
+    "question": "Olhando para todas as épocas que vocês viveram em 'Crônicas do Tempo' (Pré-História, Mesopotâmia/Egito/Kush, Grécia/Roma e Idade Média), qual sociedade ou decisão histórica mais marcou a sua dupla neste ano?",
     "choices": [
-      { "text": "🔄 Reiniciar Aventura 4", "target": "s_29", "effect": {}, "feedback": "Reiniciando o ciclo medieval..." }
+      {
+        "text": "🏠 Voltar ao Salão Principal (Menu das 4 Aventuras)",
+        "goHome": true
+      },
+      {
+        "text": "🔄 Jogar Novamente a Aventura 4 (Explorar outras rotas medievais)",
+        "reset": true
+      },
+      {
+        "text": "🔥 Rever desde a Aventura 1 (O Fogo do Pleistoceno)",
+        "nextAdventure": "aventura1.json"
+      }
     ]
   }
 }
