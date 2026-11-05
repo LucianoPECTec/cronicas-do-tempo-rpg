@@ -3,50 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crônicas do Tempo — Livro-Jogo Interativo (6º Ano)</title>
-    <!-- Folha de estilos externa dedicada -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Tailwind CSS (CDN) para classes utilitárias de design -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Crônicas do Tempo — O RPG de História</title>
+    <!-- Tailwind CSS para estilização moderna e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .font-title { font-family: 'Cinzel', serif; }
+        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f8fafc; }
+    </style>
+    <!-- Script de Proteção Anti-Cópia e Direitos Autorais -->
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('keydown', event => {
+            if (
+                event.key === 'F12' || 
+                (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J' || event.key === 'C')) ||
+                (event.ctrlKey && event.key === 'u') ||
+                (event.ctrlKey && event.key === 'c')
+            ) {
+                event.preventDefault();
+                alert("Ação protegida pelos direitos autorais do projeto Crônicas do Tempo — URE São José do Rio Preto.");
+            }
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.userSelect = 'none';
+        });
+    </script>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between p-4 md:p-8">
+<body class="bg-slate-950 min-h-screen text-slate-100 flex flex-col justify-between selection:bg-amber-500 selection:text-slate-950">
 
-    <!-- CABEÇALHO / PLACAR DA FICHA DE PERSONAGEM -->
-    <header class="max-w-4xl mx-auto w-full bg-slate-900 border border-slate-700 rounded-xl p-4 mb-6 shadow-xl flex flex-wrap justify-between items-center gap-4">
-        <div>
-            <h1 class="font-title text-xl text-amber-400 tracking-wider">CRÔNICAS DO TEMPO</h1>
-            <p class="text-xs text-slate-400">O RPG e a Narrativa Interativa no Ensino de História</p>
+    <!-- TELA DE VALIDAÇÃO DE CHAVE DE ACESSO -->
+    <div id="auth-screen" class="fixed inset-0 bg-slate-950 z-50 flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-amber-500/30 p-8 rounded-2xl max-w-md w-full text-center shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600"></div>
+            
+            <span class="text-xs uppercase tracking-widest text-amber-500 font-bold mb-2 block">1ª Edição Oficial</span>
+            <h2 class="font-title text-2xl md:text-3xl font-bold text-amber-400 mb-2">Crônicas do Tempo</h2>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">Insira a chave de acesso exclusiva do seu exemplar para desbloquear o motor do livro-jogo e iniciar a jornada histórica.</p>
+            
+            <input type="text" id="access-code" placeholder="EX: ED1-LOTE1-7A9X" 
+                class="w-full bg-slate-950 border border-slate-700 text-amber-300 px-4 py-3.5 rounded-xl mb-4 text-center font-mono tracking-widest uppercase focus:outline-none focus:border-amber-500 shadow-inner">
+            
+            <button onclick="validateCode()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3.5 px-4 rounded-xl transition duration-200 shadow-lg uppercase tracking-wider text-sm">
+                Desbloquear Acesso →
+            </button>
+            <p id="error-msg" class="text-red-400 text-xs mt-3 hidden font-medium">Chave inválida ou lote esgotado. Verifique o código no seu exemplar impresso.</p>
+            
+            <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] text-slate-500">
+                Desenvolvido no âmbito da URE de São José do Rio Preto (SEDUC-SP)
+            </div>
         </div>
-        <!-- Marcadores dinâmicos da Ficha de Personagem (Sustento, Coesão e Memória) -->
-        <div class="flex gap-4 text-center" aria-label="Placar de Recursos Históricos">
-            <div class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">
-                <span class="block text-[10px] uppercase tracking-wider text-emerald-400 font-semibold">Sustento</span>
-                <span id="stat-sustento" class="text-lg font-bold text-slate-100">3</span>
-            </div>
-            <div class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">
-                <span class="block text-[10px] uppercase tracking-wider text-sky-400 font-semibold">Coesão</span>
-                <span id="stat-coesao" class="text-lg font-bold text-slate-100">3</span>
-            </div>
-            <div class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">
-                <span class="block text-[10px] uppercase tracking-wider text-purple-400 font-semibold">Memória</span>
-                <span id="stat-memoria" class="text-lg font-bold text-slate-100">3</span>
-            </div>
-        </div>
-    </header>
+    </div>
 
-    <!-- PALCO PRINCIPAL DE RENDERIZAÇÃO DAS SESSÕES -->
-    <main class="max-w-4xl mx-auto w-full bg-slate-900 border border-slate-700 rounded-2xl p-6 md:p-10 shadow-2xl relative">
-        <article id="game-container" aria-live="polite">
-            <!-- O motor JavaScript injeta dinamicamente o texto, evidências e caminhos aqui -->
-        </article>
-    </main>
+    <!-- APLICATIVO PRINCIPAL DO JOGO (Oculto até autenticar) -->
+    <div id="game-app" class="hidden flex flex-col min-h-screen justify-between">
+        <!-- Cabeçalho Institucional -->
+        <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-40">
+            <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <span class="text-xl">⏳</span>
+                    <h1 class="font-title text-lg md:text-xl font-bold text-amber-400">Crônicas do Tempo</h1>
+                </div>
+                <div class="text-xs text-slate-400 hidden sm:block">
+                    <span>Ensino Fundamental — 6º Ano</span>
+                </div>
+            </div>
+        </header>
 
-    <!-- RODAPÉ INSTITUCIONAL -->
-    <footer class="max-w-4xl mx-auto w-full text-center mt-6 text-xs text-slate-500">
-        <p>Caderno de Condução Metodológica — Professor Luciano Julio da Silva.</p>
-    </footer>
+        <!-- Corpo Principal do Jogo -->
+        <main class="max-w-3xl w-full mx-auto px-4 py-8 my-auto">
+            <!-- Painel de Status / Ficha de Personagem -->
+            <section class="bg-slate-900 border border-slate-800 rounded-2xl p-4 mb-6 shadow-lg grid grid-cols-3 gap-3 text-center">
+                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800/80">
+                    <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-bold">🍖 Sustento</span>
+                    <span id="stat-sustento" class="font-title text-xl md:text-2xl font-bold text-amber-400">3</span>
+                </div>
+                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800/80">
+                    <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-bold">🤝 Coesão</span>
+                    <span id="stat-coesao" class="font-title text-xl md:text-2xl font-bold text-amber-400">3</span>
+                </div>
+                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800/80">
+                    <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-bold">📜 Memória</span>
+                    <span id="stat-memoria" class="font-title text-xl md:text-2xl font-bold text-amber-400">3</span>
+                </div>
+            </section>
 
-    <!-- Motor de jogo em JavaScript externo -->
+            <!-- Container Dinâmico onde as Aventuras e Sessões são Carregadas -->
+            <div id="game-container" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-xl">
+                <!-- Conteúdo injetado via script.js -->
+            </div>
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="border-t border-slate-800 bg-slate-900/30 text-center py-4 text-xs text-slate-500">
+            <p>Projeto Pedagógico • URE de São José do Rio Preto (SEDUC-SP) • Professor Luciano Julio da Silva</p>
+        </footer>
+    </div>
+
+    <!-- Script de Validação de Chaves (Incluindo a Chave Mestra) -->
+    <script>
+        function validateCode() {
+            const input = document.getElementById('access-code').value.trim().toUpperCase();
+            
+            // Lista contendo os lotes, chaves institucionais e a nova chave mestra
+            const chavesValidas = [
+                "ED1-LOTE1-7A9X", 
+                "ED1-LOTE2-4B2M", 
+                "ED1-LOTE3-9C5K", 
+                "ED1-LOTE4-2F8H", 
+                "ED1-LOTE5-6W3P", 
+                "PROF-REVISAO-URE", 
+                "TESTE-PEDAGOGICO",
+                "ED1-MESTRE-2026-SP" // Chave mestra exclusiva para o autor
+            ]; 
+
+            if (chavesValidas.includes(input)) {
+                localStorage.setItem('cronicas_autorizado', 'true');
+                document.getElementById('auth-screen').style.display = 'none';
+                document.getElementById('game-app').classList.remove('hidden');
+            } else {
+                const errorEl = document.getElementById('error-msg');
+                errorEl.innerText = "Chave inválida para esta 1ª Edição. Verifique o código no exemplar.";
+                errorEl.classList.remove('hidden');
+            }
+        }
+
+        // Verifica se o navegador já validou a chave anteriormente nesta máquina
+        window.onload = function() {
+            if(localStorage.getItem('cronicas_autorizado') === 'true') {
+                document.getElementById('auth-screen').style.display = 'none';
+                document.getElementById('game-app').classList.remove('hidden');
+            }
+        }
+    </script>
+    <!-- Importação do motor de jogo principal -->
     <script src="script.js"></script>
 </body>
 </html>
