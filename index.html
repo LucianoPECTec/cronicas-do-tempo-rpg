@@ -3,140 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crônicas do Tempo — O RPG de História</title>
-    <!-- Tailwind CSS para estilização moderna e responsiva -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        .font-title { font-family: 'Cinzel', serif; }
-        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f8fafc; }
-    </style>
-    <!-- Script de Proteção Anti-Cópia e Direitos Autorais -->
-    <script>
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        document.addEventListener('keydown', event => {
-            if (
-                event.key === 'F12' || 
-                (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J' || event.key === 'C')) ||
-                (event.ctrlKey && event.key === 'u') ||
-                (event.ctrlKey && event.key === 'c')
-            ) {
-                event.preventDefault();
-                alert("Ação protegida pelos direitos autorais do projeto Crônicas do Tempo — URE São José do Rio Preto.");
-            }
-        });
-        document.addEventListener('DOMContentLoaded', () => {
-            document.body.style.userSelect = 'none';
-        });
-    </script>
+    <title>Crônicas do Tempo — Livro-Jogo no Ensino de História (6º Ano)</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-950 min-h-screen text-slate-100 flex flex-col justify-between selection:bg-amber-500 selection:text-slate-950">
+<body class="no-select">
 
-    <!-- TELA DE VALIDAÇÃO DE CHAVE DE ACESSO -->
-    <div id="auth-screen" class="fixed inset-0 bg-slate-950 z-50 flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-amber-500/30 p-8 rounded-2xl max-w-md w-full text-center shadow-2xl relative overflow-hidden">
-            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600"></div>
+    <!-- MARCA D'ÁGUA DINÂMICA ANTI-CÓPIA -->
+    <div id="watermark-overlay" class="watermark-overlay" aria-hidden="true"></div>
+
+    <!-- ======================================================================
+         1. TELA DE AUTENTICAÇÃO POR CHAVE DE ACESSO (EXEMPLAR / LOTE)
+         ====================================================================== -->
+    <div id="auth-screen" class="auth-overlay">
+        <div class="auth-card">
+            <div class="auth-top-bar"></div>
+            <span class="badge-edition">1ª Edição Oficial • Acesso Exclusivo</span>
+            <div class="auth-icon">⏳</div>
+            <h1 class="auth-title">Crônicas do Tempo</h1>
+            <p class="auth-subtitle">O RPG e a Narrativa Interativa no Ensino de História — 6º Ano</p>
             
-            <span class="text-xs uppercase tracking-widest text-amber-500 font-bold mb-2 block">1ª Edição Oficial</span>
-            <h2 class="font-title text-2xl md:text-3xl font-bold text-amber-400 mb-2">Crônicas do Tempo</h2>
-            <p class="text-slate-400 text-sm mb-6 leading-relaxed">Insira a chave de acesso exclusiva do seu exemplar para desbloquear o motor do livro-jogo e iniciar a jornada histórica.</p>
+            <p class="auth-desc">
+                Insira a chave de acesso impressa no seu exemplar físico (ou credencial docente) para acessar o portal do livro-jogo e suas quatro aventuras bimestrais.
+            </p>
             
-            <input type="text" id="access-code" placeholder="EX: ED1-LOTE1-7A9X" 
-                class="w-full bg-slate-950 border border-slate-700 text-amber-300 px-4 py-3.5 rounded-xl mb-4 text-center font-mono tracking-widest uppercase focus:outline-none focus:border-amber-500 shadow-inner">
+            <div class="input-group">
+                <input type="text" id="access-code" placeholder="EX: ED1-LOTE1-7A9X" autocomplete="off" spellcheck="false">
+            </div>
             
-            <button onclick="validateCode()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3.5 px-4 rounded-xl transition duration-200 shadow-lg uppercase tracking-wider text-sm">
-                Desbloquear Acesso →
+            <button id="btn-login" onclick="validateCode()" class="btn-gold-large">
+                🔓 Desbloquear Portal do Livro-Jogo
             </button>
-            <p id="error-msg" class="text-red-400 text-xs mt-3 hidden font-medium">Chave inválida ou lote esgotado. Verifique o código no seu exemplar impresso.</p>
             
-            <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] text-slate-500">
-                Desenvolvido no âmbito da URE de São José do Rio Preto (SEDUC-SP)
+            <p id="error-msg" class="error-msg hidden"></p>
+            
+            <div class="auth-footer">
+                <p>Autor: <strong>Prof. Luciano Julio da Silva</strong></p>
+                <p>Unidade Regional de Ensino (URE) de São José do Rio Preto — SEDUC-SP</p>
             </div>
         </div>
     </div>
 
-    <!-- APLICATIVO PRINCIPAL DO JOGO (Oculto até autenticar) -->
-    <div id="game-app" class="hidden flex flex-col min-h-screen justify-between">
-        <!-- Cabeçalho Institucional -->
-        <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-40">
-            <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
-                <div class="flex items-center space-x-3">
-                    <span class="text-xl">⏳</span>
-                    <h1 class="font-title text-lg md:text-xl font-bold text-amber-400">Crônicas do Tempo</h1>
+    <!-- ======================================================================
+         2. APLICATIVO DESBLOQUEADO (CONTÉM A PÁGINA INICIAL E A TELA DE JOGO)
+         ====================================================================== -->
+    <div id="game-app" class="app-wrapper hidden">
+        
+        <!-- BARRA SUPERIOR FIXA -->
+        <header class="app-header">
+            <div class="header-container">
+                <div class="brand-group" onclick="showHomeScreen()" style="cursor: pointer;" title="Voltar à Página Inicial">
+                    <span class="brand-logo">⏳</span>
+                    <div>
+                        <h1 class="brand-title">Crônicas do Tempo</h1>
+                        <span class="brand-sub" id="active-key-badge">URE São José do Rio Preto • 6º Ano</span>
+                    </div>
                 </div>
-                <div class="text-xs text-slate-400 hidden sm:block">
-                    <span>Ensino Fundamental — 6º Ano</span>
+
+                <div class="header-actions">
+                    <button id="btn-back-hub" onclick="showHomeScreen()" class="btn-header-hub hidden">
+                        🏠 Menu de Aventuras
+                    </button>
+                    <button id="btn-reset-adv" onclick="resetCurrentAdventure()" class="btn-header-action hidden" title="Reiniciar Aventura Atual">
+                        🔄 Reiniciar Aventura
+                    </button>
+                    <button onclick="logoutSession()" class="btn-header-action btn-logout" title="Encerrar Sessão / Trocar Chave">
+                        🔑 Sair
+                    </button>
                 </div>
             </div>
         </header>
 
-        <!-- Corpo Principal do Jogo -->
-        <main class="max-w-3xl w-full mx-auto px-4 py-8 my-auto">
-            <!-- Painel de Status / Ficha de Personagem -->
-            <section class="bg-slate-900 border border-slate-800 rounded-2xl p-4 mb-6 shadow-lg grid grid-cols-3 gap-3 text-center">
-                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800/80">
-                    <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-bold">🍖 Sustento</span>
-                    <span id="stat-sustento" class="font-title text-xl md:text-2xl font-bold text-amber-400">3</span>
+        <!-- ==================================================================
+             2A. PÁGINA INICIAL DO PROJETO (HUB DE APRESENTAÇÃO E ESCOLHA)
+             ================================================================== -->
+        <main id="home-screen" class="hub-container">
+            
+            <!-- Banner de Apresentação do Projeto -->
+            <section class="hero-banner">
+                <span class="hero-kicker">Metodologia Ativa • Ensino Fundamental (6º Ano)</span>
+                <h2 class="hero-title">Bem-vindo às Crônicas do Tempo</h2>
+                <p class="hero-lead">
+                    Mais do que decorar datas, estudar História é investigar vestígios, compreender conflitos humanos e tomar decisões diante dos desafios de cada época. Neste livro-jogo interativo, sua dupla assume o papel de protagonistas históricos da Pré-História à Idade Média.
+                </p>
+
+                <!-- Como funciona na prática -->
+                <div class="pillars-grid">
+                    <div class="pillar-item">
+                        <span class="pillar-icon">👥</span>
+                        <div>
+                            <strong>Trabalho em Duplas</strong>
+                            <p>Leiam a cena juntos, analisem a Fonte Histórica e debatam antes de escolher o caminho.</p>
+                        </div>
+                    </div>
+                    <div class="pillar-item">
+                        <span class="pillar-icon">⚖️</span>
+                        <div>
+                            <strong>3 Marcadores (0 a 5)</strong>
+                            <p>Mantenham o equilíbrio entre <em>Sustento</em>, <em>Coesão</em> e <em>Memória</em>. Se um zerar, a sociedade colapsa!</p>
+                        </div>
+                    </div>
+                    <div class="pillar-item">
+                        <span class="pillar-icon">🎲</span>
+                        <div>
+                            <strong>Dado D6 + História</strong>
+                            <p>Bons argumentos históricos avaliados pelo professor garantem bônus nos testes de dado D6.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800/80">
-                    <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-bold">🤝 Coesão</span>
-                    <span id="stat-coesao" class="font-title text-xl md:text-2xl font-bold text-amber-400">3</span>
-                </div>
-                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800/80">
-                    <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-bold">📜 Memória</span>
-                    <span id="stat-memoria" class="font-title text-xl md:text-2xl font-bold text-amber-400">3</span>
+
+                <!-- Identificação da Dupla / Turma antes de começar -->
+                <div class="student-setup-bar">
+                    <div class="setup-field">
+                        <label for="input-dupla">✍️ Nome da Dupla ou Grupo de Investigação:</label>
+                        <input type="text" id="input-dupla" placeholder="Ex: Ana e Lucas (Guardiões do Tempo)" oninput="syncPlayerIdentification()">
+                    </div>
+                    <div class="setup-field setup-small">
+                        <label for="input-turma">🏫 Turma / Ano:</label>
+                        <input type="text" id="input-turma" placeholder="Ex: 6º Ano A" oninput="syncPlayerIdentification()">
+                    </div>
                 </div>
             </section>
 
-            <!-- Container Dinâmico onde as Aventuras e Sessões são Carregadas -->
-            <div id="game-container" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-xl">
-                <!-- Conteúdo injetado via script.js -->
-            </div>
+            <!-- Grade de Seleção das 4 Aventuras Bimestrais -->
+            <section class="adventures-section">
+                <div class="section-heading">
+                    <h3>🗺️ Escolha a Aventura Histórica para Jogar</h3>
+                    <p>Selecione abaixo o módulo correspondente ao bimestre ou tema indicado pelo seu professor:</p>
+                </div>
+
+                <div class="adventure-cards-grid">
+                    
+                    <!-- CARD AVENTURA 1 -->
+                    <article class="adv-card">
+                        <div class="adv-card-header">
+                            <span class="adv-bimestre">1º Bimestre • Aventura 1</span>
+                            <span class="adv-bncc">EF06HI01 a EF06HI06</span>
+                        </div>
+                        <div class="adv-art-showcase">🔥 🦣 ❄️ 🏹 🐚</div>
+                        <h4 class="adv-title">O Fogo do Pleistoceno e os Guardiões da Memória</h4>
+                        <p class="adv-desc">
+                            Sobreviva ao frio glacial, domine o fogo e preserve a memória na arte rupestre. Atravesse o Estreito de Beríngia ou navegue pelo Pacífico até os sítios da Serra da Capivara, Lagoa Santa (Luzia) e os monumentais Sambaquis do litoral brasileiro.
+                        </p>
+                        <ul class="adv-topics">
+                            <li>📍 Tempo Histórico, Fontes Materiais e Orais</li>
+                            <li>📍 Povoamento da América e Megafauna</li>
+                            <li>📍 Povos dos Sambaquis e Rupestres no Brasil</li>
+                        </ul>
+                        <button onclick="startAdventureFromHub('aventura1.json')" class="btn-adv-play">
+                            ⚔️ Jogar Aventura 1 →
+                        </button>
+                    </article>
+
+                    <!-- CARD AVENTURA 2 -->
+                    <article class="adv-card">
+                        <div class="adv-card-header">
+                            <span class="adv-bimestre">2º Bimestre • Aventura 2</span>
+                            <span class="adv-bncc">EF06HI07 e EF06HI08</span>
+                        </div>
+                        <div class="adv-art-showcase">🌊 🌾 ⚖️ 🏺 👑</div>
+                        <h4 class="adv-title">As Águas de Duas Terras: Entre o Tigre e o Nilo</h4>
+                        <p class="adv-desc">
+                            Enfrente as cheias impetuosas do Eufrates na Mesopotâmia, registre tributos em tabuinhas cuneiformes diante do Código de Hamurabi, meça o Rio Nilo no Egito Antigo e conheça os fornos de ferro e as rainhas Candaces do Reino de Kush em Meroé.
+                        </p>
+                        <ul class="adv-topics">
+                            <li>📍 Engenharia Hidráulica, Diques e Canais</li>
+                            <li>📍 Escrita Cuneiforme e Código de Hamurabi</li>
+                            <li>📍 Egito Antigo e Protagonismo Africano em Kush</li>
+                        </ul>
+                        <button onclick="startAdventureFromHub('aventura2.json')" class="btn-adv-play">
+                            ⚔️ Jogar Aventura 2 →
+                        </button>
+                    </article>
+
+                    <!-- CARD AVENTURA 3 -->
+                    <article class="adv-card">
+                        <div class="adv-card-header">
+                            <span class="adv-bimestre">3º Bimestre • Aventura 3</span>
+                            <span class="adv-bncc">EF06HI09 a EF06HI15</span>
+                        </div>
+                        <div class="adv-art-showcase">⚓ 🏛️ 🗳️ 🛡️ 🦅</div>
+                        <h4 class="adv-title">Vozes na Ágora e Sombras no Senado</h4>
+                        <p class="adv-desc">
+                            Desembarque no Porto do Pireu para desvendar as trocas afro-asiáticas no Mediterrâneo. Debata os limites da democracia ateniense na Pnyx, observe a rígida Esparta e lidere a revolta da plebe no Monte Sagrado pela Lei das Doze Tábuas em Roma.
+                        </p>
+                        <ul class="adv-topics">
+                            <li>📍 O Mediterrâneo além do "Milagre Grego"</li>
+                            <li>📍 Cidadania e Exclusão em Atenas e Esparta</li>
+                            <li>📍 República Romana: Patrícios vs. Plebeus</li>
+                        </ul>
+                        <button onclick="startAdventureFromHub('aventura3.json')" class="btn-adv-play">
+                            ⚔️ Jogar Aventura 3 →
+                        </button>
+                    </article>
+
+                    <!-- CARD AVENTURA 4 -->
+                    <article class="adv-card">
+                        <div class="adv-card-header">
+                            <span class="adv-bimestre">4º Bimestre • Aventura 4</span>
+                            <span class="adv-bncc">EF06HI14 a EF06HI19</span>
+                        </div>
+                        <div class="adv-art-showcase">🌫️ 🏰 🕌 ✍️ 🌾</div>
+                        <h4 class="adv-title">A Queda das Fronteiras e os Senhores da Terra</h4>
+                        <p class="adv-desc">
+                            Negocie pactos de colonato na fronteira do Reno durante a crise do Império Romano. Explore os mosaicos de Constantinopla e a ciência do Mundo Islâmico, trabalhe nos feudos medievais sob a corveia e preserve manuscritos nos mosteiros.
+                        </p>
+                        <ul class="adv-topics">
+                            <li>📍 Crise do Escravismo, Colonato e Germânicos</li>
+                            <li>📍 Império Bizantino e Ciência no Mundo Islâmico</li>
+                            <li>📍 Feudalismo, Servidão, Mosteiros e Mulheres</li>
+                        </ul>
+                        <button onclick="startAdventureFromHub('aventura4.json')" class="btn-adv-play">
+                            ⚔️ Jogar Aventura 4 →
+                        </button>
+                    </article>
+
+                </div>
+            </section>
         </main>
 
-        <!-- Rodapé -->
-        <footer class="border-t border-slate-800 bg-slate-900/30 text-center py-4 text-xs text-slate-500">
-            <p>Projeto Pedagógico • URE de São José do Rio Preto (SEDUC-SP) • Professor Luciano Julio da Silva</p>
+        <!-- ==================================================================
+             2B. TELA DE JOGO ATIVO (FICHA FIEL AO LIVRO + CENA INTERATIVA)
+             ================================================================== -->
+        <main id="gameplay-screen" class="gameplay-container hidden">
+            
+            <!-- FICHA DE REGISTRO DA DUPLA (MODELO OFICIAL DO LIVRO) -->
+            <section class="character-sheet" aria-label="Ficha do Jogador Crônicas do Tempo">
+                
+                <!-- Topo da Ficha estilo Documento de Campo -->
+                <div class="sheet-top-bar">
+                    <div class="sheet-identity">
+                        <span class="sheet-badge">📋 FICHA DE REGISTRO HISTÓRICO</span>
+                        <span class="sheet-player-info">
+                            <strong>Dupla/Grupo:</strong> <span id="sheet-dupla-name">Investigadores do Tempo</span> 
+                            • <strong>Turma:</strong> <span id="sheet-turma-name">6º Ano</span>
+                        </span>
+                    </div>
+                    <div class="sheet-QuickActions">
+                        <button onclick="toggleDiceModal()" class="btn-sheet-tool" title="Rolar Dado de 6 Faces (D6)">
+                            🎲 Rolar Teste D6
+                        </button>
+                        <button onclick="toggleDiaryPanel()" class="btn-sheet-tool" title="Ver Diário de Bordo da Dupla">
+                            📓 Diário de Bordo (<span id="diary-count">0</span>)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Os 3 Marcadores Históricos de Sobrevivência (Casas de 0 a 5 como no Livro) -->
+                <div class="sheet-stats-grid">
+                    
+                    <!-- SUSTENTO -->
+                    <div class="sheet-stat-box" id="box-sustento">
+                        <div class="sheet-stat-head">
+                            <span class="sheet-stat-title">🍖 SUSTENTO</span>
+                            <span class="sheet-stat-num"><strong id="val-sustento">3</strong> / 5</span>
+                        </div>
+                        <div class="pips-row" id="pips-sustento" aria-label="Marcador de Sustento de 0 a 5">
+                            <!-- 5 bolinhas geradas via JS -->
+                        </div>
+                        <div class="sheet-stat-footer">
+                            <span id="status-sustento" class="sheet-status-tag">Equilibrado</span>
+                            <div class="manual-adjust" title="Ajuste de Mediação do Professor">
+                                <button onclick="manualStatChange('sustento', -1)">−</button>
+                                <button onclick="manualStatChange('sustento', 1)">+</button>
+                            </div>
+                        </div>
+                        <small class="sheet-stat-desc">Água, alimento, ferramentas e produção</small>
+                    </div>
+
+                    <!-- COESÃO -->
+                    <div class="sheet-stat-box" id="box-coesao">
+                        <div class="sheet-stat-head">
+                            <span class="sheet-stat-title">🤝 COESÃO</span>
+                            <span class="sheet-stat-num"><strong id="val-coesao">3</strong> / 5</span>
+                        </div>
+                        <div class="pips-row" id="pips-coesao" aria-label="Marcador de Coesão de 0 a 5">
+                            <!-- 5 bolinhas geradas via JS -->
+                        </div>
+                        <div class="sheet-stat-footer">
+                            <span id="status-coesao" class="sheet-status-tag">Equilibrado</span>
+                            <div class="manual-adjust" title="Ajuste de Mediação do Professor">
+                                <button onclick="manualStatChange('coesao', -1)">−</button>
+                                <button onclick="manualStatChange('coesao', 1)">+</button>
+                            </div>
+                        </div>
+                        <small class="sheet-stat-desc">União do grupo, leis, acordos e política</small>
+                    </div>
+
+                    <!-- MEMÓRIA -->
+                    <div class="sheet-stat-box" id="box-memoria">
+                        <div class="sheet-stat-head">
+                            <span class="sheet-stat-title">📜 MEMÓRIA</span>
+                            <span class="sheet-stat-num"><strong id="val-memoria">3</strong> / 5</span>
+                        </div>
+                        <div class="pips-row" id="pips-memoria" aria-label="Marcador de Memória de 0 a 5">
+                            <!-- 5 bolinhas geradas via JS -->
+                        </div>
+                        <div class="sheet-stat-footer">
+                            <span id="status-memoria" class="sheet-status-tag">Equilibrado</span>
+                            <div class="manual-adjust" title="Ajuste de Mediação do Professor">
+                                <button onclick="manualStatChange('memoria', -1)">−</button>
+                                <button onclick="manualStatChange('memoria', 1)">+</button>
+                            </div>
+                        </div>
+                        <small class="sheet-stat-desc">Fontes materiais, tradição oral e escrita</small>
+                    </div>
+
+                </div>
+
+                <!-- GAVETA DO ROLADOR DE DADO D6 (OCULTA POR PADRÃO) -->
+                <div id="dice-drawer" class="sheet-drawer hidden">
+                    <div class="drawer-inner">
+                        <div>
+                            <strong>🎲 Teste de Dado D6 (Mecânica do Livro):</strong>
+                            <p class="drawer-sub">Selecione o bônus concedido pelo professor caso a dupla tenha justificado historicamente a escolha:</p>
+                        </div>
+                        <div class="dice-controls">
+                            <label>Bônus Histórico:
+                                <select id="dice-bonus">
+                                    <option value="0">+0 (Sem bônus)</option>
+                                    <option value="1">+1 (Boa justificativa histórica)</option>
+                                    <option value="2">+2 (Domínio completo da fonte/conceito)</option>
+                                </select>
+                            </label>
+                            <button onclick="rollD6()" class="btn-roll-now">Lançar 1d6</button>
+                            <span id="dice-result-display" class="dice-result-badge">Aguardando rolagem...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GAVETA DO DIÁRIO DE BORDO (OCULTA POR PADRÃO) -->
+                <div id="diary-drawer" class="sheet-drawer hidden">
+                    <div class="drawer-header-row">
+                        <strong>📓 Diário de Bordo e Registro de Evidências da Dupla</strong>
+                        <button onclick="window.print()" class="btn-print-diary">🖨️ Imprimir / Salvar PDF da Aula</button>
+                    </div>
+                    <div id="diary-log-list" class="diary-log-list">
+                        <p class="empty-diary">Nenhuma decisão registrada ainda nesta aventura.</p>
+                    </div>
+                    <div class="diary-notes-area">
+                        <label for="student-notes">✍️ Síntese / Argumento Histórico da Dupla para o Professor:</label>
+                        <textarea id="student-notes" rows="2" placeholder="Escrevam aqui o que concluíram a partir das fontes históricas analisadas hoje..."></textarea>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- BARRA DE TRILHA E BOTÃO DESFAZER -->
+            <div class="journey-tracker">
+                <div class="tracker-info">
+                    <span id="step-counter" class="step-badge">Etapa 1</span>
+                    <span id="bncc-badge" class="bncc-badge">Currículo Paulista • 6º Ano</span>
+                </div>
+                <div class="tracker-buttons">
+                    <button id="btn-undo" onclick="undoLastStep()" class="btn-undo hidden">↩ Voltar Decisão Anterior</button>
+                    <button onclick="showHomeScreen()" class="btn-back-inline">🗺️ Trocar de Aventura</button>
+                </div>
+            </div>
+
+            <!-- CONTAINER DINÂMICO DE CENA E DECISÕES -->
+            <article id="game-container" class="scene-card">
+                <!-- Renderizado via script.js -->
+            </article>
+
+        </main>
+
+        <!-- RODAPÉ INSTITUCIONAL -->
+        <footer class="app-footer">
+            <p><strong>Crônicas do Tempo</strong> • Obra Pedagógica e Sistema Interativo protegidos por Direitos Autorais</p>
+            <p>Prof. Luciano Julio da Silva • PEC Tecnologia, Inovação e Robótica — URE de São José do Rio Preto (SEDUC-SP)</p>
         </footer>
     </div>
 
-    <!-- Script de Validação de Chaves (Incluindo a Chave Mestra) -->
-    <script>
-        function validateCode() {
-            const input = document.getElementById('access-code').value.trim().toUpperCase();
-            
-            // Lista contendo os lotes, chaves institucionais e a nova chave mestra
-            const chavesValidas = [
-                "ED1-LOTE1-7A9X", 
-                "ED1-LOTE2-4B2M", 
-                "ED1-LOTE3-9C5K", 
-                "ED1-LOTE4-2F8H", 
-                "ED1-LOTE5-6W3P", 
-                "PROF-REVISAO-URE", 
-                "TESTE-PEDAGOGICO",
-                "ED1-MESTRE-2026-SP" // Chave mestra exclusiva para o autor
-            ]; 
-
-            if (chavesValidas.includes(input)) {
-                localStorage.setItem('cronicas_autorizado', 'true');
-                document.getElementById('auth-screen').style.display = 'none';
-                document.getElementById('game-app').classList.remove('hidden');
-            } else {
-                const errorEl = document.getElementById('error-msg');
-                errorEl.innerText = "Chave inválida para esta 1ª Edição. Verifique o código no exemplar.";
-                errorEl.classList.remove('hidden');
-            }
-        }
-
-        // Verifica se o navegador já validou a chave anteriormente nesta máquina
-        window.onload = function() {
-            if(localStorage.getItem('cronicas_autorizado') === 'true') {
-                document.getElementById('auth-screen').style.display = 'none';
-                document.getElementById('game-app').classList.remove('hidden');
-            }
-        }
-    </script>
-    <!-- Importação do motor de jogo principal -->
+    <!-- Motor Principal do Livro-Jogo -->
     <script src="script.js"></script>
 </body>
 </html>
