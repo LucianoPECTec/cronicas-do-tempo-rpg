@@ -1,65 +1,80 @@
 /**
  * CRONICAS DO TEMPO - MOTOR DO LIVRO-JOGO (JAVASCRIPT MODULAR)
  * Autor: Professor Luciano Julio da Silva
- * Descrição: Gerencia o carregamento de JSONs, transição de sessões e ficha de personagem.
+ * Descrição: Gerencia o carregamento de JSONs modulares, transição de sessões e ficha de personagem.
  */
 
-// Estado global da ficha de personagem e progresso atual
 let gameState = {
     sustento: 3,
     coesao: 3,
     memoria: 3,
-    currentId: "s_1" // ID inicial da Aventura 1
+    currentId: "s_1"
 };
 
-// Banco de dados local em memória carregado via fetch
 let adventureData = {};
+let currentAventuraFile = "aventura1.json";
 
 /**
- * Inicializa a aplicação buscando o arquivo JSON na pasta /data/
+ * Carrega o arquivo JSON da aventura selecionada na pasta /data/
  */
-async function initGame() {
+async function loadAdventure(filename) {
+    currentAventuraFile = filename;
     try {
-        // Por padrão, carrega a Aventura 1 ao iniciar a página
-        const response = await fetch('data/aventura1.json');
+        const response = await fetch(`data/${filename}`);
         if (!response.ok) {
-            throw new Error(`Erro ao carregar os dados da aventura: ${response.statusText}`);
+            throw new Error(`Erro ao carregar data/${filename}: ${response.statusText}`);
         }
         adventureData = await response.json();
+        
+        // Define o ponto de partida dependendo do arquivo carregado
+        if (filename === "aventura1.json") gameState.currentId = "s_1";
+        if (filename === "aventura2.json") gameState.currentId = "s_12";
+        if (filename === "aventura3.json") gameState.currentId = "s_24";
+        if (filename === "aventura4.json") gameState.currentId = "s_29";
+
         renderSession();
     } catch (error) {
-        console.error("Falha crítica ao inicializar o motor de jogo:", error);
+        console.error("Falha ao carregar o módulo:", error);
         document.getElementById("game-container").innerHTML = `
             <div class="p-4 bg-red-950 border border-red-800 rounded-xl text-red-200">
-                <h3 class="font-bold mb-1">Erro de Carregamento</h3>
-                <p class="text-sm">Não foi possível carregar o arquivo JSON da aventura. Verifique se a pasta <code>data/</code> e o arquivo <code>aventura1.json</code> estão no diretório correto.</p>
+                <h3 class="font-bold mb-1">Arquivo JSON não encontrado</h3>
+                <p class="text-sm">Certifique-se de que o arquivo <code>${filename}</code> foi criado dentro da pasta <code>data/</code> no GitHub.</p>
             </div>
         `;
     }
 }
 
 /**
- * Renderiza a sessão atual do livro-jogo na tag <article id="game-container">
+ * Renderiza a sessão atual do livro-jogo na tela
  */
 function renderSession() {
     const container = document.getElementById("game-container");
     const session = adventureData[gameState.currentId];
 
-    // Tratamento caso a chave do nó não seja encontrada
     if (!session) {
         container.innerHTML = `
-            <h2 class="font-title text-2xl font-bold text-amber-400 mb-4">Fim da Sessão Atual</h2>
-            <p class="text-slate-300 mb-6">Você concluiu este bloco da jornada ou o caminho levou a um desfecho encerravel.</p>
-            <button onclick="restartGame()" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-2.5 rounded-xl transition duration-200">
-                Reiniciar Jornada
-            </button>
+            <h2 class="font-title text-2xl font-bold text-amber-400 mb-4">Fim do Ciclo Atual</h2>
+            <p class="text-slate-300 mb-6">Você concluiu este módulo das Crônicas do Tempo.</p>
+            <div class="flex flex-wrap gap-3">
+                <button onclick="loadAdventure('aventura1.json')" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm">Aventura 1</button>
+                <button onclick="loadAdventure('aventura2.json')" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm">Aventura 2</button>
+                <button onclick="loadAdventure('aventura3.json')" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm">Aventura 3</button>
+                <button onclick="loadAdventure('aventura4.json')" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm">Aventura 4</button>
+            </div>
         `;
         return;
     }
 
-    // Montagem do HTML semântico da sessão
     let htmlOutput = `
-        <span class="text-xs uppercase tracking-widest text-amber-500 font-semibold mb-2 block">${session.module}</span>
+        <div class="flex justify-between items-center mb-3">
+            <span class="text-xs uppercase tracking-widest text-amber-500 font-semibold">${session.module}</span>
+            <div class="flex gap-2 text-xs">
+                <button onclick="loadAdventure('aventura1.json')" class="text-slate-400 hover:text-amber-400 underline">Av.1</button>
+                <button onclick="loadAdventure('aventura2.json')" class="text-slate-400 hover:text-amber-400 underline">Av.2</button>
+                <button onclick="loadAdventure('aventura3.json')" class="text-slate-400 hover:text-amber-400 underline">Av.3</button>
+                <button onclick="loadAdventure('aventura4.json')" class="text-slate-400 hover:text-amber-400 underline">Av.4</button>
+            </div>
+        </div>
         <h2 class="font-title text-2xl md:text-3xl text-amber-400 mb-4">${session.title}</h2>
         <p class="text-slate-300 text-base md:text-lg mb-6 leading-relaxed">${session.text}</p>
         
@@ -71,9 +86,7 @@ function renderSession() {
             <h3 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-3">O que a sua dupla decide fazer?</h3>
     `;
 
-    // Renderização iterativa dos botões de escolha
     session.choices.forEach((choice) => {
-        // Converte o objeto de efeito para string segura escapando as aspas
         const effectString = choice.effect ? JSON.stringify(choice.effect).replace(/"/g, '&quot;') : '{}';
         
         htmlOutput += `
@@ -87,55 +100,26 @@ function renderSession() {
 
     htmlOutput += `</div>`;
     container.innerHTML = htmlOutput;
-
-    // Atualiza visualmente o placar dos marcadores na Ficha de Personagem
     updateScoreboard();
 }
 
-/**
- * Processa a escolha da dupla, atualiza os recursos da Ficha e avança para o próximo ID
- * @param {string} targetId - Identificador do próximo nó no JSON
- * @param {Object} effects - Alterações numéricas em Sustento, Coesão ou Memória
- */
 function makeChoice(targetId, effects) {
     if (effects) {
-        if (effects.sustento) {
-            gameState.sustento = Math.max(0, Math.min(5, gameState.sustento + effects.sustento));
-        }
-        if (effects.coesao) {
-            gameState.coesao = Math.max(0, Math.min(5, gameState.coesao + effects.coesao));
-        }
-        if (effects.memoria) {
-            gameState.memoria = Math.max(0, Math.min(5, gameState.memoria + effects.memoria));
-        }
+        if (effects.sustento) gameState.sustento = Math.max(0, Math.min(5, gameState.sustento + effects.sustento));
+        if (effects.coesao) gameState.coesao = Math.max(0, Math.min(5, gameState.coesao + effects.coesao));
+        if (effects.memoria) gameState.memoria = Math.max(0, Math.min(5, gameState.memoria + effects.memoria));
     }
 
     gameState.currentId = targetId;
     renderSession();
-
-    // Rola a tela suavemente de volta ao topo da caixa de texto
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-/**
- * Atualiza os valores numéricos no cabeçalho do HTML
- */
 function updateScoreboard() {
     document.getElementById("stat-sustento").innerText = gameState.sustento;
     document.getElementById("stat-coesao").innerText = gameState.coesao;
     document.getElementById("stat-memoria").innerText = gameState.memoria;
 }
 
-/**
- * Reinicia o estado do jogo para a Sessão 1
- */
-function restartGame() {
-    gameState.sustento = 3;
-    gameState.coesao = 3;
-    gameState.memoria = 3;
-    gameState.currentId = "s_1";
-    renderSession();
-}
-
-// Executa a inicialização do motor assim que o DOM estiver carregado
-document.addEventListener("DOMContentLoaded", initGame);
+// Inicializa carregando a Aventura 1 ao abrir a página
+document.addEventListener("DOMContentLoaded", () => loadAdventure('aventura1.json'));
