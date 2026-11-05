@@ -1,7 +1,6 @@
 /**
- * CRONICAS DO TEMPO - MOTOR DO LIVRO-JOGO (JAVASCRIPT MODULAR)
+ * CRONICAS DO TEMPO - MOTOR DO LIVRO-JOGO (JAVASCRIPT MODULAR COM FEEDBACK DE CONSEQUÊNCIAS)
  * Autor: Professor Luciano Julio da Silva
- * Descrição: Gerencia o carregamento de JSONs modulares, transição de sessões e ficha de personagem.
  */
 
 let gameState = {
@@ -26,7 +25,6 @@ async function loadAdventure(filename) {
         }
         adventureData = await response.json();
         
-        // Define o ponto de partida dependendo do arquivo carregado
         if (filename === "aventura1.json") gameState.currentId = "s_1";
         if (filename === "aventura2.json") gameState.currentId = "s_12";
         if (filename === "aventura3.json") gameState.currentId = "s_24";
@@ -38,7 +36,7 @@ async function loadAdventure(filename) {
         document.getElementById("game-container").innerHTML = `
             <div class="p-4 bg-red-950 border border-red-800 rounded-xl text-red-200">
                 <h3 class="font-bold mb-1">Arquivo JSON não encontrado</h3>
-                <p class="text-sm">Certifique-se de que o arquivo <code>${filename}</code> foi criado dentro da pasta <code>data/</code> no GitHub.</p>
+                <p class="text-sm">Certifique-se de que o arquivo <code>${filename}</code> está dentro da pasta <code>data/</code> no GitHub.</p>
             </div>
         `;
     }
@@ -54,12 +52,12 @@ function renderSession() {
     if (!session) {
         container.innerHTML = `
             <h2 class="font-title text-2xl font-bold text-amber-400 mb-4">Fim do Ciclo Atual</h2>
-            <p class="text-slate-300 mb-6">Você concluiu este módulo das Crônicas do Tempo.</p>
+            <p class="text-slate-300 mb-6">Você concluiu este módulo das Crônicas do Tempo com sua turma.</p>
             <div class="flex flex-wrap gap-3">
-                <button onclick="loadAdventure('aventura1.json')" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm">Aventura 1</button>
-                <button onclick="loadAdventure('aventura2.json')" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm">Aventura 2</button>
-                <button onclick="loadAdventure('aventura3.json')" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm">Aventura 3</button>
-                <button onclick="loadAdventure('aventura4.json')" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm">Aventura 4</button>
+                <button onclick="loadAdventure('aventura1.json')" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm">Aventura 1 (Pleistoceno)</button>
+                <button onclick="loadAdventure('aventura2.json')" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm">Aventura 2 (Mesopotâmia/Egito)</button>
+                <button onclick="loadAdventure('aventura3.json')" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm">Aventura 3 (Grécia/Roma)</button>
+                <button onclick="loadAdventure('aventura4.json')" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm">Aventura 4 (Feudalismo)</button>
             </div>
         `;
         return;
@@ -79,21 +77,37 @@ function renderSession() {
         <p class="text-slate-300 text-base md:text-lg mb-6 leading-relaxed">${session.text}</p>
         
         <div class="bg-slate-950 border-l-4 border-amber-500 p-4 rounded-r-lg mb-8 text-sm text-amber-200/90 italic" role="note">
-            <strong>Evidência / Fonte Histórica:</strong> ${session.evidence}
+            <strong>🔍 Evidência / Fonte Histórica:</strong> ${session.evidence}
         </div>
 
         <div class="space-y-3">
-            <h3 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-3">O que a sua dupla decide fazer?</h3>
+            <h3 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-3">🤔 O que a sua dupla decide fazer?</h3>
     `;
 
     session.choices.forEach((choice) => {
+        // Formata os efeitos em texto legível para o aluno ver antes de clicar
+        let effectBadge = "";
+        if (choice.effect) {
+            let parts = [];
+            if (choice.effect.sustento) parts.push(`Sustento: ${choice.effect.sustento > 0 ? '+' + choice.effect.sustento : choice.effect.sustento}`);
+            if (choice.effect.coesao) parts.push(`Coesão: ${choice.effect.coesao > 0 ? '+' + choice.effect.coesao : choice.effect.coesao}`);
+            if (choice.effect.memoria) parts.push(`Memória: ${choice.effect.memoria > 0 ? '+' + choice.effect.memoria : choice.effect.memoria}`);
+            if (parts.length > 0) {
+                effectBadge = `<span class="block text-[11px] text-amber-400/80 mt-1 font-mono">Impacto Direto → [ ${parts.join(" | ")} ]</span>`;
+            }
+        }
+
         const effectString = choice.effect ? JSON.stringify(choice.effect).replace(/"/g, '&quot;') : '{}';
-        
+        const feedbackString = choice.feedback ? choice.feedback.replace(/"/g, '&quot;') : 'A decisão gerou desdobramentos diretos no cotidiano do grupo.';
+
         htmlOutput += `
-            <button onclick="makeChoice('${choice.target}', ${effectString})" 
+            <button onclick="makeChoice('${choice.target}', ${effectString}, '${feedbackString}')" 
                 class="w-full text-left bg-slate-800 hover:bg-slate-750 border border-slate-700 hover:border-amber-500/50 p-4 rounded-xl transition duration-200 flex items-center justify-between group">
-                <span class="text-sm md:text-base text-slate-200 group-hover:text-amber-300">${choice.text}</span>
-                <span class="text-amber-500 text-xs font-bold uppercase tracking-wider ml-2 shrink-0">Escolher →</span>
+                <div>
+                    <span class="text-sm md:text-base text-slate-200 group-hover:text-amber-300 block">${choice.text}</span>
+                    ${effectBadge}
+                </div>
+                <span class="text-amber-500 text-xs font-bold uppercase tracking-wider ml-4 shrink-0">Decidir →</span>
             </button>
         `;
     });
@@ -103,13 +117,34 @@ function renderSession() {
     updateScoreboard();
 }
 
-function makeChoice(targetId, effects) {
+/**
+ * Processa a escolha, exibe o painel de consequência histórica e avança
+ */
+function makeChoice(targetId, effects, feedbackText) {
     if (effects) {
         if (effects.sustento) gameState.sustento = Math.max(0, Math.min(5, gameState.sustento + effects.sustento));
         if (effects.coesao) gameState.coesao = Math.max(0, Math.min(5, gameState.coesao + effects.coesao));
         if (effects.memoria) gameState.memoria = Math.max(0, Math.min(5, gameState.memoria + effects.memoria));
     }
 
+    // Tela intermediária de feedback profundo das consequências
+    const container = document.getElementById("game-container");
+    container.innerHTML = `
+        <div class="animate-fadeIn py-6">
+            <span class="text-xs uppercase tracking-widest text-amber-500 font-semibold mb-2 block">⚖️ Desdobramento Histórico da Escolha</span>
+            <h2 class="font-title text-2xl md:text-3xl text-amber-400 mb-6">O Impacto na Jornada</h2>
+            <div class="bg-slate-950 border-l-4 border-emerald-500 p-6 rounded-r-lg mb-8 text-slate-200 text-base md:text-lg leading-relaxed shadow-inner">
+                <p>${feedbackText}</p>
+            </div>
+            <button onclick="proceedToNext('${targetId}')" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3.5 px-6 rounded-xl transition duration-200 text-center text-base">
+                Continuar a Investigação Histórica →
+            </button>
+        </div>
+    `;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function proceedToNext(targetId) {
     gameState.currentId = targetId;
     renderSession();
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -121,5 +156,4 @@ function updateScoreboard() {
     document.getElementById("stat-memoria").innerText = gameState.memoria;
 }
 
-// Inicializa carregando a Aventura 1 ao abrir a página
 document.addEventListener("DOMContentLoaded", () => loadAdventure('aventura1.json'));
