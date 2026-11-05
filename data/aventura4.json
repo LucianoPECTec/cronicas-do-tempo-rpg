@@ -1,76 +1,64 @@
 {
   "s_29": {
-    "module": "Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
+    "module": "🏰 Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
     "title": "Sessão 1: A Névoa no Limes do Reno",
-    "text": "No século IV d.C., com a crise do escravismo romano e a escassez de cativos, propriedades agrícolas adotam o regime de colonato e firmam pactos de hospitalidade (hospitalitas) com os povos germânicos federados.",
-    "evidence": "Pista Material: Moedas desvalorizadas, transição econômica para a ruralização e fusão cultural romano-germânica.",
+    "text": "🌫️ No século IV d.C., com a crise do escravismo romano e a escassez de cativos, as propriedades agrícolas adotam o regime de colonato e firmam pactos de hospitalidade (hospitalitas) com os povos germânicos.",
+    "evidence": "🪙 Pista Material: Moedas desvalorizadas, ruralização econômica e fusão cultural romano-germânica.",
     "choices": [
-      { "text": "Caminho A: Organizar o colonato agrário e estabelecer acordos de coexistência produtiva.", "target": "s_30", "effect": { "sustento": 1, "coesao": 1 } },
-      { "text": "Caminho B: Tentar manter as fronteiras fechadas à força com legiões esvaziadas.", "target": "s_31_err", "effect": { "sustento": -1, "coesao": -1 } }
+      { 
+        "text": "🌾 Caminho A: Organizar o colonato agrário e estabelecer acordos pacíficos de coexistência produtiva com os federados.", 
+        "target": "s_30_a", 
+        "effect": { "sustento": 1, "coesao": 1 },
+        "feedback": "🤝 Desdobramento: A parceria agrícola garantiu a produção de alimentos e assentou as bases para a transição rumo ao feudalismo."
+      },
+      { 
+        "text": "⚔️ Caminho B: Tentar fechar as fronteiras à força com legiões romanas esvaziadas e sem recursos.", 
+        "target": "s_30_b", 
+        "effect": { "sustento": -1, "coesao": -1 },
+        "feedback": "⚠️ Desdobramento: A tentativa falha de militarização gerou conflitos violentos e acelerou o colapso administrativo do Império."
+      },
+      { 
+        "text": "🕌 Caminho C: Viajar para o Oriente para estudar as caravanas, o direito de Justiniano e as inovações do Mundo Islâmico.", 
+        "target": "s_30_c", 
+        "effect": { "memoria": 2 },
+        "feedback": "🌟 Desdobramento: A imersão oriental revelou o esplendor de Bizantino e a preservação científica e comercial do Islã."
+      }
     ]
   },
-  "s_30": {
-    "module": "Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
-    "title": "Sessão 2: A Fusão dos Povos",
-    "text": "A integração entre romanos e germanos consolida novas formas de posse da terra, preparando o terreno para o mundo rural medieval.",
-    "evidence": "Evolução das leis consuetudinárias e o direito germânico.",
+  "s_30_a": {
+    "module": "🏰 Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
+    "title": "Sessão 2A: O Domínio Feudal",
+    "text": "🏰 Com a ruralização da Europa, a sociedade organiza-se em torno do senhorio feudal, exigindo o cumprimento das obrigações servis.",
+    "evidence": "🌾 Obrigações consuetudinárias: corveia, talha e banalidades.",
     "choices": [
-      { "text": "Avançar para o Império Bizantino e o Mundo Islâmico.", "target": "s_32", "effect": { "memoria": 1 } }
+      { "text": "⛪ Visitar os mosteiros para observar o trabalho dos monges copistas no scriptorium.", "target": "s_end_av4", "effect": { "memoria": 2 }, "feedback": "✍️ O trabalho monástico preservou manuscritos antigos, superando o mito simplista das Idades das Trevas." }
     ]
   },
-  "s_31_err": {
-    "module": "Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
-    "title": "Sessão 3: O Colapso das Fronteiras",
-    "text": "A recusa em negociar o assentamento gera conflitos violentos e o avanço desordenado sobre as vilas romanas.",
-    "evidence": "O colapso militar do Limes ocidental.",
+  "s_30_b": {
+    "module": "🏰 Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
+    "title": "Sessão 2B: A Fragmentação do Poder",
+    "text": "⚔️ O colapso centralizado fragmenta o poder político nas mãos dos senhores de terras locais.",
+    "evidence": "🏛️ Descentralização política medieval.",
     "choices": [
-      { "text": "Recuar e negociar termos de colonato com os chefes tribais.", "target": "s_30", "effect": {} }
+      { "text": "🤝 Aceitar a nova realidade agrária e firmar laços de vassalagem.", "target": "s_end_av4", "effect": { "coesao": 1 }, "feedback": "🛡️ Os laços de fidelidade militar reestruturaram a ordem política na Europa Ocidental." }
     ]
   },
-  "s_32": {
-    "module": "Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
-    "title": "Sessão 10: Constantinopla e o Corpus Juris Civilis",
-    "text": "No Oriente, o Império Bizantino floresce sob a égide de Justiniano, que consolida o direito romano no Corpus Juris Civilis, enquanto as caravanas do Mundo Islâmico difundem o astrolábio, a matemática e a preservação científica.",
-    "evidence": "Códigos jurídicos bizantinos e o papel científico e comercial do Mundo Islâmico medieval.",
+  "s_30_c": {
+    "module": "🏰 Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
+    "title": "Sessão 2C: O Saber Oriental",
+    "text": "📚 O uso do astrolábio e os avanços na medicina comprovam a riqueza cultural do mundo islâmico medieval.",
+    "evidence": "🔬 Ciência, comércio e circulação de saberes.",
     "choices": [
-      { "text": "Avançar para a estruturação do senhorio feudal na Europa Ocidental.", "target": "s_33", "effect": { "memoria": 2, "sustento": 1 } }
-    ]
-  },
-  "s_33": {
-    "module": "Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
-    "title": "Sessão 18: O Senhorio Feudal e a Corveia",
-    "text": "Na Europa do século XI, o feudo organiza-se entre o manso senhorial, o manso servil e as terras comunais. O feitor exige o trabalho gratuito obrigatório da corveia e o pagamento da talha e das banalidades.",
-    "evidence": "Obrigações consuetudinárias: corveia, talha, banalidades e a distinção entre suserania/vassalagem e senhor/servo.",
-    "choices": [
-      { "text": "Caminho A: Cumprir a corveia e organizar a solidariedade aldeã para garantir o cultivo dos lotes.", "target": "s_34", "effect": { "sustento": 1, "coesao": 1, "memoria": 1 } },
-      { "text": "Caminho B: Tentar fugir para o burgo comercial sem autorização do senhor feudal.", "target": "s_35_burgo", "effect": { "sustento": -1, "coesao": -1 } }
-    ]
-  },
-  "s_34": {
-    "module": "Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
-    "title": "Sessão 29: O Scriptorium e as Vozes Medievais",
-    "text": "Na abadia beneditina, monges copistas salvaguardam textos no scriptorium, enquanto damas administradoras de feudos e abadessas lideram a produção e a cultura medieval, superando o mito simplista das 'Idades das Trevas'.",
-    "evidence": "Superação do mito das Trevas, protagonismo feminino medieval e a preservação cultural monástica.",
-    "choices": [
-      { "text": "Concluir com êxito a Aventura 4 e encerrar o ciclo letivo do 6º ano!", "target": "s_end_av4", "effect": { "memoria": 2, "coesao": 2 } }
-    ]
-  },
-  "s_35_burgo": {
-    "module": "Aventura 4 — A Queda das Fronteiras e os Senhores da Terra",
-    "title": "Sessão 30: A Rota dos Burgos",
-    "text": "A fuga para os burgos em expansão inicia novas relações de trabalho livre e o ressurgimento da economia mercantil urbana.",
-    "evidence": "O nascimento da burguesia e o renascimento urbano e comercial.",
-    "choices": [
-      { "text": "Estabelecer laços com as corporações de ofício e concluir o ciclo anual.", "target": "s_end_av4", "effect": { "memoria": 1 } }
+      { "text": "🌍 Retornar ao Ocidente com a bagagem de novos conhecimentos.", "target": "s_end_av4", "effect": { "memoria": 1 }, "feedback": "🌟 A troca cultural enriqueceu a compreensão histórica da Idade Média global." }
     ]
   },
   "s_end_av4": {
-    "module": "Aventura 4 — Fim da Jornada Anual",
+    "module": "🏰 Aventura 4 — Epílogo",
     "title": "Epílogo da Aventura 4: Guardiões do Tempo e da História",
-    "text": "Parabéns! Sua turma concluiu a imensa travessia histórica do Pleistoceno ao Feudalismo medieval, compreendendo as transformações do trabalho, da política, das culturas e do espaço ao longo dos séculos.",
-    "evidence": "Habilidades EF06HI13 a EF06HI20 consolidadas de ponta a ponta.",
+    "text": "🏆 Parabéns! Você completou toda a travessia histórica do 6º ano, compreendendo as transformações do trabalho, da política e da sociedade!",
+    "evidence": "📚 Habilidades EF06HI13 a EF06HI20 consolidadas com excelência.",
     "choices": [
-      { "text": "Reiniciar a Aventura 4 ou refazer o ciclo completo", "target": "s_29", "effect": {} }
+      { "text": "🔄 Reiniciar Aventura 4", "target": "s_29", "effect": {}, "feedback": "Reiniciando o ciclo medieval..." }
     ]
   }
 }
