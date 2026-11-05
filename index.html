@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crônicas do Tempo — Livro-Jogo Interativo (6º Ano)</title>
+    <!-- Folha de estilos externa dedicada -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS (CDN) para classes utilitárias de design -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between p-4 md:p-8">
+
+    <!-- CABEÇALHO / PLACAR DA FICHA DE PERSONAGEM -->
+    <header class="max-w-4xl mx-auto w-full bg-slate-900 border border-slate-700 rounded-xl p-4 mb-6 shadow-xl flex flex-wrap justify-between items-center gap-4">
+        <div>
+            <h1 class="font-title text-xl text-amber-400 tracking-wider">CRÔNICAS DO TEMPO</h1>
+            <p class="text-xs text-slate-400">O RPG e a Narrativa Interativa no Ensino de História</p>
+        </div>
+        <!-- Marcadores dinâmicos da Ficha de Personagem (Sustento, Coesão e Memória) -->
+        <div class="flex gap-4 text-center" aria-label="Placar de Recursos Históricos">
+            <div class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">
+                <span class="block text-[10px] uppercase tracking-wider text-emerald-400 font-semibold">Sustento</span>
+                <span id="stat-sustento" class="text-lg font-bold text-slate-100">3</span>
+            </div>
+            <div class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">
+                <span class="block text-[10px] uppercase tracking-wider text-sky-400 font-semibold">Coesão</span>
+                <span id="stat-coesao" class="text-lg font-bold text-slate-100">3</span>
+            </div>
+            <div class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">
+                <span class="block text-[10px] uppercase tracking-wider text-purple-400 font-semibold">Memória</span>
+                <span id="stat-memoria" class="text-lg font-bold text-slate-100">3</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- PALCO PRINCIPAL DE RENDERIZAÇÃO DAS SESSÕES -->
+    <main class="max-w-4xl mx-auto w-full bg-slate-900 border border-slate-700 rounded-2xl p-6 md:p-10 shadow-2xl relative">
+        <article id="game-container" aria-live="polite">
+            <!-- O motor JavaScript injeta dinamicamente o texto, evidências e caminhos aqui -->
+        </article>
+    </main>
+
+    <!-- RODAPÉ INSTITUCIONAL -->
+    <footer class="max-w-4xl mx-auto w-full text-center mt-6 text-xs text-slate-500">
+        <p>Caderno de Condução Metodológica — Professor Luciano Julio da Silva.</p>
+    </footer>
+
+    <!-- Motor de jogo em JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
