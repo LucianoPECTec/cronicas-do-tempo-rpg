@@ -1,64 +1,252 @@
 {
   "s_24": {
     "module": "🏛️ Aventura 3 — Vozes na Ágora e Sombras no Senado",
-    "title": "Sessão 1: O Porto do Pireu",
-    "text": "⚓ No movimentado porto do Pireu em Atenas, marinheiros fenícios e comerciantes egípcios desembarcam mercadorias e papiros, revelando o intenso intercâmbio cultural no Mediterrâneo Antigo.",
-    "evidence": "🏺 Pista Material: Ânforas, moedas de prata e rotas comerciais afro-asiáticas.",
+    "stepLabel": "Etapa 1 de 6 • O Mar Mediterrâneo Conectado",
+    "bncc": "EF06HI09 • EF06HI10",
+    "sceneArt": "⚓ ⛵ 🏺 🗺️ 🌊",
+    "era": "Século V a.C. (Antiguidade Clássica)",
+    "location": "Porto do Pireu — Atenas (Mar Egeu / Mediterrâneo)",
+    "title": "Sessão 1: As Docas do Pireu e o Mito do 'Milagre Grego'",
+    "text": "⚓ O cheiro de maresia, azeite de oliva e madeira de cedro domina o movimentado **Porto do Pireu**, a porta de entrada marítima de Atenas. Nas docas, marinheiros **fenícios** descarregam tecidos tingidos de púrpura e rolos de papiro trazidos do **Egito**, enquanto mercadores da Ásia Menor negociam trigo, metais e conhecimentos matemáticos babilônicos.\n\n📜 Um jovem estudante ateniense afirma com orgulho que os gregos inventaram sozinhos a filosofia, a escrita alfabética e a ciência num 'Milagre Grego' isolado do resto do mundo. Mas um navegador fenício sorri e mostra as letras do alfabeto fenício gravadas em uma ânfora...",
+    "evidence": "🏺 Fonte Material e Epigráfica: Ânforas comerciais mediterrâneas, moedas de prata (corujas atenienses) e tabuinhas comparando o alfabeto fenício (*Aleph, Beth*) com o alfabeto grego (*Alpha, Beta*).",
+    "question": "Por que a historiografia atual rejeita a ideia de um 'Milagre Grego' isolado e destaca as profundas raízes afro-asiáticas (egípcias, fenícias e mesopotâmicas) na formação da cultura grega?",
     "choices": [
-      { 
-        "text": "🌍 Caminho A: Investigar as profundas raízes e trocas culturais entre povos da Ásia, África e Europa na formação clássica.", 
-        "target": "s_25_a", 
-        "effect": { "memoria": 2, "coesao": 1 },
-        "feedback": "📚 Desdobramento: A investigação derrubou o mito do 'milagre grego isolado', valorizando as contribuições fenícias e egípcias."
+      {
+        "text": "🌍 Caminho A: Dialogar com os navegadores fenícios e egípcios, reconhecendo que o alfabeto, a geometria, a astronomia e a arte grega nasceram do intenso intercâmbio cultural entre África, Ásia e Europa no Mediterrâneo.",
+        "target": "s_25_atenas",
+        "effect": { "coesao": 1, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Vocês desconstruíram o eurocentrismo! O Mar Mediterrâneo funcionou como uma grande ponte de trocas: os gregos adaptaram o alfabeto fenício (adicionando as vogais) e aprenderam geometria e medicina com egípcios e babilônios."
       },
-      { 
-        "text": "🏛️ Caminho B: Visitar imediatamente a colina da Pnyx para acompanhar a votação na Assembleia Popular (Eclésia).", 
-        "target": "s_25_b", 
+      {
+        "text": "🏺 Caminho B: Seguir os carregadores de ânforas até as oficinas de cerâmica e as minas de prata de Laurion para descobrir quem realiza o trabalho pesado em Atenas.",
+        "target": "s_25_escravidao",
         "effect": { "sustento": 1, "memoria": 1 },
-        "feedback": "🗳️ Desdobramento: A vivência na Pnyx revelou o funcionamento da democracia direta e suas exclusões sociais."
+        "feedback": "🔍 Desdobramento Historiográfico: Vocês decidiram olhar para a base econômica da pólis! Descobrir quem produzia a riqueza material é essencial para entender como os cidadãos tinham tempo livre para a política."
       },
-      { 
-        "text": "⚔️ Caminho C: Viajar para Esparta para analisar o rigor militar e a exploração do trabalho dos hilotas.", 
-        "target": "s_25_c", 
-        "effect": { "coesao": 1, "sustento": -1 },
-        "feedback": "🛡️ Desdobramento: A observação de Esparta escancarou o modelo oligárquico e militarizado baseado no controle de servos."
+      {
+        "text": "🚫 Caminho C: Expulsar os mercadores estrangeiros do porto, defendendo que Atenas não precisa de comércio externo nem de saberes de outros povos.",
+        "target": "s_25_atenas",
+        "effect": { "sustento": -2, "coesao": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: O solo pedregoso da Ática não produzia trigo suficiente para alimentar a população! Sem o comércio marítimo no Pireu e sem os estrangeiros (*metecos*), Atenas entraria em colapso de abastecimento."
       }
     ]
   },
-  "s_25_a": {
+  "s_25_atenas": {
     "module": "🏛️ Aventura 3 — Vozes na Ágora e Sombras no Senado",
-    "title": "Sessão 2A: As Raízes do Mediterrâneo",
-    "text": "📜 O debate sobre as influências externas amplia a visão crítica dos estudantes sobre a Antiguidade Clássica.",
-    "evidence": "🌍 Pluralidade cultural e circulação de saberes.",
+    "stepLabel": "Etapa 2 de 6 • Democracia Ateniense e Exclusão",
+    "bncc": "EF06HI10 • EF06HI12",
+    "sceneArt": "🏛️ 🗳️ ⏳ 👥 🗣️",
+    "era": "Século de Péricles (~440 a.C.)",
+    "location": "Colina da Pnyx e Ágora de Atenas",
+    "title": "Sessão 2: A Clepsidra na Pnyx — Quem tem Voz na Democracia?",
+    "text": "🏛️ Subindo da Ágora até a **Colina da Pnyx**, vocês encontram milhares de homens reunidos ao ar livre na **Eclésia** (Assembleia Popular). O relógio de água (*clepsidra*) marca o tempo de fala: ali vigora a **democracia direta**, onde os cidadãos votam pessoalmente sobre leis, impostos e guerras, ou escrevem em cacos de cerâmica (*óstrakon*) o nome de quem ameaça a democracia.\n\n👥 Porém, ao redor da colina, vocês conversam com três pessoas barradas pelos guardas: **Melissa** (uma mulher ateniense), **Darius** (um artesão estrangeiro livre, chamado *meteco*, que paga impostos em Atenas há vinte anos) e **Trácio** (um homem escravizado por guerra). Nenhum dos três pode entrar ou votar!",
+    "evidence": "🏺 Fonte Arqueológica: *Óstrakon* (fragmento de cerâmica com nomes gravados para votação de ostracismo) e *Clepsidra* (relógio de água usado nos tribunais e na Eclésia).",
+    "question": "Qual é a diferença fundamental entre o conceito de cidadania na democracia direta de Atenas (século V a.C.) e o conceito de cidadania nas democracias atuais?",
     "choices": [
-      { "text": "🏛️ Seguir para a República Romana para apoiar a greve plebeia no Monte Sagrado.", "target": "s_end_av3", "effect": { "coesao": 1 } }
+      {
+        "text": "⚖️ Caminho A: Reconhecer a importância histórica da democracia ateniense (debate público, sorteio de cargos e voto direto), mas apontar seu caráter excludente, que deixava de fora cerca de 85% da população (mulheres, metecos e escravizados).",
+        "target": "s_26_esparta",
+        "effect": { "coesao": 1, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Leitura histórica impecável! Em Atenas, apenas homens adultos, livres e filhos de pai e mãe atenienses eram cidadãos. Compreender esses limites evita idealizar o passado e mostra que a cidadania plena é uma construção histórica contínua."
+      },
+      {
+        "text": "🏺 Caminho B: Participar da votação do *Ostracismo* gravando no caco de cerâmica o nome de um aristocrata que tenta dar um golpe tirânico em Atenas.",
+        "target": "s_26_esparta",
+        "effect": { "coesao": 1, "memoria": 1 },
+        "feedback": "🗳️ Desdobramento Historiográfico: O ostracismo exilava por 10 anos qualquer cidadão considerado perigoso para as instituições democráticas, protegendo o equilíbrio político da pólis."
+      },
+      {
+        "text": "📢 Caminho C: Afirmar no relatório que Atenas possuía sufrágio universal idêntico ao atual, onde mulheres, estrangeiros e trabalhadores escravizados votavam livremente.",
+        "target": "s_26_esparta",
+        "effect": { "memoria": -2 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Erro grave de interpretação histórica! Confundir a democracia antiga (restrita e escravista) com a democracia contemporânea apaga as lutas históricas de mulheres e trabalhadores por direitos políticos."
+      }
     ]
   },
-  "s_25_b": {
+  "s_25_escravidao": {
     "module": "🏛️ Aventura 3 — Vozes na Ágora e Sombras no Senado",
-    "title": "Sessão 2B: Os Limites da Cidadania",
-    "text": "👥 A constatação de que mulheres, estrangeiros e escravizados não votavam gera profundo debate crítico.",
-    "evidence": "⚖️ Exclusão e privilégios na pólis grega.",
+    "stepLabel": "Etapa 2 de 6 • Trabalho, Mulheres e Cidadania em Atenas",
+    "bncc": "EF06HI10 • EF06HI12 • EF06HI19",
+    "sceneArt": "⛏️ 🏺 👥 🏛️ ⛓️",
+    "era": "Século V a.C.",
+    "location": "Bairro do Cerâmico e Colina da Pnyx — Atenas",
+    "title": "Sessão 2: O Suor sob o Mármore — Quem Sustenta a Pólis?",
+    "text": "⛏️ Ao investigar o bairro das oficinas (*Cerâmico*) e os relatos das minas de prata de Laurion, sua dupla descobre o segredo por trás do brilho de Atenas: enquanto os cidadãos homens debatem filosofia e votam na Assembleia da Pnyx, a economia depende do trabalho de milhares de **escravizados** (prisioneiros de guerra ou comprados) e **metecos** (estrangeiros livres sem direitos políticos).\n\n🏠 Nas casas atenienses, as mulheres cidadãs vivem restritas ao espaço doméstico (*gineceu*), administrando a tecelagem e a economia familiar, mas sem direito a voto ou propriedade da terra.",
+    "evidence": "🏺 Fonte Iconográfica: Vasos gregos em figuras vermelhas retratando mulheres tecendo no gineceu, artesãos pintando cerâmica e mineradores escravizados extraindo prata.",
+    "question": "De que maneira o trabalho dos escravizados, dos metecos e das mulheres tornava possível que os homens cidadãos atenienses tivessem tempo livre (ócio) para participar da democracia direta?",
     "choices": [
-      { "text": "📜 Acompanhar as conquistas da plebe romana e a Lei das Doze Tábuas.", "target": "s_end_av3", "effect": { "memoria": 1 } }
+      {
+        "text": "🔍 Caminho A: Documentar no Diário de Bordo que a democracia direta ateniense dependia estruturalmente do trabalho escravo e da exclusão política de mulheres e estrangeiros.",
+        "target": "s_26_esparta",
+        "effect": { "sustento": 1, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Vocês enxergaram a estrutura completa da sociedade antiga! O tempo livre do cidadão para ir à Ágora e à Eclésia era sustentado pelo trabalho de quem não tinha cidadania."
+      },
+      {
+        "text": "🤝 Caminho B: Propor na Assembleia o pagamento do *Misthoi* (remuneração pública criada por Péricles) para que camponeses e remadores pobres atenienses também possam largar um dia de trabalho para votar.",
+        "target": "s_26_esparta",
+        "effect": { "sustento": 1, "coesao": 1 },
+        "feedback": "✨ Desdobramento Historiográfico: Boa medida! Antes de Péricles, os cidadãos pobres quase não conseguiam participar porque precisavam trabalhar; a remuneração ampliou a participação popular entre os cidadãos livres."
+      },
+      {
+        "text": "⛓️ Caminho C: Aumentar a exploração nas minas de prata e proibir os metecos de comercializar na Ágora.",
+        "target": "s_26_esparta",
+        "effect": { "sustento": -1, "coesao": -2 },
+        "feedback": "⚠️ Desdobramento Historiográfico: A opressão extrema gerou fugas em massa de trabalhadores escravizados e paralisou o comércio artesanal da cidade."
+      }
     ]
   },
-  "s_25_c": {
+  "s_26_esparta": {
     "module": "🏛️ Aventura 3 — Vozes na Ágora e Sombras no Senado",
-    "title": "Sessão 2C: A Sociedade Espartana",
-    "text": "🛡️ O contraste entre esparciatas e hilotas evidencia a rigidez das estruturas de dominação.",
-    "evidence": "⚔️ Sociedade estamental e militarismo.",
+    "stepLabel": "Etapa 3 de 6 • O Modelo Oligárquico Espartano",
+    "bncc": "EF06HI10 • EF06HI12 • EF06HI19",
+    "sceneArt": "🛡️ ⚔️ 🏔️ 🏋️‍♀️ 🌾",
+    "era": "Século V a.C.",
+    "location": "Vale do Rio Eurotas — Esparta (Península do Peloponeso)",
+    "title": "Sessão 3: O Escudo da Lacônia — Esparciatas, Mulheres e Hilotas",
+    "text": "🛡️ Atravessando o Istmo de Corinto até o Peloponeso, o cenário muda completamente. **Esparta** não tem muralhas suntuosas nem assembleias democráticas barulhentas: é uma **oligarquia** ('governo de poucos') comandada pela elite guerreira dos **Esparciatas**, com dois reis, o conselho de anciãos (*Gerúsia*) e os fiscais (*Éforos*).\n\n🏋️‍♀️ Dois fatos surpreendem a sua dupla: primeiro, os meninos esparciatas são levados aos 7 anos para a educação militar rigorosa (**Agogê**), mas as **mulheres espartanas** praticam esportes ao ar livre, administram propriedades e têm muito mais autonomia financeira que as atenienses! Segundo, nos campos ao redor, uma imensa população de servos presos à terra — os **Hilotas** — trabalha sob vigilância armada constante dos guerreiros espartanos.",
+    "evidence": "📜 Fonte Histórica e Material: Estatuetas de bronze de jovens corredoras espartanas e relatos de Plutarco e Xenofonte sobre a *Agogê* e as revoltas dos hilotas na Messênia.",
+    "question": "Por que Esparta se transformou em um Estado permanentemente militarizado? Qual era a relação entre esse militarismo e o medo constante de uma revolta da maioria hilota?",
     "choices": [
-      { "text": "⚖️ Consolidar o estudo comparativo entre as cidades-estado.", "target": "s_end_av3", "effect": { "memoria": 1 } }
+      {
+        "text": "🛡️ Caminho A: Analisar como o militarismo extremo de Esparta (Agogê) servia principalmente para manter submetida a imensa maioria de trabalhadores Hilotas, que superavam os esparciatas em proporção de quase dez para um.",
+        "target": "s_27_roma_secessao",
+        "effect": { "coesao": 1, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Análise certeira! Os esparciatas não podiam dedicar-se ao comércio ou à lavoura porque viviam em alerta permanente para reprimir rebeliões internas dos hilotas que produziam todo o alimento da Lacônia."
+      },
+      {
+        "text": "🏋️‍♀️ Caminho B: Comparar a condição feminina entre as duas pólis, registrando que as mulheres espartanas podiam herdar terras, falar em público e treinar fisicamente, ao contrário do confinamento no gineceu ateniense.",
+        "target": "s_27_roma_secessao",
+        "effect": { "coesao": 1, "memoria": 1 },
+        "feedback": "🌟 Desdobramento Historiográfico: Excelente comparação! Como os homens esparciatas viviam nos quartéis e campanhas militares, as mulheres espartanas geriam a economia das propriedades (chegando a controlar 40% das terras de Esparta!)."
+      },
+      {
+        "text": "⚔️ Caminho C: Apoiar a *Krypteia* (emboscadas noturnas contra os hilotas no campo) para espalhar o terror e aumentar os tributos agrícolas à força.",
+        "target": "s_27_roma_secessao",
+        "effect": { "sustento": -1, "coesao": -2 },
+        "feedback": "⚠️ Desdobramento Historiográfico: A violência brutal desencadeou uma grande revolta dos hilotas na Messênia, paralisando a colheita e desestabilizando toda a sociedade espartana."
+      }
+    ]
+  },
+  "s_27_roma_secessao": {
+    "module": "🏛️ Aventura 3 — Vozes na Ágora e Sombras no Senado",
+    "stepLabel": "Etapa 4 de 6 • A República Romana em Conflito",
+    "bncc": "EF06HI11 • EF06HI12",
+    "sceneArt": "🦅 🏛️ ⛺ ✊ ⚖️",
+    "era": "Início da República Romana (494 a.C.)",
+    "location": "Fórum Romano e Colina do Monte Sagrado — Roma (Península Itálica)",
+    "title": "Sessão 4: A Greve no Monte Sagrado — Patrícios contra Plebeus",
+    "text": "🦅 Cruzando o Mar Jônico até a Península Itálica, vocês desembarcam em **Roma** poucos anos após a expulsão do último rei etrusco e a fundação da **República** (*Res Publica*, 'coisa pública'). Mas há um problema grave: o **Senado** e todos os cargos de Cônsul e Juiz estão monopolizados pelos **Patrícios** (grandes proprietários de terras).\n\n✊ Enquanto isso, os **Plebeus** (camponeses livres, artesãos e comerciantes) formam a espinha dorsal do exército romano nas guerras, mas ao voltarem para casa encontram suas pequenas lavouras arruinadas e acabam **escravizados por dívidas** (*nexum*) pelos próprios patrícios! Cansados da injustiça, os plebeus tomam uma decisão radical: abandonam Roma em massa e acampam no **Monte Sagrado**, recusando-se a lutar no exército e a produzir alimentos até terem direitos!",
+    "evidence": "📜 Fonte Histórica (Tito Lívio, *História de Roma*): Relato da Primeira Secessão da Plebe ao Monte Sagrado em 494 a.C., que deixou o Senado patrício sem soldados e sem abastecimento.",
+    "question": "Por que a retirada estratégica dos plebeus para o Monte Sagrado (recusando o serviço militar e o trabalho) forçou a elite patrícia a negociar?",
+    "choices": [
+      {
+        "text": "✊ Caminho A: Apoiar a mobilização pacífica e organizada da plebe no Monte Sagrado, exigindo a criação imediata de magistrados próprios com poder de proteger os plebeus contra os abusos dos patrícios.",
+        "target": "s_28_doze_tabuas",
+        "effect": { "sustento": 1, "coesao": 2, "memoria": 1 },
+        "feedback": "🏆 Desdobramento Historiográfico: Vocês protagonizaram uma das primeiras grandes greves políticas da História! Sem os soldados e trabalhadores plebeus, Roma ficava indefesa, obrigando o Senado patrício a ceder e criar o cargo de **Tribuno da Plebe**."
+      },
+      {
+        "text": "🏛️ Caminho B: Aceitar voltar ao trabalho em Roma sem exigir nenhuma garantia política nem fim da escravidão por dívidas, confiando apenas nas promessas verbais dos senadores patrícios.",
+        "target": "s_28_doze_tabuas",
+        "effect": { "sustento": -1, "coesao": -2 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Sem garantias institucionais, os patrícios retomaram imediatamente as cobranças abusivas de juros, transformando dezenas de famílias camponesas livres em escravizadas por dívidas."
+      },
+      {
+        "text": "🤝 Caminho C: Negociar um pacto político que mantenha a defesa de Roma contra invasores externos, mas sob a condição inegociável de eleger uma Assembleia da Plebe (*Concilium Plebis*).",
+        "target": "s_28_doze_tabuas",
+        "effect": { "coesao": 1, "memoria": 1 },
+        "feedback": "⚖️ Desdobramento Historiográfico: A pressão coletiva abriu espaço para que os plebeus conquistassem voz institucional dentro da República Romana."
+      }
+    ]
+  },
+  "s_28_doze_tabuas": {
+    "module": "🏛️ Aventura 3 — Vozes na Ágora e Sombras no Senado",
+    "stepLabel": "Etapa 5 de 6 • As Conquistas Jurídicas da Plebe",
+    "bncc": "EF06HI12 • EF06HI15",
+    "sceneArt": "📜 🏛️ 🛡️ ⚖️ 🔨",
+    "era": "República Romana (~450 a.C. a 326 a.C.)",
+    "location": "Rostra do Fórum Romano — Roma",
+    "title": "Sessão 5: O Bronze no Fórum — Tribunos e a Lei das Doze Tábuas",
+    "text": "🏛️ De volta ao **Fórum Romano**, o coração político da cidade, o **Tribuno da Plebe** ergue a mão e pronuncia uma única palavra latina diante de uma ordem injusta de um cônsul patrício: ***'VETO!'*** ('Eu proíbo!'). O Tribuno é considerado sagrado e inviolável.\n\n📜 Mas ainda resta uma armadilha: as leis de Roma são guardadas em segredo na memória oral dos sacerdotes e juízes patrícios, que sempre interpretam as regras a seu favor nos tribunais. Os plebeus exigem que as leis sejam redigidas e pregadas em **Doze Tábuas de Bronze** no meio do Fórum para que todos possam ler!",
+    "evidence": "📜 Fonte Jurídica Romana: Fragmentos da **Lei das Doze Tábuas** (450 a.C., primeira legislação escrita de Roma), acompanhada pela *Lei Canuleia* (casamento entre patrícios e plebeus) e *Lei Poetelia Papiria* (fim da escravidão por dívidas para cidadãos romanos).",
+    "question": "Qual é a importância histórica de uma sociedade conquistar leis escritas e públicas (como a Lei das Doze Tábuas) em vez de depender de leis orais secretas controladas por uma elite?",
+    "choices": [
+      {
+        "text": "📜 Caminho A: Exigir a fixação das **Doze Tábuas de Bronze** no Fórum Romano e lutar pelas leis seguintes (fim da escravidão por dívidas e acesso dos plebeus ao Consulado e ao Senado).",
+        "target": "s_28_imperio_legado",
+        "effect": { "sustento": 1, "coesao": 2, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Marco histórico do Direito Ocidental! Com a Lei das Doze Tábuas exposta em praça pública, nenhum juiz patrício podia inventar regras secretas. Ao longo de dois séculos de lutas, a plebe conquistou também a abolição da escravidão por dívidas (326 a.C.) e os plebiscitos com força de lei!"
+      },
+      {
+        "text": "🛡️ Caminho B: Utilizar o poder de *Veto* do Tribuno da Plebe para impedir cobranças abusivas de impostos de guerra sobre os pequenos agricultores.",
+        "target": "s_28_imperio_legado",
+        "effect": { "sustento": 1, "coesao": 1 },
+        "feedback": "⚖️ Desdobramento Historiográfico: O direito de veto (*intercessio*) dos Tribunos da Plebe tornou-se um freio fundamental contra o autoritarismo do Senado."
+      },
+      {
+        "text": "🤫 Caminho C: Deixar que apenas o colégio de pontífices patrícios guarde o texto das leis trancado nos templos.",
+        "target": "s_28_imperio_legado",
+        "effect": { "coesao": -1, "memoria": -2 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Quando a lei não é pública nem acessível, prevalece o arbítrio dos mais poderosos. A pressão popular logo obrigou a publicação das tábuas no Fórum."
+      }
+    ]
+  },
+  "s_28_imperio_legado": {
+    "module": "🏛️ Aventura 3 — Vozes na Ágora e Sombras no Senado",
+    "stepLabel": "Etapa 6 de 6 • Expansão Romana, Engenharia e Contradições",
+    "bncc": "EF06HI11 • EF06HI13 • EF06HI15",
+    "sceneArt": "🛣️ 🏟️ ⛲ ⚔️ 🌾",
+    "era": "Transição da República ao Alto Império Romano (~73 a.C. a 100 d.C.)",
+    "location": "Via Ápia, Aquedutos e Anfiteatro de Roma",
+    "title": "Sessão 6: Estradas de Pedra, Aquedutos e a Revolta de Espártaco",
+    "text": "🛣️ Com as conquistas militares ao redor de todo o Mar Mediterrâneo (que os romanos passam a chamar de *Mare Nostrum*), Roma transforma-se na maior metrópole do mundo antigo. Vocês caminham sobre as pedras perfeitamente encaixadas da **Via Ápia** e observam os arcos monumentais dos **Aquedutos**, que trazem milhões de litros de água limpa por dia para fontes públicas e termas.\n\n⚔️ Contudo, a riqueza das conquistas concentrou terras em imensos **latifúndios escravistas**: milhões de prisioneiros de guerra trabalham acorrentados nos campos e nas escolas de gladiadores (levando à gigantesca revolta liderada por **Espártaco**), enquanto os camponeses livres arruinados incham as cidades e recebem da elite a política do **Pão e Circo** (trigo subsidiado e espetáculos de gladiadores e corridas de bigas).",
+    "evidence": "🏛️ Fonte Material e Histórica: Arcos de aquedutos romanos, marcos miliários das estradas, inscrições de Pompeia e relatos sobre a revolta escrava de Espártaco (73–71 a.C.) e a reforma agrária proposta pelos irmãos Tibério e Caio Graco.",
+    "question": "Como a expansão militar de Roma gerou, ao mesmo tempo, obras grandiosas de engenharia pública e uma profunda crise social no campo e nas cidades?",
+    "choices": [
+      {
+        "text": "⚖️ Caminho A: Analisar as duas faces do mundo romano: valorizar o legado técnico da engenharia (aquedutos, estradas, saneamento e direito), mas denunciar a brutalidade do escravismo em massa e a concentração de terras.",
+        "target": "s_end_av3",
+        "effect": { "sustento": 1, "coesao": 1, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Visão histórica madura e completa! Roma legou o idioma latim (pai do português), o Direito Civil e técnicas brilhantes de engenharia, mas sua estrutura econômica escravista e latifundiária gerou intensas lutas sociais, como as tentativas de reforma agrária dos irmãos Graco e a rebelião de Espártaco."
+      },
+      {
+        "text": "🌾 Caminho B: Apoiar as propostas dos tribunos Tibério e Caio Graco para limitar o tamanho dos latifúndios nas terras públicas (*ager publicus*) e distribuir lotes aos camponeses sem-terra.",
+        "target": "s_end_av3",
+        "effect": { "sustento": 1, "coesao": 1 },
+        "feedback": "✨ Desdobramento Historiográfico: Os irmãos Graco perceberam que a ruína dos pequenos agricultores destruía a base social da República, embora a elite senatorial tenha reagido com violência para impedir a reforma."
+      },
+      {
+        "text": "🏟️ Caminho C: Ignorar a crise dos camponeses e as revoltas de escravizados, distraindo a população urbana apenas com jogos sangrentos na arena.",
+        "target": "s_end_av3",
+        "effect": { "sustento": -1, "coesao": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: A política do 'Pão e Circo' aliviava tensões imediatas na capital, mas não resolvia a dependência estrutural do trabalho escravo, que cobrará seu preço na crise final do Império!"
+      }
     ]
   },
   "s_end_av3": {
-    "module": "🏛️ Aventura 3 — Epílogo",
-    "title": "Epílogo da Aventura 3: Entre a Ágora e o Fórum",
-    "text": "🏆 Você explorou as bases da civilização clássica, os limites da cidadania e as lutas sociais em Roma e na Grécia!",
-    "evidence": "📚 Habilidades EF06HI09 a EF06HI12 consolidadas.",
+    "module": "🏛️ Aventura 3 — Epílogo Pedagógico (3º Bimestre)",
+    "stepLabel": "Jornada Concluída • Síntese do 3º Bimestre",
+    "bncc": "EF06HI09 a EF06HI15 Consolidadas",
+    "sceneArt": "🏆 🏛️ 🗳️ 🦅 📜",
+    "era": "Síntese da Antiguidade Clássica e Mediterrânea",
+    "location": "Entre a Ágora de Atenas e o Fórum de Roma",
+    "title": "Epílogo: Vozes da Cidadania e Lutas Sociais no Mundo Antigo",
+    "text": "🌟 **Parabéns, Investigadores do Tempo!** Sua dupla concluiu a investigação sobre o Mediterrâneo Antigo, a Grécia e Roma!\n\nAo longo desta aventura, vocês demonstraram que:\n1️⃣ **O Mediterrâneo foi um espaço de trocas plurais:** A cultura clássica nasceu do diálogo intenso com povos africanos e asiáticos (egípcios, fenícios, mesopotâmicos e persas).\n2️⃣ **Grécia Antiga era diversa e contraditória:** Atenas criou a democracia direta para seus cidadãos homens, mas excluiu mulheres, estrangeiros (*metecos*) e escravizados; já Esparta estruturou uma oligarquia militarizada para dominar os servos *hilotas*, embora garantisse maior autonomia econômica às mulheres espartanas.\n3️⃣ **Em Roma, direitos foram conquistados com luta:** Através da greve no Monte Sagrado, os plebeus arrancaram do Senado patrício os **Tribunos da Plebe**, a **Lei das Doze Tábuas** e o fim da escravidão por dívidas!",
+    "evidence": "📓 Dica para o Diário de Bordo: Usem o botão 'Diário de Bordo' na Ficha do Jogador para revisar todas as fontes analisadas neste 3º Bimestre!",
+    "question": "Qual conquista dos plebeus romanos (Tribuno da Plebe, Lei escrita das Doze Tábuas ou fim da escravidão por dívidas) vocês consideram mais importante para a ideia de justiça até os dias de hoje?",
     "choices": [
-      { "text": "🔄 Reiniciar Aventura 3", "target": "s_24", "effect": {}, "feedback": "Reiniciando o ciclo clássico..." }
+      {
+        "text": "🏰 Avançar para a Aventura 4: A Queda das Fronteiras e os Senhores da Terra (Idade Média)",
+        "nextAdventure": "aventura4.json"
+      },
+      {
+        "text": "🔄 Jogar Novamente a Aventura 3 (Testar outros caminhos)",
+        "reset": true
+      },
+      {
+        "text": "🏠 Voltar ao Salão Principal (Menu de Aventuras)",
+        "goHome": true
+      }
     ]
   }
 }
