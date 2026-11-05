@@ -1,94 +1,65 @@
 {
   "s_12": {
-    "module": "Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
-    "title": "Sessão 1: As Comportas de Ur e a Cheia Impetuosa",
-    "text": "O calor derrete a neve ao norte e faz as águas do rio Eufrates subirem rapidamente na Babilônia. No horizonte, os degraus do zigurate dominam a planície. O fiscal do palácio verifica quem limpou as valas de irrigação antes da cheia.",
-    "evidence": "Pista Material: Enxadas com lâmina de bronze e comporta de madeira represando o canal.",
+    "module": "🌊 Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
+    "title": "Sessão 1: A Cheia Impetuosa do Eufrates",
+    "text": "🌊 O calor derrete a neve ao norte e faz as águas do rio Eufrates subirem rapidamente na Babilônia. No horizonte, os degraus do zigurate dominam a planície. O fiscal do palácio convoca os camponeses para a manutenção dos canais de irrigação.",
+    "evidence": "🏺 Pista Material: Enxadas de bronze e comportas de madeira represando o fluxo agrícola.",
     "choices": [
-      { "text": "Caminho A: Reunir vizinhos para reforçar o dique com tijolos de barro e abrir valas de drenagem.", "target": "s_13", "effect": { "sustento": 1, "coesao": 1 } },
-      { "text": "Caminho B: Abrir uma fenda clandestina no dique para desviar água só para o próprio lote.", "target": "s_14", "effect": { "sustento": -1, "coesao": -1 } },
-      { "text": "Caminho C: Cruzar os braços e esperar a natureza fazer tudo sozinha.", "target": "s_15_err", "effect": { "sustento": -1, "memoria": -1 } }
+      { 
+        "text": "👥 Caminho A: Organizar o mutirão comunitário para reforçar os diques e limpar as valas coletivas.", 
+        "target": "s_13_a", 
+        "effect": { "sustento": 1, "coesao": 1 },
+        "feedback": "🌾 Desdobramento: O trabalho coletivo disciplinado domesticou a cheia do rio e garantiu uma colheita farta de cevada para o vilarejo."
+      },
+      { 
+        "text": "🤫 Caminho B: Desviar clandestinamente a água para irrigar apenas o seu próprio lote de plantação.", 
+        "target": "s_13_b", 
+        "effect": { "sustento": -1, "coesao": -1 },
+        "feedback": "⚠️ Desdobramento: O desvio individualista alagou a lavoura dos vizinhos e chamou a atenção imediata dos guardas do palácio."
+      },
+      { 
+        "text": "⏳ Caminho C: Ignorar os chamados do templo e cruzar os braços esperando a enchente passar.", 
+        "target": "s_13_c", 
+        "effect": { "sustento": -2, "memoria": -1 },
+        "feedback": "☀️ Desdobramento: Sem manutenção, os canais secaram sob o sol e a terra estéril gerou escassez severa de alimentos."
+      }
     ]
   },
-  "s_13": {
-    "module": "Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
-    "title": "Sessão 2: O Trabalho Coletivo nas Valas",
-    "text": "Dezenas de famílias trabalham lado a lado erguendo barreiras de argila. A força bruta do Eufrates é domada de forma controlada sobre os campos de cevada.",
-    "evidence": "Consequência: Obras hidráulicas fortalecem a organização e a produção agrícola.",
+  "s_13_a": {
+    "module": "🌊 Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
+    "title": "Sessão 2A: O Celeiro do Templo",
+    "text": "🏛️ Com a colheita garantida, os grãos excedentes devem ser levados ao centro político-religioso.",
+    "evidence": "📜 Controle estatal e tributação na Mesopotâmia.",
     "choices": [
-      { "text": "Seguir com a colheita para o pátio dos escribas no zigurate.", "target": "s_15", "effect": { "memoria": 1 } }
+      { "text": "📜 Registrar os tributos no tablete de argila com escrita cuneiforme.", "target": "s_end_av2", "effect": { "memoria": 2 }, "feedback": "✍️ O registro oficial assegurou a contabilidade do Estado e o controle dos estoques." },
+      { "text": "⚖️ Visitar a Estela de Hamurabi na praça para conhecer as leis escritas.", "target": "s_end_av2", "effect": { "memoria": 1 }, "feedback": "🏛️ A observação das leis públicas consolidou a noção de justiça e hierarquia social." }
     ]
   },
-  "s_14": {
-    "module": "Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
-    "title": "Sessão 3: O Rompimento do Dique",
-    "text": "A fenda aberta às escondidas alarga-se e inunda as terras vizinhas. Na manhã seguinte, o fiscal real rastreia a lama até a sua enxada.",
-    "evidence": "Consequência: Punição e prejuízo comunitário.",
+  "s_13_b": {
+    "module": "🌊 Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
+    "title": "Sessão 2B: O Tribunal do Zigurate",
+    "text": "⚖️ Conduzido perante os juízes do templo por causa do dique rompido, você precisa responder pelos danos causados à comunidade.",
+    "evidence": "⚖️ Aplicação das normas jurídicas mesopotâmicas.",
     "choices": [
-      { "text": "Comparecer ao tribunal administrativo do zigurate.", "target": "s_15", "effect": {} }
+      { "text": "🤝 Aceitar a penalidade de reparação coletiva e trabalho nos canais.", "target": "s_end_av2", "effect": { "coesao": 1 }, "feedback": "💪 O cumprimento da pena restaurou a ordem no vilarejo e reparou o dique." }
     ]
   },
-  "s_15_err": {
-    "module": "Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
-    "title": "Sessão 4: A Ilusão da 'Dádiva' Passiva",
-    "text": "Sem a abertura de canais, o solo da mesopotâmia racha sob o sol de quarenta graus. Determinismo geográfico gera esterilidade.",
-    "evidence": "Erro conceitual: O Crescente Fértil exigia engenharia humana constante.",
+  "s_13_c": {
+    "module": "🌊 Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
+    "title": "Sessão 2C: A Crise da Seca",
+    "text": "🏜️ A falta de irrigação cobra seu preço. O grupo precisa buscar alternativas de sobrevivência.",
+    "evidence": "⚠️ O risco histórico do determinismo geográfico passivo.",
     "choices": [
-      { "text": "Retomar a negociação de sementes no zigurate.", "target": "s_15", "effect": { "memoria": -1 } }
-    ]
-  },
-  "s_15": {
-    "module": "Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
-    "title": "Sessão 5: O Tablete de Argila e a Escrita",
-    "text": "No pátio do zigurate, o escriba pressiona o estilete no barro fresco gravando sinais em forma de cunha (escrita cuneiforme) para registrar os tributos de cevada.",
-    "evidence": "Tablete de argila com registros contábeis e fiscais do Estado.",
-    "choices": [
-      { "text": "Exigir o registro oficial no tablete com o selo cilíndrico e testemunhas.", "target": "s_16", "effect": { "memoria": 2, "sustento": 1 } }
-    ]
-  },
-  "s_16": {
-    "module": "Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
-    "title": "Sessão 8: Diante da Estela de Hamurabi",
-    "text": "Na praça central ergue-se uma coluna de basalto negro com 282 artigos de leis gravados, incluindo a distinção de penas conforme a camada social (§ 196 e § 198).",
-    "evidence": "Estela jurídica do Código de Hamurabi e estratificação social.",
-    "choices": [
-      { "text": "Reconhecer a desigualdade jurídica da lei e seguir em caravana rumo ao Egito.", "target": "s_17_egito", "effect": { "memoria": 2, "coesao": 1 } }
-    ]
-  },
-  "s_17_egito": {
-    "module": "Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
-    "title": "Sessão 13: O Nilômetro de Tebas",
-    "text": "No Antigo Egito, os sacerdotes medem a cheia no nilômetro. O lodo fértil (húmus) cobre as margens, exigindo o esforço coletivo dos camponeses na abertura de canais e no uso do shaduf.",
-    "evidence": "Engenharia hidráulica e servidão coletiva nas margens do Nilo.",
-    "choices": [
-      { "text": "Organizar a abertura de valas e o trabalho nas obras públicas (corveia real).", "target": "s_18_kush", "effect": { "sustento": 1, "memoria": 1 } }
-    ]
-  },
-  "s_18_kush": {
-    "module": "Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
-    "title": "Sessão 25: As Fornos de Ferro de Meroé",
-    "text": "Subindo o Nilo rumo ao sul, a expedição atinge o Reino de Kush na Núbia. A savana exibe fornos de fundição de ferro, pirâmides núbias e inscrições em escrita meroítica sob o governo das rainhas Candaces.",
-    "evidence": "Soberania tecnológica africana e poder político feminino das Candaces.",
-    "choices": [
-      { "text": "Reconhecer a potência metalúrgica de Kush e iniciar o espelhamento com as Américas.", "target": "s_19_americas", "effect": { "memoria": 2, "coesao": 1 } }
-    ]
-  },
-  "s_19_americas": {
-    "module": "Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
-    "title": "Sessão 30: As Chinampas e os Quipus Incas",
-    "text": "Na Mesoamérica e nos Andes, os astecas cultivam as chinampas sobre os lagos e os incas moldam terraços agrícolas (andenes), registrando dados estatais com nós em cordões (quipus).",
-    "evidence": "Códices, chinampas, andenes e quipus como sistemas de alta engenharia e registro.",
-    "choices": [
-      { "text": "Concluir com êxito a Aventura 2 e preparar a transição para a Grécia e Roma.", "target": "s_end_av2", "effect": { "sustento": 1, "memoria": 2 } }
+      { "text": "🤲 Pedir auxílio aos armazéns do templo e firmar compromisso de trabalho.", "target": "s_end_av2", "effect": { "sustento": 1 }, "feedback": "🌾 O auxílio foi concedido em troca de obrigações de servidão temporária ao templo." }
     ]
   },
   "s_end_av2": {
-    "module": "Aventura 2 — Fim da Jornada do 2º Bimestre",
+    "module": "🌊 Aventura 2 — Epílogo",
     "title": "Epílogo da Aventura 2: Os Construtores de Rios",
-    "text": "Do vale do Tigre ao Nilo e aos Andes, sua turma compreendeu a relação entre o controle das águas, a escrita e as formas de trabalho na Antiguidade.",
-    "evidence": "Habilidades EF06HI07, EF06HI05 e EF06HI08 consolidadas.",
+    "text": "🏆 Você completou a viagem pelas civilizações hidráulicas, compreendendo o papel da engenharia, da escrita e do trabalho coletivo.",
+    "evidence": "📚 Habilidades EF06HI07 e EF06HI08 consolidadas.",
     "choices": [
-      { "text": "Reiniciar Aventura 2", "target": "s_12", "effect": {} }
+      { "text": "🔄 Reiniciar Aventura 2", "target": "s_12", "effect": {}, "feedback": "Reiniciando o ciclo das águas..." }
     ]
   }
 }
