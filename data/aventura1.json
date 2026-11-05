@@ -1,67 +1,252 @@
 {
   "s_1": {
     "module": "🔥 Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
-    "title": "Sessão 1: O Vento Frio do Alvorecer",
-    "text": "❄️ O sol ainda não rompeu a linha das colinas, mas o vento que desce das áreas cobertas de gelo atinge o acampamento trazendo um cheiro forte de geada e grama seca. O fogo central da caverna reduziu-se a brasa viva sob uma camada de cinzas. Na entrada do abrigo, as crianças choram com frio e a carne seca nos cestos de junco garante mantimento para apenas mais dois dias.",
-    "evidence": "🏺 Pista Material: Restos de carvão triturados e ossos raspados de antílope no fundo da lareira de pedra.",
+    "stepLabel": "Etapa 1 de 6 • Paleolítico Superior",
+    "bncc": "EF06HI01 • EF06HI02 • EF06HI03",
+    "sceneArt": "❄️ 🔥 🦣 🪨 🌬️",
+    "era": "Pleistoceno Tardio (~40.000 AP)",
+    "location": "Abrigo Rochoso nas Colinas Glaciais",
+    "title": "Sessão 1: O Vento Frio do Alvorecer e a Brasa Viva",
+    "text": "❄️ O sol ainda não rompeu a linha das colinas, mas o vento que desce das geleiras atinge o acampamento trazendo cheiro de geada e estepe seca. No centro da gruta, o fogo coletivo reduziu-se a uma única brasa sob as cinzas.\n\n🍖 Nos cestos de fibras trançadas, a carne seca e as raízes garantem sustento por apenas dois dias. Os anciãos alertam que deixar o fogo morrer significa ficar à mercê dos grandes predadores noturnos e do congelamento, enquanto os jovens caçadores pressionam para sair imediatamente atrás de uma manada de renas.",
+    "evidence": "🏺 Vestígio Arqueológico: Lareiras circulares de pedra contendo carvão vegetal, ossos calcinados de antílope e lascas de sílex usadas para raspar peles.",
+    "question": "Por que o domínio do fogo e a cooperação entre diferentes gerações foram decisivos para a sobrevivência dos primeiros grupos humanos?",
     "choices": [
-      { 
-        "text": "🌲 Caminho A: Deslocar todo o clã para uma área mais baixa e aberta no sopé da colina em busca de caça maior.", 
-        "target": "s_2_a", 
+      {
+        "text": "🛡️ Caminho A: Dividir tarefas com equilíbrio — um grupo protege e alimenta a brasa com resina e esterco seco, enquanto batedores buscam lenha e caça menor.",
+        "target": "s_2_abrigo",
+        "effect": { "sustento": 1, "coesao": 1 },
+        "feedback": "✨ Desdobramento Historiográfico: A divisão social do trabalho e a conservação do fogo garantiram calor, proteção contra predadores e o cozimento de alimentos fibrosos, facilitando a digestão e fortalecendo a união do bando."
+      },
+      {
+        "text": "🏹 Caminho B: Abandonar a guarda da fogueira e lançar todo o clã na planície gelada para perseguir a manada antes que ela atravesse o vale.",
+        "target": "s_2_cacada",
+        "effect": { "sustento": 1, "coesao": -1, "memoria": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: O grupo abateu um animal jovem, mas a marcha forçada no vento glacial exauriu os anciãos e deixou a brasa do abrigo apagar, exigindo esforço dobrado para produzir fogo por fricção."
+      },
+      {
+        "text": "🔥 Caminho C: Queimar toda a reserva de madeira e galhos secos de uma só vez na entrada da caverna para aquecer o grupo rapidamente.",
+        "target": "s_2_abrigo",
         "effect": { "sustento": -1, "coesao": -1 },
-        "feedback": "⚠️ Desdobramento: Mover o grupo sob o vento gélido sem abrigo fixo esgotou as energias dos mais velhos e fez o clã perder parte das sementes guardadas."
-      },
-      { 
-        "text": "🛡️ Caminho B: Manter o grupo no abrigo protegido, enviando batedores para caça menor e coleta de raízes.", 
-        "target": "s_2_b", 
-        "effect": { "coesao": 1 },
-        "feedback": "✨ Desdobramento: A prudência de permanecer no abrigo evitou o congelamento do grupo e garantiu a partilha segura dos recursos armazenados."
-      },
-      { 
-        "text": "🔥 Caminho C: Tentar acender fogueiras rápidas na entrada da caverna sem verificar a direção do vento gelado.", 
-        "target": "s_2_c", 
-        "effect": { "sustento": -1, "memoria": -1 },
-        "feedback": "💨 Desdobramento: O vento soprou a fumaça para dentro do abrigo, intoxicando levemente as crianças e estragando parte da carne seca."
+        "feedback": "💨 Desdobramento Historiográfico: O consumo imediato sem planejamento esgotou o combustível antes do cair da noite e encheu o fundo da gruta de fumaça densa, gerando conflito entre as famílias do clã."
       }
     ]
   },
-  "s_2_a": {
+  "s_2_abrigo": {
     "module": "🔥 Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
-    "title": "Sessão 2A: A Planície Inóspita",
-    "text": "💨 Na planície aberta, o vento castiga o grupo. Vocês precisam decidir urgentemente onde fixar acampamento provisório antes que a noite caia.",
-    "evidence": "🏔️ Desafio geográfico e adaptação climática no Paleolítico.",
+    "stepLabel": "Etapa 2 de 6 • Cultura Material e Imaterial",
+    "bncc": "EF06HI01 • EF06HI02",
+    "sceneArt": "🎨 🖐️ 🦌 🔦 🪨",
+    "era": "Paleolítico Superior (~30.000 AP)",
+    "location": "Salão Interno da Caverna de Calcário",
+    "title": "Sessão 2: As Paredes que Falam e o Ocre Vermelho",
+    "text": "🔥 Com o fogo estabilizado, a luz trêmula das tochas de gordura animal projeta sombras nas paredes de rocha. A anciã guardiã das histórias tritura hematita (óxido de ferro) com água e gordura sobre uma pedra côncava, produzindo pigmento vermelho e amarelo.\n\n📜 Ela convoca os jovens: é preciso registrar nas paredes a anatomia dos animais, a época das migrações e as marcas das mãos do clã para que as próximas gerações saibam ler o território.",
+    "evidence": "🎨 Fonte Material: Pinturas rupestres em negativo (mãos estêncil sopradas com canudos de osso) e representações de manadas feitas com carvão e ocre.",
+    "question": "A ausência de escrita alfabética significa que os povos pré-históricos não tinham história? Qual o papel da arte rupestre e da oralidade?",
     "choices": [
-      { "text": "⛰️ Subir o afloramento rochoso em busca de uma nova gruta seca.", "target": "s_end_av1", "effect": { "memoria": 1 }, "feedback": "🗿 A escolha por um novo abrigo rochoso garantiu segurança contra predadores noturnos." },
-      { "text": "👥 Tentar negociar abrigo com um clã rival acampado na margem do rio.", "target": "s_end_av1", "effect": { "coesao": -1, "sustento": 1 }, "feedback": "🤝 A troca de recursos evitou o conflito direto, mas gerou desconfiança inicial entre os grupos." }
+      {
+        "text": "🖌️ Caminho A: Participar do ritual coletivo de pintura rupestre e ouvir os relatos orais dos anciãos sobre as rotas seguras das manadas.",
+        "target": "s_3_beringia",
+        "effect": { "coesao": 1, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Vocês produziram uma fonte histórica visual duradoura! A arte rupestre e a tradição oral funcionavam como verdadeiras bibliotecas vivas, transmitindo técnicas de caça, identidade e cosmovisão."
+      },
+      {
+        "text": "⛏️ Caminho B: Priorizar apenas o lascamento de pontas de pedra, tratando as pinturas e histórias dos mais velhos como perda de tempo.",
+        "target": "s_3_beringia",
+        "effect": { "sustento": 1, "memoria": -2 },
+        "feedback": "⚠️ Desdobramento Historiográfico: O grupo fabricou boas lâminas de sílex, mas ao desprezar a memória oral e os mapas simbólicos da caverna, os jovens perderam o conhecimento acumulado sobre os ciclos das estações."
+      },
+      {
+        "text": "🤝 Caminho C: Combinar a oficina de pedra lascada com os cantos narrativos, ensinando cada criança a lascar sílex enquanto memoriza os caminhos do vale.",
+        "target": "s_3_beringia",
+        "effect": { "sustento": 1, "memoria": 1 },
+        "feedback": "✨ Desdobramento Historiográfico: Técnica material (cultura lítica) e saber imaterial (oralidade) caminharam juntos, preparando o clã para as grandes migrações climáticas."
+      }
     ]
   },
-  "s_2_b": {
+  "s_2_cacada": {
     "module": "🔥 Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
-    "title": "Sessão 2B: A Sabedoria do Abrigo",
-    "text": "🌿 Com o grupo seguro na caverna, é hora de decidir como aproveitar o tempo enquanto o temporal uiva lá fora.",
-    "evidence": "🎨 Preservação da cultura material e imaterial.",
+    "stepLabel": "Etapa 2 de 6 • Tecnologia Lítica e Registro",
+    "bncc": "EF06HI02 • EF06HI04",
+    "sceneArt": "🏹 🪨 🦬 ❄️ 🎨",
+    "era": "Paleolítico Superior (~30.000 AP)",
+    "location": "Vale Congelado e Paredão Rochoso",
+    "title": "Sessão 2: O Lascamento da Pedra e o Registro da Caçada",
+    "text": "🏹 Na estepe gelada, as lanças de madeira sem ponta de pedra quebram ao atingir o couro espesso dos grandes herbívoros. O grupo encontra um afloramento de sílex e quartzo próximo a um paredão rochoso.\n\n🪨 Antes de seguir a migração dos animais rumo às terras do leste, vocês precisam aperfeiçoar os instrumentos e decidir como deixar registrado para os outros bandos o caminho percorrido.",
+    "evidence": "🪨 Fonte Arqueológica: Bifaces, raspadores e pontas de projétil produzidos por percussão direta pedra contra pedra e retoque com chifre de cervo.",
+    "question": "Como um simples fragmento de pedra lascada permite ao arqueólogo descobrir o modo de vida e a alimentação de um grupo humano antigo?",
     "choices": [
-      { "text": "🎨 Registrar cenas de caça e o cotidiano do clã nas paredes usando ocre vermelho.", "target": "s_end_av1", "effect": { "memoria": 2 }, "feedback": "🖌️ As pinturas rupestres reforçaram a transmissão de saberes e a identidade cultural do grupo." },
-      { "text": "🏹 Enviar os jovens para testar novas pontas de sílex lascado nas redondezas.", "target": "s_end_av1", "effect": { "sustento": 1 }, "feedback": "⛏️ O teste tecnológico aprimorou a eficácia das ferramentas de caça para o próximo ciclo." }
+      {
+        "text": "⛏️ Caminho A: Aperfeiçoar as pontas de lança por percussão cuidadosa e gravar na rocha os símbolos da trilha da manada.",
+        "target": "s_3_beringia",
+        "effect": { "sustento": 1, "memoria": 1 },
+        "feedback": "✨ Desdobramento Historiográfico: O domínio do lascamento aumentou a eficiência da caça e as gravuras rupestres (petróglifos) preservaram a memória geográfica da rota."
+      },
+      {
+        "text": "⚡ Caminho B: Quebrar as pedras às pressas sem técnica e avançar sem deixar marcas ou sinais para o restante do clã.",
+        "target": "s_3_beringia",
+        "effect": { "sustento": -1, "coesao": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Muitas lâminas quebraram no primeiro uso e a falta de comunicação visual fragmentou os grupos que vinham atrás."
+      },
+      {
+        "text": "🔥 Caminho C: Reunir os caçadores e anciãos ao redor de uma fogueira abrigada para compartilhar a carne e ensinar a técnica do propulsor de dardos (estólica).",
+        "target": "s_3_beringia",
+        "effect": { "sustento": 1, "coesao": 1 },
+        "feedback": "🎯 Desdobramento Historiográfico: O uso do propulsor multiplicou o alcance e a força dos dardos sem exigir combate corporal próximo aos animais perigosos."
+      }
     ]
   },
-  "s_2_c": {
+  "s_3_beringia": {
     "module": "🔥 Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
-    "title": "Sessão 2C: O resgate do Fogo",
-    "text": "🌍 A fumaça tomou conta do ambiente. O fogo central corre o risco de se apagar completamente se uma atitude rápida não for tomada.",
-    "evidence": "⚡ A importância vital do domínio e conservação do fogo.",
+    "stepLabel": "Etapa 3 de 6 • O Povoamento da América",
+    "bncc": "EF06HI03 • EF06HI04",
+    "sceneArt": "🌊 🧊 🛶 🗺️ 👣",
+    "era": "Último Máximo Glacial (~20.000 a 14.000 AP)",
+    "location": "Estreito de Beríngia e Costa do Pacífico",
+    "title": "Sessão 3: A Grande Travessia rumo a um Novo Continente",
+    "text": "🧊 Gerações se passaram. Com o avanço das geleiras, o nível dos oceanos baixou mais de cem metros, expondo uma imensa ponte terrestre de tundra entre a Ásia (Sibéria) e a América do Norte: a **Beríngia**. Ao mesmo tempo, junto à costa do Pacífico, bolsões livres de gelo oferecem cardumes de peixes, algas e mamíferos marinhos.\n\n🗺️ Seu grupo está diante da decisão que mudará a história da humanidade: qual rota e estratégia adotar para adentrar o continente americano?",
+    "evidence": "🧬 Evidência Científica: Estudos genéticos, geológicos e arqueológicos que comprovam múltiplas vagas migratórias (terrestres por Beríngia e costeiras pelo Pacífico).",
+    "question": "Compare a hipótese da rota terrestre (Beríngia) com a rota costeira/transpacífica: por que hoje a ciência aceita que o povoamento da América ocorreu por múltiplos caminhos e épocas?",
     "choices": [
-      { "text": "🌍 Abafar o excesso de fumaça com terra úmida e reorganizar a ventilação.", "target": "s_end_av1", "effect": { "coesao": 1 }, "feedback": "🛠️ A intervenção técnica salvou a brasa e restabeleceu o conforto térmico do abrigo." },
-      { "text": "💧 Despejar a preciosa água dos odres para apagar os focos de fumaça densa.", "target": "s_end_av1", "effect": { "sustento": -2 }, "feedback": "⚠️ A água foi desperdiçada, deixando o clã vulnerável à desidratação no dia seguinte." }
+      {
+        "text": "🦣 Caminho A (Rota Terrestre de Beríngia): Seguir as manadas da megafauna pela ponte terrestre da Beríngia usando agasalhos de pele costurados com agulhas de osso.",
+        "target": "s_4_capivara",
+        "effect": { "sustento": 1, "coesao": 1 },
+        "feedback": "👣 Desdobramento Historiográfico: Vocês vivenciaram a clássica rota terrestre pelo Estreito de Bering! A tecnologia de costura em peles e a caça coordenada permitiram cruzar as planícies frias rumo ao interior das Américas."
+      },
+      {
+        "text": "🛶 Caminho B (Rota Costeira de Cabotagem): Deslocar-se pelo litoral do Pacífico em embarcações costeiras, aproveitando peixes, moluscos e florestas de algas (kelp).",
+        "target": "s_4_capivara",
+        "effect": { "sustento": 1, "memoria": 1 },
+        "feedback": "🌊 Desdobramento Historiográfico: Excelente escolha! A hipótese da migração costeira explica como grupos humanos conseguiram descer rapidamente até a América do Sul mesmo quando os corredores terrestres do norte estavam bloqueados por gelo."
+      },
+      {
+        "text": "❄️ Caminho C: Avançar dispersos sobre as geleiras centrais sem observar o comportamento dos animais nem os sinais da costa.",
+        "target": "s_4_capivara",
+        "effect": { "sustento": -1, "coesao": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Ignorar as condições geográficas e ecológicas da glaciação custou caro ao grupo, que sofreu com a escassez de caça até encontrar os vales mais quentes ao sul."
+      }
+    ]
+  },
+  "s_4_capivara": {
+    "module": "🔥 Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
+    "stepLabel": "Etapa 4 de 6 • Arqueologia Brasileira (Piauí)",
+    "bncc": "EF06HI04 • EF06HI05",
+    "sceneArt": "🌵 🪨 🔥 🎨 🦎",
+    "era": "Pleistoceno / Holoceno Antigo",
+    "location": "Boqueirão da Pedra Furada — Serra da Capivara (Piauí, Brasil)",
+    "title": "Sessão 4: Os Paredões Pintados da Serra da Capivara",
+    "text": "🌵 Milhares de anos após as primeiras migrações, seu grupo habita os cânions e abrigos de arenito da atual **Serra da Capivara, no Piauí**. O clima ainda é mais úmido que a caatinga atual, com matas ricas em capivaras, emas, tatus-gigantes e árvores frutíferas.\n\n🎨 Nos paredões da **Pedra Furada**, vocês organizam fogueiras estruturadas com blocos de pedra e pintam cenas vibrantes de dança, caça coletiva, partos e rituais com pigmento vermelho. Milênios no futuro, a arqueóloga brasileira **Niède Guidon** escavará exatamente este solo!",
+    "evidence": "🔬 Sítio Arqueológico da Serra da Capivara (Patrimônio da Humanidade): Mais de 1.300 sítios com pinturas rupestres dinâmicas, artefatos de pedra lascada e vestígios de fogueiras estudados pela equipe de Niède Guidon.",
+    "question": "Por que os achados da arqueóloga Niède Guidon na Serra da Capivara revolucionaram o debate mundial sobre a antiguidade da presença humana no Brasil?",
+    "choices": [
+      {
+        "text": "🎨 Caminho A: Pintar cenas detalhadas da vida cotidiana (danças, caça, acrobacias e rituais) nas rochas abrigadas da chuva e manter as fogueiras delimitadas.",
+        "target": "s_5_lagoasanta",
+        "effect": { "coesao": 1, "memoria": 2 },
+        "feedback": "🏛️ Desdobramento Historiográfico: Graças a esse cuidado, a Tradição Nordeste de arte rupestre na Serra da Capivara tornou-se um dos maiores acervos pré-históricos do planeta, provando a complexidade social dos primeiros habitantes do Brasil!"
+      },
+      {
+        "text": "🪨 Caminho B: Lascar seixos de quartzo e quartzito ao redor da fogueira para cortar carnes, processar vegetais e trabalhar madeira.",
+        "target": "s_5_lagoasanta",
+        "effect": { "sustento": 1, "memoria": 1 },
+        "feedback": "🔍 Desdobramento Historiográfico: Esses instrumentos líticos e o carvão das fogueiras no Boqueirão da Pedra Furada tornaram-se as provas materiais que desafiaram a antiga teoria do 'Clóvis Primeiro'."
+      },
+      {
+        "text": "🔥 Caminho C: Montar o acampamento no fundo de um vale sujeito a enxurradas repentinas, sem proteger as ferramentas nem gravar registros nos abrigos altos.",
+        "target": "s_5_lagoasanta",
+        "effect": { "sustento": -1, "memoria": -1 },
+        "feedback": "🌧️ Desdobramento Historiográfico: As fortes chuvas levaram parte das ferramentas e apagaram os vestígios do acampamento, mostrando como a escolha geográfica do abrigo era vital tanto para a sobrevivência quanto para a preservação arqueológica."
+      }
+    ]
+  },
+  "s_5_lagoasanta": {
+    "module": "🔥 Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
+    "stepLabel": "Etapa 5 de 6 • Luzia e a Megafauna (Minas Gerais)",
+    "bncc": "EF06HI04 • EF06HI05 • EF06HI06",
+    "sceneArt": "🦴 🦥 🐅 🏞️ 💀",
+    "era": "Transição Pleistoceno-Holoceno (~11.500 AP)",
+    "location": "Grutas de Calcário de Lagoa Santa (Minas Gerais, Brasil)",
+    "title": "Sessão 5: O Povo de Luzia e os Gigantes da Megafauna",
+    "text": "🏞️ Descendo para o planalto central brasileiro, seu bando chega à região de **Lagoa Santa (Minas Gerais)**, cercada por lagoas e grutas como a **Lapa Vermelha**. Na paisagem caminham animais colossais da **Megafauna**: a preguiça-gigante (*Eremotherium*), o tatu-gigante (*Gliptodonte*, do tamanho de um carro) e o temido tigre-dentes-de-sabre (*Smilodon*).\n\n🦴 Uma jovem coletora do grupo — que a ciência chamará onze mil anos depois de **Luzia** — acabou de falecer, e o bando precisa decidir como honrar sua memória e como garantir alimento diante das mudanças climáticas que estão extinguindo os grandes mamíferos.",
+    "evidence": "💀 Fóssil de Luzia (~11.500 anos, Lapa Vermelha IV): O esqueleto humano mais antigo do Brasil, estudado por Annette Laming-Emperaire e Walter Neves, junto a fósseis da megafauna estudados por Peter Lund.",
+    "question": "O que o fóssil de Luzia e os vestígios de Lagoa Santa revelam sobre a diversidade biológica, a alimentação e os rituais funerários dos primeiros brasileiros?",
+    "choices": [
+      {
+        "text": "🌿 Caminho A: Realizar o sepultamento cuidadoso na gruta protegida e diversificar a dieta com frutos do cerrado (pequi, jatobá), raízes e caça de pequeno e médio porte.",
+        "target": "s_6_sambaquis",
+        "effect": { "sustento": 1, "coesao": 1, "memoria": 1 },
+        "feedback": "🌟 Desdobramento Historiográfico: A arqueologia comprova que o povo de Luzia não vivia apenas de caçar megafauna: eles tinham forte base na coleta vegetal e caça menor, e o sepultamento na Lapa Vermelha preservou o crânio mais famoso das Américas!"
+      },
+      {
+        "text": "⚔️ Caminho B: Arriscar todo o bando em um ataque frontal contra um tigre-dentes-de-sabre e uma preguiça-gigante adulta dentro de uma caverna estreita.",
+        "target": "s_6_sambaquis",
+        "effect": { "sustento": -1, "coesao": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Os humanos pré-históricos raramente enfrentavam predadores gigantes de frente; aproveitavam animais jovens ou atolados em pântanos. O ataque imprudente feriu caçadores e abalou o grupo."
+      },
+      {
+        "text": "🦴 Caminho C: Aproveitar a carcaça de um Gliptodonte atolado na beira da lagoa, utilizando sua couraça óssea como abrigo e suas partes para ferramentas.",
+        "target": "s_6_sambaquis",
+        "effect": { "sustento": 1, "memoria": 1 },
+        "feedback": "🛠️ Desdobramento Historiográfico: Inteligência adaptativa! O aproveitamento oportunista da megafauna fornecia grande volume de carne, couro e ossos sem expor o clã ao massacre."
+      }
+    ]
+  },
+  "s_6_sambaquis": {
+    "module": "🔥 Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
+    "stepLabel": "Etapa 6 de 6 • Povos do Litoral Brasileiro",
+    "bncc": "EF06HI05 • EF06HI06",
+    "sceneArt": "🐚 🌊 🐟 🗿 🛶",
+    "era": "Holoceno (~8.000 a 2.000 AP)",
+    "location": "Baías e Lagoas Costeiras do Atlântico Sul (Brasil)",
+    "title": "Sessão 6: Os Arquitetos de Conchas — Povos dos Sambaquis",
+    "text": "🌊 Chegando ao litoral brasileiro, vocês encontram comunidades sedentárias ou semissedentárias que habitam a região entre o mar, os manguezais e a Mata Atlântica. Diante da baía ergue-se uma colina monumental de até 30 metros de altura construída inteiramente pelas mãos humanas ao longo de gerações: um **Sambaqui** (do tupi *tamba'kī*, 'monte de conchas').\n\n🐚 Ao contrário do antigo preconceito que via esses montes como 'lixo de pescadores', o sambaqui é o centro sagrado, político e territorial da comunidade, onde os ancestrais são sepultados junto a belíssimas esculturas de pedra polida em forma de aves, peixes e baleias (**zoólitos**).",
+    "evidence": "🗿 Patrimônio Arqueológico: Sambaquis monumentais de Santa Catarina, São Paulo e Rio de Janeiro, contendo camadas de conchas de ostras/berbigões, fogueiras, sepultamentos rituais e zoólitos em pedra polida.",
+    "question": "Por que é um erro histórico chamar os sambaquis de 'simples montes de lixo'? Qual era a verdadeira função social, simbólica e ambiental dessas construções?",
+    "choices": [
+      {
+        "text": "🐚 Caminho A: Participar da construção coletiva do sambaqui, depositando conchas em camadas planejadas, esculpindo zoólitos em pedra polida e respeitando o ciclo de reprodução dos peixes e moluscos.",
+        "target": "s_end_av1",
+        "effect": { "sustento": 1, "coesao": 1, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Vocês compreenderam a grandiosidade dos povos sambaquieiros! Com farta alimentação marinha, eles sustentaram populações densas por milhares de anos, erguendo monumentos funerários e marcos paisagísticos visíveis a quilômetros de distância."
+      },
+      {
+        "text": "🐟 Caminho B: Explorar os bancos de ostras e cardumes da lagoa até o esgotamento total, abandonando a manutenção comunitária do monte de conchas.",
+        "target": "s_end_av1",
+        "effect": { "sustento": -1, "coesao": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Sem o manejo coletivo dos manguezais e sem os rituais de coesão em torno do sambaqui, a comunidade sofreu crise alimentar e perda de referência territorial."
+      },
+      {
+        "text": "🛶 Caminho C: Estabelecer redes de troca na costa usando canoas, compartilhando anzóis de osso, dentes de tubarão perfurados e técnicas de pedra polida com sambaquis vizinhos.",
+        "target": "s_end_av1",
+        "effect": { "coesao": 2, "memoria": 1 },
+        "feedback": "🤝 Desdobramento Historiográfico: Os povos dos sambaquis mantinham intensas redes de interação cultural ao longo da costa atlântica, compartilhando estilos artísticos de zoólitos e rituais funerários."
+      }
     ]
   },
   "s_end_av1": {
-    "module": "🔥 Aventura 1 — Epílogo",
-    "title": "Epílogo da Aventura 1: Os Guardiões do Tempo",
-    "text": "🌟 Sua turma concluiu os desafios da Pré-História e dos sambaquis, compreendendo a adaptação humana, o uso do fogo e o valor das fontes materiais e orais.",
-    "evidence": "📚 Habilidades EF06HI01 a EF06HI06 consolidadas.",
+    "module": "🔥 Aventura 1 — Epílogo Pedagógico (1º Bimestre)",
+    "stepLabel": "Jornada Concluída • Síntese do 1º Bimestre",
+    "bncc": "EF06HI01 a EF06HI06 Consolidadas",
+    "sceneArt": "🏆 🔥 🗿 🐚 📜",
+    "era": "Síntese Historiográfica da Pré-História Americana",
+    "location": "Museu vivo da Memória Humana",
+    "title": "Epílogo: Os Guardiões da Memória e dos Vestígios",
+    "text": "🌟 **Parabéns, Investigadores do Tempo!** Sua dupla atravessou milênios de história humana.\n\nAo longo desta aventura, vocês comprovaram na prática que:\n1️⃣ **Não existe povo sem história:** Fontes materiais (pedras lascadas, fogueiras, crânios, conchas, zoólitos) e imateriais (tradição oral) são documentos tão legítimos quanto textos escritos.\n2️⃣ **O povoamento da América foi plural e complexo:** Envolveu tanto a travessia terrestre por Beríngia quanto rotas costeiras pelo Pacífico.\n3️⃣ **O Brasil possui um patrimônio arqueológico extraordinário:** Das fogueiras e pinturas estudadas por Niède Guidon na **Serra da Capivara**, passando pelo povo de **Luzia em Lagoa Santa**, até a engenharia monumental dos **Sambaquis** no litoral!",
+    "evidence": "📓 Dica para o Diário de Bordo: Abrindo a aba 'Diário de Bordo' na Ficha do Jogador acima, vocês podem revisar todas as escolhas feitas hoje e imprimir/salvar o relatório para o professor!",
+    "question": "Qual das fontes arqueológicas estudadas nesta aventura (arte rupestre da Serra da Capivara, crânio de Luzia ou zoólitos dos Sambaquis) mais chamou a atenção da sua dupla e por quê?",
     "choices": [
-      { "text": "🔄 Reiniciar Aventura 1", "target": "s_1", "effect": {}, "feedback": "Reiniciando o ciclo do Pleistoceno..." }
+      {
+        "text": "🌊 Avançar para a Aventura 2: As Águas de Duas Terras (Mesopotâmia, Egito e Kush)",
+        "nextAdventure": "aventura2.json"
+      },
+      {
+        "text": "🔄 Jogar Novamente a Aventura 1 (Testar outras rotas e decisões)",
+        "reset": true
+      },
+      {
+        "text": "🏠 Voltar ao Salão Principal (Menu de Aventuras)",
+        "goHome": true
+      }
     ]
   }
 }
