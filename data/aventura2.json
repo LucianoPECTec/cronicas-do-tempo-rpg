@@ -1,65 +1,252 @@
 {
   "s_12": {
     "module": "🌊 Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
-    "title": "Sessão 1: A Cheia Impetuosa do Eufrates",
-    "text": "🌊 O calor derrete a neve ao norte e faz as águas do rio Eufrates subirem rapidamente na Babilônia. No horizonte, os degraus do zigurate dominam a planície. O fiscal do palácio convoca os camponeses para a manutenção dos canais de irrigação.",
-    "evidence": "🏺 Pista Material: Enxadas de bronze e comportas de madeira represando o fluxo agrícola.",
+    "stepLabel": "Etapa 1 de 6 • Mesopotâmia (Crescente Fértil)",
+    "bncc": "EF06HI07 • EF06HI08",
+    "sceneArt": "🌊 🌾 🧱 🏛️ ☀️",
+    "era": "Idade do Bronze (~1800 a.C.)",
+    "location": "Planície Aluvial entre os Rios Tigre e Eufrates",
+    "title": "Sessão 1: A Cheia Violenta do Eufrates e os Diques de Argila",
+    "text": "🌊 O degelo nas montanhas da Armênia ao norte faz as águas barrentas do rio **Eufrates** subirem com violência assustadora. Na planície da **Mesopotâmia** ('terra entre rios'), onde quase não chove, a água do rio é a única fonte de vida — mas se os diques de terra romperem, a inundação destruirá as casas de tijolos de barro cru e afogará os campos de cevada.\n\n🏛️ No topo do **Zigurate**, os sacerdotes e funcionários do rei tocam as trombetas convocando todas as famílias camponesas para o trabalho coletivo obrigatório nas comportas e canais de irrigação.",
+    "evidence": "🏺 Fonte Material: Enxadas de bronze, cestos impermeabilizados com betume e vestígios arqueológicos de redes de canais que levavam água a quilômetros das margens do Eufrates.",
+    "question": "Como a necessidade de controlar as cheias imprevisíveis dos rios Tigre e Eufrates levou ao surgimento do trabalho coletivo organizado e do Estado centralizado?",
     "choices": [
-      { 
-        "text": "👥 Caminho A: Organizar o mutirão comunitário para reforçar os diques e limpar as valas coletivas.", 
-        "target": "s_13_a", 
+      {
+        "text": "🤝 Caminho A: Unir a comunidade no mutirão dos canais, reforçando os diques de contenção com tijolos de argila e abrindo reservatórios para a época da seca.",
+        "target": "s_13_zigurate",
         "effect": { "sustento": 1, "coesao": 1 },
-        "feedback": "🌾 Desdobramento: O trabalho coletivo disciplinado domesticou a cheia do rio e garantiu uma colheita farta de cevada para o vilarejo."
+        "feedback": "🌾 Desdobramento Historiográfico: A engenharia hidráulica coletiva domou a fúria do Eufrates! O solo fertilizado pelo húmus gerou excedente agrícola de trigo e cevada, base para o crescimento das cidades-Estado mesopotâmicas."
       },
-      { 
-        "text": "🤫 Caminho B: Desviar clandestinamente a água para irrigar apenas o seu próprio lote de plantação.", 
-        "target": "s_13_b", 
-        "effect": { "sustento": -1, "coesao": -1 },
-        "feedback": "⚠️ Desdobramento: O desvio individualista alagou a lavoura dos vizinhos e chamou a atenção imediata dos guardas do palácio."
+      {
+        "text": "🤫 Caminho B: Romper secretamente uma comporta secundária durante a noite para desviar água apenas para o lote da sua família, prejudicando as terras vizinhas.",
+        "target": "s_13_crise_agua",
+        "effect": { "sustento": -1, "coesao": -2 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Na Mesopotâmia, o desvio egoísta de água quebrava toda a rede hidráulica. Sua ação alagou o terreno vizinho, destruiu sementes e levou o caso diretamente aos fiscais reais."
       },
-      { 
-        "text": "⏳ Caminho C: Ignorar os chamados do templo e cruzar os braços esperando a enchente passar.", 
-        "target": "s_13_c", 
+      {
+        "text": "⏳ Caminho C: Recusar o chamado para limpar o lodo dos canais, esperando que os deuses acalmem o rio apenas com oferendas domésticas.",
+        "target": "s_13_crise_agua",
         "effect": { "sustento": -2, "memoria": -1 },
-        "feedback": "☀️ Desdobramento: Sem manutenção, os canais secaram sob o sol e a terra estéril gerou escassez severa de alimentos."
+        "feedback": "🏜️ Desdobramento Historiográfico: Sem desassoreamento técnico, os canais entupiram de lama. Quando a cheia baixou, a água não chegou às lavouras distantes, provocando quebra severa da safra."
       }
     ]
   },
-  "s_13_a": {
+  "s_13_zigurate": {
     "module": "🌊 Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
-    "title": "Sessão 2A: O Celeiro do Templo",
-    "text": "🏛️ Com a colheita garantida, os grãos excedentes devem ser levados ao centro político-religioso.",
-    "evidence": "📜 Controle estatal e tributação na Mesopotâmia.",
+    "stepLabel": "Etapa 2 de 6 • O Surgimento da Escrita Cuneiforme",
+    "bncc": "EF06HI07",
+    "sceneArt": "✍️ 📜 🌾 🏛️ 🏺",
+    "era": "Antiga Mesopotâmia (~1780 a.C.)",
+    "location": "Armazéns do Templo e Escola de Escribas (Edubba)",
+    "title": "Sessão 2: O Excedente nos Celeiros e os Sinais na Argila",
+    "text": "🌾 Com a colheita farta garantida pelos canais, longas filas de camponeses e pastores entregam sacas de cevada, jarros de óleo de gergelim, lã e cabeças de gado nos armazéns do templo e do palácio.\n\n✍️ São milhares de entregas diárias: a memória humana já não dá conta de lembrar quem pagou o tributo e quanto há guardado para os períodos de seca ou guerra. Um mestre **escriba** segura um tablete de argila fresca e um estilete de junco com ponta em forma de cunha.",
+    "evidence": "📜 Fonte Escrita e Material: Tabuinhas de argila cozida gravadas em **escrita cuneiforme** contendo recibos de impostos, listas de rações de trabalhadores e hinos religiosos.",
+    "question": "A escrita cuneiforme nasceu inicialmente para escrever poemas ou para resolver uma necessidade prática de administração econômica e política? Explique.",
     "choices": [
-      { "text": "📜 Registrar os tributos no tablete de argila com escrita cuneiforme.", "target": "s_end_av2", "effect": { "memoria": 2 }, "feedback": "✍️ O registro oficial assegurou a contabilidade do Estado e o controle dos estoques." },
-      { "text": "⚖️ Visitar a Estela de Hamurabi na praça para conhecer as leis escritas.", "target": "s_end_av2", "effect": { "memoria": 1 }, "feedback": "🏛️ A observação das leis públicas consolidou a noção de justiça e hierarquia social." }
+      {
+        "text": "✍️ Caminho A: Acompanhar o registro exato dos sacos de grãos no tablete de argila em escrita cuneiforme e guardar o selo cilíndrico de comprovação.",
+        "target": "s_14_hamurabi",
+        "effect": { "sustento": 1, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Vocês presenciaram a função original da escrita na Mesopotâmia! Criada pelos sumérios para controlar estoques, impostos e comércio no templo, a escrita cuneiforme expandiu-se depois para leis, cartas e epopeias como a de Gilgamesh."
+      },
+      {
+        "text": "🗣️ Caminho B: Entregar toda a colheita confiando apenas na palavra verbal do cobrador, recusando o registro na tabuinha de argila.",
+        "target": "s_14_hamurabi",
+        "effect": { "sustento": -1, "coesao": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Sem o documento em argila timbrado pelo selo cilíndrico, outro fiscal cobrou o tributo novamente semanas depois, gerando endividamento para a família camponesa."
+      },
+      {
+        "text": "📚 Caminho C: Enviar um jovem da família para aprender a ler e gravar sinais cuneiformes na escola do templo, além de observar os cálculos astronômicos dos sacerdotes.",
+        "target": "s_14_hamurabi",
+        "effect": { "coesao": 1, "memoria": 2 },
+        "feedback": "🌟 Desdobramento Historiográfico: O domínio da escrita e da matemática (como a base sexagesimal que divide nossa hora em 60 minutos) conferia enorme prestígio social e preservava o saber mesopotâmico."
+      }
     ]
   },
-  "s_13_b": {
+  "s_13_crise_agua": {
     "module": "🌊 Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
-    "title": "Sessão 2B: O Tribunal do Zigurate",
-    "text": "⚖️ Conduzido perante os juízes do templo por causa do dique rompido, você precisa responder pelos danos causados à comunidade.",
-    "evidence": "⚖️ Aplicação das normas jurídicas mesopotâmicas.",
+    "stepLabel": "Etapa 2 de 6 • Arbitragem Estatal e Registros",
+    "bncc": "EF06HI07",
+    "sceneArt": "⚖️ ✍️ 🧱 🌾 🏛️",
+    "era": "Antiga Mesopotâmia (~1780 a.C.)",
+    "location": "Pátio Administrativo da Cidade da Babilônia",
+    "title": "Sessão 2: A Disputa pelos Canais e o Registro dos Escribas",
+    "text": "⚖️ Os danos nos canais provocaram uma grave disputa entre os agricultores do distrito. Fiscais reais chegam acompanhados por escribas que carregam tabuinhas de argila úmida para medir os campos inundados e calcular o prejuízo de cevada.\n\n✍️ Para evitar que sua família perca o direito de uso da terra, vocês precisam responder à convocação administrativa do palácio.",
+    "evidence": "📜 Fonte Histórica: Contratos e atas de julgamento em escrita cuneiforme regulando a manutenção obrigatória de diques vizinhos.",
+    "question": "Por que o Estado mesopotâmico fiscalizava com tanto rigor quem deixava de cuidar do seu trecho de dique ou canal?",
     "choices": [
-      { "text": "🤝 Aceitar a penalidade de reparação coletiva e trabalho nos canais.", "target": "s_end_av2", "effect": { "coesao": 1 }, "feedback": "💪 O cumprimento da pena restaurou a ordem no vilarejo e reparou o dique." }
+      {
+        "text": "🛠️ Caminho A: Reparar imediatamente o dique danificado junto aos vizinhos e registrar o acordo de compensação em uma tabuinha cuneiforme oficial.",
+        "target": "s_14_hamurabi",
+        "effect": { "coesao": 1, "memoria": 1 },
+        "feedback": "✨ Desdobramento Historiográfico: A reparação coletiva e o contrato escrito restauraram a paz hidráulica na aldeia, preparando o grupo para conhecer as leis gerais do império."
+      },
+      {
+        "text": "🌾 Caminho B: Solicitar um empréstimo de sementes nos celeiros reais do zigurate, comprometendo-se a devolver com juros na próxima colheita.",
+        "target": "s_14_hamurabi",
+        "effect": { "sustento": 1, "coesao": -1 },
+        "feedback": "📜 Desdobramento Historiográfico: Os templos e palácios funcionavam também como bancos de grãos, mas o atraso no pagamento de dívidas era uma das principais causas de servidão temporária na Mesopotâmia."
+      },
+      {
+        "text": "😡 Caminho C: Quebrar a tabuinha de argila do escriba para tentar apagar a multa pelo descuido com o canal.",
+        "target": "s_14_hamurabi",
+        "effect": { "coesao": -1, "memoria": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Destruir um documento real era crime grave! Os escribas faziam cópias de segurança em envelopes de argila cozida, e a revolta agravou a situação jurídica do grupo."
+      }
     ]
   },
-  "s_13_c": {
+  "s_14_hamurabi": {
     "module": "🌊 Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
-    "title": "Sessão 2C: A Crise da Seca",
-    "text": "🏜️ A falta de irrigação cobra seu preço. O grupo precisa buscar alternativas de sobrevivência.",
-    "evidence": "⚠️ O risco histórico do determinismo geográfico passivo.",
+    "stepLabel": "Etapa 3 de 6 • O Direito Escrito na Babilônia",
+    "bncc": "EF06HI07",
+    "sceneArt": "🗿 ⚖️ 👑 📜 🏛️",
+    "era": "Primeiro Império Babilônico (~1750 a.C.)",
+    "location": "Praça Pública de Babilônia diante da Estela de Basalto",
+    "title": "Sessão 3: A Sombra da Estela — O Código de Hamurabi",
+    "text": "🗿 No centro da praça da Babilônia ergue-se um monumento de basalto negro de mais de dois metros de altura. No topo, o rei **Hamurabi** aparece recebendo as insígnias da justiça diretamente do deus solar *Shamash*. Abaixo, 282 leis estão gravadas em escrita cuneiforme.\n\n⚖️ Dois casos estão sendo julgados hoje pelos juízes reais:\n1) Um construtor ergueu uma casa malfeita que desabou;\n2) Um nobre rico (*Awilum*) feriu o olho de um homem livre comum (*Mushkenum*) e quebrou o dente de um escravizado (*Wardum*). Como o Código de Hamurabi aplica a **Lei de Talião**?",
+    "evidence": "📜 Fonte Histórica Direta (Código de Hamurabi): Art. 196: 'Se um Awilum destruiu o olho de outro Awilum, destruirão o seu olho'. Art. 198: 'Se destruiu o olho de um Mushkenum, pagará uma mina de prata'. Art. 199: 'Se destruiu o olho do escravo de um Awilum, pagará metade do seu preço'.",
+    "question": "Ao ler os artigos 196, 198 e 199 do Código de Hamurabi, podemos afirmar que a lei na Babilônia tratava todas as pessoas como iguais? Por quê?",
     "choices": [
-      { "text": "🤲 Pedir auxílio aos armazéns do templo e firmar compromisso de trabalho.", "target": "s_end_av2", "effect": { "sustento": 1 }, "feedback": "🌾 O auxílio foi concedido em troca de obrigações de servidão temporária ao templo." }
+      {
+        "text": "⚖️ Caminho A: Analisar criticamente a Estela e concluir que a Lei de Talião ('olho por olho') dependia da classe social: a punição física rigorosa valia entre iguais (Awilum), enquanto contra camponeses e escravizados aplicava-se multa em prata.",
+        "target": "s_15_nilo",
+        "effect": { "coesao": 1, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Análise perfeita! Embora o Código de Hamurabi tenha sido um marco ao substituir a vingança privada sem limites por uma lei escrita pública e estatal, ele refletia e protegia a profunda desigualdade social babilônica."
+      },
+      {
+        "text": "🔨 Caminho B: Defender que o Código de Hamurabi garantia igualdade absoluta para todos os habitantes, aplicando exatamente a mesma pena para nobres, camponeses e escravizados.",
+        "target": "s_15_nilo",
+        "effect": { "memoria": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Cuidado com o anacronismo! Na Babilônia antiga não existia igualdade jurídica perante a lei: o valor da pena variava conforme o estatuto social da vítima e do agressor."
+      },
+      {
+        "text": "🌾 Caminho C: Consultar o Artigo 53 da Estela sobre irrigação, que obriga todo agricultor negligente a restituir o trigo perdido pelos vizinhos caso seu dique se rompa.",
+        "target": "s_15_nilo",
+        "effect": { "sustento": 1, "coesao": 1 },
+        "feedback": "✨ Desdobramento Historiográfico: O Código de Hamurabi dedicava dezenas de leis à agricultura, aos canais, aos salários de artesãos e à responsabilidade de construtores e médicos, regulando toda a vida econômica."
+      }
+    ]
+  },
+  "s_15_nilo": {
+    "module": "🌊 Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
+    "stepLabel": "Etapa 4 de 6 • Egito Antigo e o Rio Nilo",
+    "bncc": "EF06HI07 • EF06HI08",
+    "sceneArt": "🐊 🌾 📐 🌊 ☀️",
+    "era": "Império Novo do Egito (~1400 a.C.)",
+    "location": "Nilômetro da Ilha de Elefantina e Vale do Nilo (Kemet)",
+    "title": "Sessão 4: Os Degraus do Nilômetro — Dádiva da Natureza ou Suor Humano?",
+    "text": "🌊 Seguindo as rotas de caravanas até o nordeste da África, sua dupla chega ao **Egito Antigo** (*Kemet*, a 'Terra Negra'). É o início da estação de *Akhet* (inundação): o **Rio Nilo** sobe de forma muito mais regular e previsível que os rios mesopotâmicos, depositando o lodo escuro e fértil nas margens cercadas pelo deserto escaldante (*Deshret*).\n\n📐 Vocês descem as escadarias de pedra de um **Nilômetro** — poço graduado que mede a altura exata da cheia. Séculos mais tarde, o historiador grego Heródoto dirá que *'o Egito é uma dádiva (presente) do Nilo'*. Mas ao olhar para a margem, vocês veem milhares de camponeses (*felás*) trabalhando sob o sol escaldante com o *shaduf* (alavanca com balde), abrindo valas, arando a lama pesada e carregando pedras.",
+    "evidence": "📐 Fonte Material e Iconográfica: Poço do Nilômetro com marcações de nível de cheia e pinturas murais em tumbas egípcias retratando camponeses arando, colhendo trigo e operando o *shaduf*.",
+    "question": "Por que os historiadores atuais criticam a frase 'O Egito é uma dádiva do Nilo' se ela for entendida de forma isolada? Quem realmente transformava a água do rio em alimento e monumentos?",
+    "choices": [
+      {
+        "text": "🌾 Caminho A: Reconhecer a importância vital do Nilo, mas destacar que o Egito foi construído pelo trabalho árduo, pela ciência astronômica e pela engenharia dos camponeses, artesãos e trabalhadores africanos.",
+        "target": "s_16_eternidade",
+        "effect": { "sustento": 1, "coesao": 1, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Excelente leitura crítica! O rio fornecia a condição natural (água e húmus), mas sem o suor coletivo dos *felás*, o calendário agrícola de 365 dias e a engenharia hidráulica, não haveria colheita nem civilização egípcia."
+      },
+      {
+        "text": "📐 Caminho B: Usar as medições do Nilômetro para prever o volume da colheita futura e planejar o armazenamento nos celeiros reais para evitar a fome nos anos de cheia baixa.",
+        "target": "s_16_eternidade",
+        "effect": { "sustento": 2, "memoria": 1 },
+        "feedback": "📊 Desdobramento Historiográfico: Se o Nilo subisse pouco, havia seca; se subisse demais, destruía aldeias. O Nilômetro unia ciência hidráulica e administração fiscal para garantir o sustento do reino."
+      },
+      {
+        "text": "☀️ Caminho C: Acreditar que a natureza faz tudo sozinha como um 'presente mágico' e dispensar a manutenção dos canais e do shaduf após a vazante.",
+        "target": "s_16_eternidade",
+        "effect": { "sustento": -2, "coesao": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Essa escolha prova na prática o erro do determinismo geográfico! Sem o trabalho humano para reter a água quando o Nilo baixava, o sol do deserto rachou o solo e secou a plantação."
+      }
+    ]
+  },
+  "s_16_eternidade": {
+    "module": "🌊 Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
+    "stepLabel": "Etapa 5 de 6 • Ciência, Escrita e Religião no Egito",
+    "bncc": "EF06HI07",
+    "sceneArt": "⚱️ 📜 ⚖️ 🪶 🏛️",
+    "era": "Império Novo (~1350 a.C.)",
+    "location": "Casa da Vida (Per-Ankh) e Necrópole de Tebas",
+    "title": "Sessão 5: O Papiro, a Balança de Maat e o Segredo das Múmias",
+    "text": "📜 Em Tebas, vocês visitam a *Casa da Vida*, onde escribas e médicos estudam rolos feitos da planta do **papiro**. Nas paredes dos templos brilham os **hieróglifos** sagrados, enquanto no dia a dia os escribas usam escritas mais rápidas (hierática e demótica).\n\n⚱️ Ao lado, embalsamadores preparam um corpo com natrão (sal natural), óleos aromáticos e faixas de linho para o Julgamento de Osíris, no qual o coração do morto será pesado contra a **Pena de Maat** (deusa da verdade, justiça e harmonia cósmica). Como o grupo interpreta essas práticas?",
+    "evidence": "📜 Fonte Histórica: *Papiro Ebers* (tratado médico egípcio com descrições anatômicas e receitas) e o *Livro dos Mortos* (ilustrando o Tribunal de Osíris).",
+    "question": "Qual é a relação entre a crença religiosa na vida após a morte (mumificação) e o avanço real da medicina, da anatomia e da química no Egito Antigo?",
+    "choices": [
+      {
+        "text": "🔬 Caminho A: Investigar como a prática da mumificação permitiu aos egípcios conhecer profundamente os órgãos internos, a cirurgia, as fraturas ósseas e a conservação química.",
+        "target": "s_17_kush",
+        "effect": { "sustento": 1, "memoria": 2 },
+        "feedback": "🌟 Desdobramento Historiográfico: Religião e ciência caminhavam juntas no Egito! Ao retirar órgãos e tratar tecidos para a eternidade, os médicos egípcios desenvolveram conhecimentos avançados registrados nos papiros."
+      },
+      {
+        "text": "⚖️ Caminho B: Refletir sobre o conceito de *Maat* (equilíbrio e justiça), exigindo que os governantes e cobradores de impostos não oprimam os camponeses para manter a harmonia social.",
+        "target": "s_17_kush",
+        "effect": { "coesao": 2, "memoria": 1 },
+        "feedback": "⚖️ Desdobramento Historiográfico: Na teocracia egípcia, o Faraó e seus funcionários tinham o dever religioso de manter *Maat* — o que incluía garantir que ninguém passasse fome e que os canais funcionassem."
+      },
+      {
+        "text": "🚫 Caminho C: Saquear amuletos e rolos de papiro da oficina funerária para vender aos mercadores estrangeiros.",
+        "target": "s_17_kush",
+        "effect": { "coesao": -2, "memoria": -1 },
+        "feedback": "⚠️ Desdobramento Historiográfico: A violação de tumbas e templos era considerada uma ofensa gravíssima contra *Maat* e contra a memória coletiva, gerando severa punição pelos guardas da necrópole."
+      }
+    ]
+  },
+  "s_17_kush": {
+    "module": "🌊 Aventura 2 — As Águas de Duas Terras: Entre o Tigre e o Nilo",
+    "stepLabel": "Etapa 6 de 6 • O Reino Africano de Kush (Núbia)",
+    "bncc": "EF06HI07 • EF06HI08",
+    "sceneArt": "👑 🔥 ⚒️ 🔺 🐘",
+    "era": "Período Meroítico (~300 a.C. a 100 d.C.)",
+    "location": "Cidade Real de Meroé — Reino de Kush (Núbia / Atual Sudão)",
+    "title": "Sessão 6: As Forjas de Ferro de Meroé e o Poder das Candaces",
+    "text": "🔥 Subindo o Rio Nilo além da Primeira Catarata, rumo ao interior da África (região da **Núbia**, atual Sudão), vocês chegam ao poderoso **Reino de Kush**. Durante muito tempo, visões preconceituosas tentaram tratar Kush apenas como uma 'sombra do Egito', mas a realidade diante dos seus olhos é impressionante: Kush chegou a conquistar e governar todo o Egito durante a **XXV Dinastia (os Faraós Negros)**!\n\n⚒️ Na capital **Meroé**, cercada por savanas férteis e minas de minério, dezenas de altos-fornos fundem o **ferro** para produzir enxadas resistentes e armas. No horizonte erguem-se mais de duzentas **pirâmides núbias** (mais íngremes e numerosas que as do Egito!), e no trono governa com autoridade suprema uma rainha guerreira: a **Candace (Kandake) Amanirenas**, ao lado de escribas que usam um alfabeto próprio, a **escrita meroítica**.",
+    "evidence": "🔺 Patrimônio Arqueológico de Meroé (Sudão): Centenas de pirâmides reais núbias, montanhas de escória de fundição de ferro, inscrições em escrita meroítica e relevos das rainhas Candaces liderando exércitos.",
+    "question": "Como a história do Reino de Kush — com suas pirâmides próprias, sua metalurgia do ferro e o governo das rainhas Candaces — ajuda a combater estereótipos sobre a África Antiga?",
+    "choices": [
+      {
+        "text": "👑 Caminho A: Valorizar a autonomia e a originalidade da civilização africana de Kush, destacando o protagonismo político e militar das rainhas Candaces e o domínio tecnológico da metalurgia do ferro em Meroé.",
+        "target": "s_end_av2",
+        "effect": { "sustento": 1, "coesao": 1, "memoria": 2 },
+        "feedback": "🏆 Desdobramento Historiográfico: Vocês resgataram uma página essencial da História da África! Kush foi uma potência comercial e tecnológica que conectava a África Subsaariana ao Mediterrâneo e ao Mar Vermelho, onde mulheres negras exerciam o poder soberano como Candaces."
+      },
+      {
+        "text": "⚒️ Caminho B: Trabalhar junto aos mestres ferreiros de Meroé na produção de ferramentas agrícolas de ferro e organizar caravanas comerciais de ouro, marfim e ébano.",
+        "target": "s_end_av2",
+        "effect": { "sustento": 2, "coesao": 1 },
+        "feedback": "🔥 Desdobramento Historiográfico: A abundante madeira das savanas de Meroé e suas jazidas de minério transformaram Kush em um dos maiores polos siderúrgicos do Mundo Antigo!"
+      },
+      {
+        "text": "📉 Caminho C: Repetir a visão antiga de que tudo em Kush era apenas uma cópia inferior do Egito, ignorando a escrita meroítica, as Candaces e as forjas de ferro.",
+        "target": "s_end_av2",
+        "effect": { "coesao": -1, "memoria": -2 },
+        "feedback": "⚠️ Desdobramento Historiográfico: Essa visão eurocêntrica do século XIX foi totalmente superada pela arqueologia moderna! Kush possuía língua, escrita alfabética própria, deuses locais (como Apedemak) e arquitetura singular."
+      }
     ]
   },
   "s_end_av2": {
-    "module": "🌊 Aventura 2 — Epílogo",
-    "title": "Epílogo da Aventura 2: Os Construtores de Rios",
-    "text": "🏆 Você completou a viagem pelas civilizações hidráulicas, compreendendo o papel da engenharia, da escrita e do trabalho coletivo.",
-    "evidence": "📚 Habilidades EF06HI07 e EF06HI08 consolidadas.",
+    "module": "🌊 Aventura 2 — Epílogo Pedagógico (2º Bimestre)",
+    "stepLabel": "Jornada Concluída • Síntese do 2º Bimestre",
+    "bncc": "EF06HI07 e EF06HI08 Consolidadas",
+    "sceneArt": "🏆 🌊 📜 ⚖️ 👑",
+    "era": "Síntese do Oriente Próximo e África Antiga",
+    "location": "Confluência das Grandes Civilizações Fluviais",
+    "title": "Epílogo: Os Construtores de Rios, Leis e Ferro",
+    "text": "🌟 **Parabéns, Investigadores do Tempo!** Vocês concluíram a travessia pelo Crescente Fértil e pelo Vale do Nilo!\n\nNesta jornada do 2º Bimestre, sua dupla comprovou que:\n1️⃣ **Sociedades Hidráulicas e Trabalho:** Nem a Mesopotâmia nem o Egito foram 'presentes prontos da natureza'; ambos dependeram da engenharia de diques, canais e do trabalho coletivo de milhares de camponeses.\n2️⃣ **Escrita e Leis:** A escrita cuneiforme nasceu da necessidade de administrar o excedente agrícola, e o **Código de Hamurabi** oficializou leis públicas escritas, mas marcadas pela desigualdade entre as camadas sociais.\n3️⃣ **África Antiga Protagonista:** O Egito Antigo e o **Reino de Kush (Núbia)** demonstram o altíssimo desenvolvimento científico, arquitetônico, metalúrgico e político africano, com destaque para as rainhas **Candaces** de Meroé!",
+    "evidence": "📓 Registro Final: Abra o botão 'Diário de Bordo' na Ficha do Jogador para conferir o histórico das suas 6 decisões e anotar a conclusão da dupla!",
+    "question": "Se vocês pudessem comparar a sociedade da Babilônia de Hamurabi com o Reino Africano de Kush em Meroé, qual diferença mais chamou a atenção da dupla?",
     "choices": [
-      { "text": "🔄 Reiniciar Aventura 2", "target": "s_12", "effect": {}, "feedback": "Reiniciando o ciclo das águas..." }
+      {
+        "text": "🏛️ Avançar para a Aventura 3: Vozes na Ágora e Sombras no Senado (Grécia e Roma)",
+        "nextAdventure": "aventura3.json"
+      },
+      {
+        "text": "🔄 Jogar Novamente a Aventura 2 (Explorar outros caminhos)",
+        "reset": true
+      },
+      {
+        "text": "🏠 Voltar ao Salão Principal (Menu de Aventuras)",
+        "goHome": true
+      }
     ]
   }
 }
