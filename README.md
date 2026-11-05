@@ -31,3 +31,39 @@ cronicas-do-tempo-rpg/
     ├── aventura2.json # 2º Bimestre: Mesopotâmia, Egito e Reino de Kush
     ├── aventura3.json # 3º Bimestre: Grécia Antiga e República Romana
     └── aventura4.json # 4º Bimestre: Antiguidade Tardia e Feudalismo
+
+
+🕹️ Como Executar o Projeto
+Opção 1: Rodar Online via GitHub Pages (Recomendado)
+Vá até a aba Settings (Configurações) do seu repositório no GitHub.
+
+No menu lateral, clique em Pages.
+
+Na seção Build and deployment, selecione a branch main e a pasta / (root). Clique em Save.
+
+Acesse o link gerado pelo GitHub e o livro-jogo estará online para qualquer aluno ou professor acessar pelo celular ou computador.
+
+Opção 2: Rodar Offline na Escola (Direto do Pendrive)
+Baixe todos os arquivos deste repositório para uma pasta no seu computador.
+
+Copie a pasta para o seu pendrive.
+
+Na escola, insira o pendrive no computador conectado à TV ou projetor e dê dois cliques no arquivo index.html (ele abrirá instantaneamente no navegador Google Chrome ou Microsoft Edge, mesmo sem internet).
+
+📚 Conteúdo Pedagógico das Aventuras
+Aventura 1: O Fogo do Pleistoceno, domínio do fogo, arte rupestre, as rotas de povoamento da América (Beríngia, Serra da Capivara, Lagoa Santa) e a monumentalidade dos sambaquis litorâneos.
+
+Aventura 2: As Águas de Duas Terras, o controle das cheias no Tigre e no Eufrates, a escrita cuneiforme, o Código de Hamurabi, o nilômetro egípcio e as forjas de ferro do Reino de Kush em Meroé.
+
+Aventura 3: Vozes na Ágora e Sombras no Senado, o intercâmbio comercial no Mediterrâneo, os limites da democracia direta em Atenas, a estrutura espartana e as conquistas da plebe em Roma (Lei das Doze Tábuas).
+
+Aventura 4: A Queda das Fronteiras, a crise do escravismo romano, o colonato, a fusão romano-germânica, o Império Bizantino, o legado científico do Mundo Islâmico e a estruturação do senhorio feudal medieval.
+
+👨‍🏫 Autor e Licenciamento
+Autor: Professor Luciano Julio da Silva
+
+Função: Professor de História/Geografia e Professor Especialista em Currículo (PEC) em Tecnologia, Inovação e Robótica (SEDUC-SP).
+
+Portal Oficial: NerdWeek (nerdweek@nerdweek.com.br)
+
+Este projeto é disponibilizado sob os princípios de recursos educacionais abertos para uso pedagógico nas redes públicas e privadas de ensino.
