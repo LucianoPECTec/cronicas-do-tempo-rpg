@@ -1,0 +1,85 @@
+{
+  "s_1": {
+    "module": "Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
+    "title": "Sessão 1: O Vento Frio do Alvorecer",
+    "text": "O sol ainda não rompeu a linha das colinas, mas o vento que desce das áreas cobertas de gelo atinge o acampamento trazendo um cheiro forte de geada e grama seca. O fogo central da caverna reduziu-se a brasa viva sob uma camada de cinzas.",
+    "evidence": "Pista Material: Restos de carvão triturados e ossos raspados de antílope no fundo da lareira de pedra.",
+    "choices": [
+      { "text": "Caminho A: Deslocar todo o clã para uma área mais baixa e aberta no sopé da colina.", "target": "s_2", "effect": { "sustento": -1 } },
+      { "text": "Caminho B: Manter o grupo no abrigo protegido, enviando batedores para caça menor e coleta.", "target": "s_3", "effect": { "coesao": 1 } },
+      { "text": "Caminho C: Tentar acender fogueiras rápidas na entrada sem verificar a direção do vento.", "target": "s_4", "effect": { "sustento": -1, "coesao": -1 } }
+    ]
+  },
+  "s_2": {
+    "module": "Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
+    "title": "Sessão 2: A Decisão da Partida",
+    "text": "Vocês decidem levantar acampamento e descer para a planície aberta. Mover o grupo carregando ferramentas pesadas sob o vento gélido exige esforço extremo.",
+    "evidence": "Consequência: O desgaste fez o grupo perder parte das raízes e sementes guardadas.",
+    "choices": [
+      { "text": "Avançar para o alto do afloramento rochoso para ter visão panorâmica.", "target": "s_5", "effect": { "memoria": 1 } }
+    ]
+  },
+  "s_3": {
+    "module": "Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
+    "title": "Sessão 3: O Racionamento e a Coleta",
+    "text": "A decisão de permanecer na caverna protege o grupo. As mulheres e os mais velhos reúnem raízes e frutos silvestres armazenados com técnicas tradicionais de secagem.",
+    "evidence": "Consequência: A partilha rigorosa dos recursos manteve a união do clã.",
+    "choices": [
+      { "text": "Continuar a exploração e analisar os vestígios rupestres.", "target": "s_11", "effect": { "memoria": 1 } }
+    ]
+  },
+  "s_4": {
+    "module": "Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
+    "title": "Sessão 4: O Fogo Apressado",
+    "text": "A pressa em espalhar o fogo na boca da caverna sem observar o vento faz a fumaça invadir o abrigo, fazendo as crianças tossirem e estragando parte da carne seca.",
+    "evidence": "Consequência: Perda de mantimentos e conflito interno.",
+    "choices": [
+      { "text": "Abafar as chamas imediatamente com terra batida e cinzas.", "target": "s_9", "effect": {} }
+    ]
+  },
+  "s_5": {
+    "module": "Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
+    "title": "Sessão 5: A Visão do Alto",
+    "text": "Do alto da colina, o grupo avista uma manada de pequenos cervos pastando abrigados, enquanto colunas de fumaça ao longe indicam outro clã acampado no vale.",
+    "evidence": "Reconhecimento geográfico estratégico e leitura do território.",
+    "choices": [
+      { "text": "Estabelecer contato pacífico e cooperação com o clã vizinho.", "target": "s_7", "effect": { "coesao": 1, "memoria": 1 } }
+    ]
+  },
+  "s_7": {
+    "module": "Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
+    "title": "Sessão 7: A Reciprocidade na Savana",
+    "text": "O acordo evita o confronto físico e sela um pacto de ajuda mútua. À noite, a anciã narra o mito de fundação do clã ao redor da fogueira coletiva.",
+    "evidence": "Tradição oral, memória imaterial e partilha entre coletores-caçadores.",
+    "choices": [
+      { "text": "Concluir a Aventura 1 (Pré-História e Sambaquis).", "target": "s_end_av1", "effect": { "sustento": 1, "memoria": 1 } }
+    ]
+  },
+  "s_9": {
+    "module": "Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
+    "title": "Sessão 9: O Segredo do Ocre Vermelho",
+    "text": "As pinturas rupestres feitas com óxido de ferro revelam manadas de herbívoros cruzando uma fenda entre duas montanhas no inverno.",
+    "evidence": "Patrimônio visual e indício espacial.",
+    "choices": [
+      { "text": "Cruzar a imagem com os relatos orais dos anciãos.", "target": "s_11", "effect": { "memoria": 1 } }
+    ]
+  },
+  "s_11": {
+    "module": "Aventura 1 — O Fogo do Pleistoceno e os Guardiões da Memória",
+    "title": "Sessão 11: O Paradigma dos Rastreadores",
+    "text": "Cruzando a narrativa mítica com as lascas de sílex e as pinturas rupestres, o clã descobre a rota exata das águas perenes e vales férteis onde as sementes germinam.",
+    "evidence": "Síntese entre fontes materiais, visuais e orais.",
+    "choices": [
+      { "text": "Concluir a Aventura 1 com êxito.", "target": "s_end_av1", "effect": { "sustento": 1, "memoria": 1 } }
+    ]
+  },
+  "s_end_av1": {
+    "module": "Aventura 1 — Fim da Jornada do 1º Bimestre",
+    "title": "Epílogo da Aventura 1: Os Guardiões da Memória",
+    "text": "Do alto do grande sambaqui construído à beira da laguna, sua dupla conclui a jornada compreendendo a diferença entre o tempo da natureza e o tempo histórico, validando as fontes não escritas dos povos originários.",
+    "evidence": "Habilidades EF06HI01 a EF06HI06 consolidadas.",
+    "choices": [
+      { "text": "Reiniciar Aventura 1", "target": "s_1", "effect": {} }
+    ]
+  }
+}
