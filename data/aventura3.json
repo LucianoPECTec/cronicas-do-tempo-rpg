@@ -1,0 +1,48 @@
+{
+  "s_24": {
+    "module": "Aventura 3 — Vozes na Ágora e Sombras no Senado",
+    "title": "Sessão 1: As Velas do Mediterrâneo no Porto do Pireu",
+    "text": "No movimentado porto do Pireu em Atenas, marinheiros fenícios descarregam rolos de papiro e mercadorias, anotando tudo com um alfabeto fonético adaptado pelos gregos.",
+    "evidence": "Pista Material: Ânforas de cerâmica, dracmas de prata e o intercâmbio comercial e cultural no Mediterrâneo.",
+    "choices": [
+      { "text": "Caminho A: Reconhecer as profundas raízes afro-asiáticas da cultura clássica grega.", "target": "s_25", "effect": { "memoria": 2 } },
+      { "text": "Caminho B: Acreditar no mito isolado do 'milagre grego' puro.", "target": "s_26", "effect": { "memoria": -1 } }
+    ]
+  },
+  "s_25": {
+    "module": "Aventura 3 — Vozes na Ágora e Sombras no Senado",
+    "title": "Sessão 7: A Subida para a Pnyx",
+    "text": "Na praça da Ágora, os arqueiros citas conduzem os cidadãos com uma corda molhada em tinta vermelha rumo à colina da Pnyx para votação na Eclésia (Assembleia Popular).",
+    "evidence": "Kleroterion de sorteio em pedra e os limites excludentes da cidadania ateniense antiga.",
+    "choices": [
+      { "text": "Enviar apenas o cidadão ateniense qualificado para votar, compreendendo a exclusão de mulheres, metecos e escravizados.", "target": "s_27", "effect": { "coesao": 1, "memoria": 2 } }
+    ]
+  },
+  "s_26": {
+    "module": "Aventura 3 — Vozes na Ágora e Sombras no Senado",
+    "title": "Sessão 3: O Erro de Perspectiva Histórica",
+    "text": "Ignorar as trocas culturais com fenícios e egípcios impede a compreensão correta da formação do mundo clássico.",
+    "evidence": "Correção historiográfica aplicada pelo mestre oleiro.",
+    "choices": [
+      { "text": "Retomar o estudo correto das instituições de Atenas e Esparta.", "target": "s_25", "effect": {} }
+    ]
+  },
+  "s_27": {
+    "module": "Aventura 3 — Vozes na Ágora e Sombras no Senado",
+    "title": "Sessão 19: A República Romana e o Monte Sagrado",
+    "text": "Em Roma, a plebe endividada enfrenta o risco do nexum (escravidão por dívidas) perante a oligarquia patrícia, decidindo marchar em greve geral para o Monte Sagrado.",
+    "evidence": "Conquista histórica dos Tribunos da Plebe e da Lei das Doze Tábuas de bronze.",
+    "choices": [
+      { "text": "Concluir com êxito a Aventura 3 e avançar para o período helenístico.", "target": "s_28", "effect": { "sustento": 1, "coesao": 2 } }
+    ]
+  },
+  "s_28": {
+    "module": "Aventura 3 — Fim da Jornada do 3º Bimestre",
+    "title": "Epílogo da Aventura 3: Entre a Ágora e o Fórum",
+    "text": "Do mundo grego à República Romana, sua turma analisou os limites da cidadania antiga, o escravismo e as conquistas jurídicas da plebe.",
+    "evidence": "Habilidades EF06HI09, EF06HI10, EF06HI11 e EF06HI12 consolidadas.",
+    "choices": [
+      { "text": "Reiniciar Aventura 3", "target": "s_24", "effect": {} }
+    ]
+  }
+}
